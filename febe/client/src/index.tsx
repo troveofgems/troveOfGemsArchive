@@ -4,6 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+/* Import Fonts */
+import './assets/fonts/myst/exile/stylesheet.css';
+import './assets/fonts/myst/dni/stylesheet.css';
+import './assets/fonts/myst/dnidings/stylesheet.css';
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
