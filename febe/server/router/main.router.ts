@@ -1,12 +1,13 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import express, {Router} from 'express';
+import express from 'express';
 import LoggerMiddleware from "../middleware/logger/logger.middleware";
 import tryMiddleware from "../middleware/try/try.middleware";
 
 const logger = new LoggerMiddleware();
 
 export default async function mountRouter(app: express.Application): Promise<express.Application> {
+    logger.print("Mounting Router...");
     const // This is the main router. It bundles all sub-routes and mounts them to the application.
         apiPrefix = process.env.API_PREFIX || "/api/",
         apiVersion = process.env.API_VERSION || "0.0.0",
@@ -36,6 +37,7 @@ async function attachRoutes(
 
         app.use(API_RoutePath, module.default);
         logger.print(`Route ${route} loaded successfully.`);
+        app.disable("x-powered-by"); // Remove this from the lower children levels.
     }
 
     return app;
