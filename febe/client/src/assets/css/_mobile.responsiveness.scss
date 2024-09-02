@@ -1,0 +1,88 @@
+@import "../../../node_modules/rfs/scss";
+$enable-responsive-font-sizes: true;
+
+#notViewableMessage, #trulyFalling {
+  visibility: hidden;
+  height: 0;
+}
+
+.tablePanelBackground_darker > blockquote > p {
+  color: var(--tiana-off-white);
+  font-size: rfs-fluid-value(1.125rem);
+}
+
+/* Mobile Responsiveness
+    DIM | User % | Code Written
+    414×896 – 20.52% - complete
+    375×667 – 13.18% - complete
+    375×812 – 12.65% - complete
+    414×736 – 6.63% - complete
+    360×640 – 5.41% - complete
+    412×869 – 3.67% - complete
+*/
+@media(min-width: 0px) {
+  div#root {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  main {
+    flex-grow: 1;
+  }
+
+  .inheritHeight {
+    height: inherit!important;
+  }
+}
+@media(min-width: 526px) and (max-width: 600px) {}
+@media(min-width: 415px) and (max-width: 525px) {}
+@media(min-width: 360px) and (max-width: 414px) {}
+@media(min-width: 201px) and (max-width: 359px) {
+  div#root {
+    overflow: hidden;
+  }
+
+  #notViewableMessage {
+    visibility: visible;
+    height: fit-content;
+  }
+
+  .bookList {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+
+  .tablePanelBackground_darker > blockquote > p {
+
+  }
+}
+@media(min-width: 0px) and (max-width: 200px) {
+  #trulyFalling {
+    background-image: url("../../components/Landing/img/falling.gif")!important;
+    background-size: contain!important;
+    width: 200px!important;
+    height: 80vh!important;
+    visibility: visible;
+  }
+
+  .inheritHeight {
+    margin: 0!important;
+    padding: 0!important;
+  }
+
+  main {
+    margin-top: 0!important;
+  }
+
+  #root {
+    overflow: hidden;
+  }
+
+  .bookList {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+}

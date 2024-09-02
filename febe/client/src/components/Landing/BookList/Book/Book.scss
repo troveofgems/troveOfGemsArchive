@@ -1,0 +1,1366 @@
+@import "../../../../../node_modules/rfs/scss";
+$enable-responsive-font-sizes: true;
+
+img {
+  height: calc(96px + 2vw);
+  width: calc(96px + 2vw);
+  overflow: hidden;
+}
+
+.book {
+  margin: .5rem 0;
+  overflow: hidden;
+}
+
+.bookMobileView {
+  background-image: url("../../img/closedBook.jpg");
+  background-repeat:  no-repeat;
+  background-size:  contain;
+  background-position:  center;
+}
+
+.bookTabletView {
+  background-image: url("../../img/oldBook.png");
+  background-repeat:  no-repeat;
+  background-size:  cover;
+  background-position:  center;
+  visibility: hidden;
+  height: 0;
+}
+
+.bookDesktopView {
+  background-image: url("../../img/oldBook.png");
+  background-repeat:  no-repeat;
+  background-size:  cover;
+  background-position:  center;
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+
+.openBookContent {
+  height: 100%;
+  padding: 1.3rem 2.75rem 2.1rem 3rem;
+  overflow: hidden;
+}
+
+.openBookPage1, .openBookPage2 {
+  height: inherit;
+  overflow: hidden;
+}
+
+.bookCover {
+  height: inherit;
+}
+
+.bookStamp {
+  margin: 0 auto;
+  @include padding-top(12rem);
+  text-align: center;
+  width: 18%;
+}
+
+button.bookTooltip, button.bookTooltip:hover, button.bookTooltip:active {
+  background: transparent;
+  border: none;
+  @include font-size(4rem);
+  padding: 0;
+  width: 100%;
+}
+
+button.bookTooltip:active {
+  background: transparent!important;
+  border: none!important;
+}
+
+span.dnii {
+  color: var(--book-cover-3) !important;
+}
+
+.bookTitle {
+  text-align: center;
+}
+
+.linkingBookHeader {
+  color: var(--book-cover-3)!important;
+  @include font-size(1.75rem);
+  margin: .5rem auto 0 auto!important;
+  overflow: hidden;
+  text-align: center;
+  width: 55%;
+}
+
+.linkingBookMainHeader {
+  color: var(--book-cover-3)!important;
+  @include font-size(2rem);
+  font-weight: bold;
+  margin: 0.25rem auto .5rem auto!important;
+  overflow: hidden;
+  text-align: center;
+  width: 72%;
+}
+
+.pageLinkingPanel {
+  padding: 5px;
+  background-color: rgba(162, 96, 23, 0.5);
+  box-shadow:
+          rgb(162, 96, 23) 3px 3px 6px 0 inset,
+          rgba(216, 179, 112, 0.5) -3px -3px 6px 1px inset;
+  width: calc(60% - 11vw);
+  margin: 0 auto;
+  height: 170px;
+  overflow-y: hidden;
+}
+
+.radioStatic {
+  align-content: center;
+  background-image: url("../../img/radioStatic.gif");
+  height: inherit;
+}
+
+.linkToDir {
+  align-items: center;
+  background-color: black;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  opacity: 0.7;
+  overflow: hidden;
+}
+
+.directoryLink {
+  overflow: hidden;
+}
+
+
+.grow:hover {
+  transition: all .2s ease-in-out;
+  transform: scale(1.05);
+}
+
+.invertLogoColor {
+  filter: invert(100%)!important;
+}
+
+.roundLogo {
+  border-radius: 50%;
+}
+
+.bookP_1, .bookP_2 {
+  color: #461c06;
+  margin: .5rem 4rem;
+  text-align: left;
+  font-size: 1rem;
+}
+
+/* Desktop Responsiveness
+    1920×1080 – 20.66% - Complete
+    1366×768 – 13.96% - Complete
+    1440×900 – 9.16% - Complete
+    1536×864 – 7.79% - Complete
+    1280×720 – 4.74% - Complete
+    768×1024 – 4.72% - Complete
+*/
+@media(min-width: 2000px) and (max-width: 2099px) {
+  .mobile-book, .tablet-book {
+    visibility: hidden;
+    height: 0!important;
+    width: 0!important;
+  }
+  .desktop-book {
+    visibility: visible;
+    height: calc(26rem + 5vw);
+    width: 100%;
+  }
+
+  .bookDesktopView {
+    background-size:  contain;
+  }
+
+  .openBookContent {
+    height: 100%;
+    padding: 1rem 3rem 2.5rem 3.5rem;
+    overflow: hidden;
+  }
+
+  .linkingBookHeader {
+    font-size: calc(1rem + .25vw)!important;
+    width: 100%;
+    margin: 1rem 0 0 0!important;
+    text-align: start;
+    padding-left: calc(2.5rem + .1vw)!important;
+  }
+
+  .bookTooltip {
+    font-size: calc(1rem + .25vw)!important;
+    width: 15%!important;
+  }
+
+  .linkingBookMainHeader {
+    font-size: calc(.25rem + 1vw);
+    text-align: center;
+  }
+
+  .openBookPage1 {
+    text-align: start;
+  }
+
+  .openBookPage2 {
+    align-content: center;
+  }
+
+  .pageLinkingPanel {
+    height: 175px;
+    width: 275px;
+    margin-left: 3.5rem;
+  }
+
+  #splashImg {
+    width: 35%;
+  }
+
+  .bookP_1, .bookP_2 {
+    margin: 0.5rem 0;
+    @include font-size(1rem);
+    @include margin-left(3.75rem);
+    @include margin-right(2rem);
+    font-size: 1.25rem;
+  }
+
+  .bookPQuote_1, .bookPQuoteAuthor {
+    @include font-size(1.25rem);
+    @include margin-left(3.5rem);
+    @include margin-right(1.5rem);
+  }
+
+  .bookP_1_small {
+    @include margin-left(3.5rem);
+    @include margin-right(1.5rem);
+    font-size: 1rem;
+  }
+}
+@media(min-width: 1900px) and (max-width: 1999px){
+  .mobile-book, .tablet-book {
+    visibility: hidden;
+    height: 0!important;
+    width: 0!important;
+  }
+  .desktop-book {
+    visibility: visible;
+    height: calc(26rem + 5vw);
+    width: 100%;
+  }
+
+  .bookDesktopView {
+    background-size:  contain;
+  }
+
+  .openBookContent {
+    height: 100%;
+    padding: 1rem 3rem 2.5rem 3.5rem;
+    overflow: hidden;
+  }
+
+  .linkingBookHeader {
+    font-size: calc(1rem + .25vw)!important;
+    width: 100%;
+    margin: 1rem 0 0 0!important;
+    text-align: start;
+    padding-left: calc(2.5rem + .1vw)!important;
+  }
+
+  .bookTooltip {
+    font-size: calc(1rem + .25vw)!important;
+    width: 15%!important;
+  }
+
+  .linkingBookMainHeader {
+    font-size: calc(.25rem + 1vw);
+    text-align: center;
+  }
+
+  .openBookPage1 {
+    text-align: start;
+  }
+
+  .openBookPage2 {
+    align-content: center;
+  }
+
+  .pageLinkingPanel {
+    height: 175px;
+    width: 275px;
+    margin-left: 3.5rem;
+  }
+
+  #splashImg {
+    width: 35%;
+  }
+
+  .bookP_1, .bookP_2 {
+    margin: 0.5rem 0;
+    @include font-size(1rem);
+    @include margin-left(2.75rem);
+    @include margin-right(2rem);
+    font-size: 1.25rem;
+  }
+
+  .bookPQuote_1, .bookPQuoteAuthor {
+    @include font-size(1.25rem);
+    @include margin-left(2.5rem);
+    @include margin-right(1.5rem);
+  }
+
+  .bookP_1_small {
+    @include margin-left(2.5rem);
+    @include margin-right(1.5rem);
+    font-size: 1rem;
+  }
+}
+@media(min-width: 1701px) and (max-width: 1899px) {
+  .mobile-book, .tablet-book {
+    visibility: hidden;
+    height: 0!important;
+    width: 0!important;
+  }
+  .desktop-book {
+    visibility: visible;
+    height: calc(24rem + 5vw);
+    width: 100%;
+  }
+
+  .bookDesktopView {
+    background-size:  contain;
+  }
+
+  .openBookContent {
+    height: 100%;
+    padding: 1rem 3rem 2.5rem 3.5rem;
+    overflow: hidden;
+  }
+
+  .linkingBookHeader {
+    font-size: calc(.75rem + .25vw)!important;
+    width: 100%;
+    margin: 5rem 0 0 0!important;
+    text-align: start;
+    padding-left: calc(2.5rem + .1vw)!important;
+  }
+
+  .bookTooltip {
+    font-size: calc(.75rem + .25vw)!important;
+    width: 15%!important;
+  }
+
+  .linkingBookMainHeader {
+    font-size: calc(1rem);
+    text-align: center;
+  }
+
+  .openBookPage1 {
+    text-align: start;
+  }
+
+  .openBookPage2 {
+    align-content: center;
+  }
+
+  .pageLinkingPanel {
+    height: 150px;
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  #splashImg {
+    width: 35%;
+  }
+
+  .bookP_1, .bookP_2 {
+    margin: 0.5rem 0;
+    @include font-size(1rem);
+    @include margin-left(.5rem);
+    @include margin-right(1rem);
+    font-size: .9rem;
+  }
+
+  .bookPQuote_1, .bookPQuoteAuthor {
+    @include font-size(1rem);
+    @include margin-left(.75rem);
+    @include margin-right(1.5rem);
+    @include margin-bottom(.125rem);
+  }
+
+  .bookPQuote_1 {
+    @include margin-bottom(.25rem);
+  }
+
+  .bookP_1_small {
+    @include margin-left(.75rem);
+    @include margin-right(1.5rem);
+    @include margin-bottom(.125rem);
+    font-size: .9rem;
+  }
+
+  header {
+    width: 100%;
+  }
+}
+@media(min-width: 1701px) and (max-width: 1800px) {
+  .bookP_1, .bookP_2 {
+    margin: 0.5rem 0;
+    @include font-size(1rem);
+    @include margin-left(2rem);
+    @include margin-right(1rem);
+    font-size: .9rem;
+  }
+
+  .bookPQuote_1, .bookPQuoteAuthor {
+    @include font-size(1rem);
+    @include margin-left(2rem);
+    @include margin-right(1.5rem);
+  }
+
+  .bookP_1_small {
+    @include margin-left(2rem);
+    @include margin-right(1.5rem);
+    font-size: .9rem;
+  }
+}
+@media(min-width: 1601px) and (max-width: 1700px) {
+  .mobile-book, .tablet-book {
+    visibility: hidden;
+    height: 0!important;
+    width: 0!important;
+  }
+  .desktop-book {
+    visibility: visible;
+    height: calc(21rem + 6vw);
+    width: fit-content;
+  }
+
+  .bookDesktopView {
+    background-size:  contain;
+  }
+
+  .openBookContent {
+    height: 100%;
+    padding: 1rem 3rem 2.5rem 3.5rem;
+    overflow: hidden;
+  }
+
+  .linkingBookHeader {
+    font-size: calc(1rem + .25vw)!important;
+    width: 100%;
+    margin: 1rem 0 0 0!important;
+    text-align: start;
+    padding-left: calc(1.5rem + .1vw)!important;
+  }
+
+  .bookTooltip {
+    font-size: calc(1rem + .25vw)!important;
+    width: 15%!important;
+  }
+
+  .linkingBookMainHeader {
+    font-size: calc(.25rem + 1vw);
+    text-align: center;
+  }
+
+  .openBookPage1 {
+    text-align: start;
+  }
+
+  .openBookPage2 {
+    align-content: center;
+  }
+
+  .pageLinkingPanel {
+    height: 150px;
+    width: 200px;
+    margin-left: 3.5rem;
+  }
+
+  #splashImg {
+    width: 35%;
+  }
+
+  .bookP_1, .bookP_2 {
+    margin: 0.5rem 0;
+    @include font-size(1rem);
+    @include margin-left(2rem);
+    @include margin-right(1rem);
+    font-size: .9rem;
+  }
+
+  .bookPQuote_1, .bookPQuoteAuthor {
+    @include font-size(1rem);
+    @include margin-left(2rem);
+    @include margin-right(1.5rem);
+  }
+
+  .bookP_1_small {
+    @include margin-left(2rem);
+    @include margin-right(1.5rem);
+    font-size: .9rem;
+  }
+}
+@media(min-width: 1400px) and (max-width: 1600px) {
+  .mobile-book, .tablet-book {
+    visibility: hidden;
+    height: 0!important;
+    width: 0!important;
+  }
+  .desktop-book {
+    visibility: visible;
+    height: calc(21rem + 5vw);
+    width: fit-content;
+  }
+
+  .bookDesktopView {
+    background-size:  contain;
+  }
+
+  .openBookContent {
+    height: 100%;
+    padding: 1rem 3rem 2.5rem 3.5rem;
+    overflow: hidden;
+  }
+
+  .linkingBookHeader {
+    font-size: calc(1rem + .25vw)!important;
+    width: 100%;
+    margin: 1rem 0 0 0!important;
+    text-align: start;
+    padding-left: calc(1.25rem + .1vw)!important;
+  }
+
+  .bookTooltip {
+    font-size: calc(1rem + .25vw)!important;
+    width: 15%!important;
+  }
+
+  .linkingBookMainHeader {
+    font-size: calc(.25rem + 1vw);
+    text-align: center;
+  }
+
+  .openBookPage1 {
+    text-align: start;
+  }
+
+  .openBookPage2 {
+    align-content: center;
+  }
+
+  .pageLinkingPanel {
+    height: 150px;
+    width: 200px;
+    margin-left: 3rem;
+  }
+
+  #splashImg {
+    width: 35%;
+  }
+
+  .bookP_1, .bookP_2 {
+    margin: 0.5rem 0;
+    @include font-size(1rem);
+    @include margin-left(2rem);
+    @include margin-right(1rem);
+    font-size: .9rem;
+  }
+
+  .bookPQuote_1, .bookPQuoteAuthor {
+    @include font-size(1rem);
+    @include margin-left(2rem);
+    @include margin-right(1.5rem);
+  }
+
+  .bookP_1_small {
+    @include margin-left(2rem);
+    @include margin-right(1.5rem);
+    font-size: .9rem;
+  }
+}
+@media(min-width: 1281px) and (max-width: 1399px) {
+  .mobile-book, .tablet-book {
+    visibility: hidden;
+    height: 0!important;
+    width: 0!important;
+  }
+  .desktop-book {
+    visibility: visible;
+    height: calc(17rem + 5vw);
+    width: fit-content;
+  }
+
+  .bookDesktopView {
+    background-size:  contain;
+  }
+
+  .openBookContent {
+    height: 100%;
+    padding: 1rem 3rem 2.5rem 3.5rem;
+    overflow: hidden;
+  }
+
+  .linkingBookHeader {
+    font-size: calc(1rem + .25vw)!important;
+    width: 100%;
+    margin: 1rem 0 0 0!important;
+    text-align: start;
+    padding-left: calc(1.25rem + .1vw)!important;
+  }
+
+  .bookTooltip {
+    font-size: calc(1rem + .25vw)!important;
+    width: 15%!important;
+  }
+
+  .linkingBookMainHeader {
+    font-size: calc(.25rem + 1vw);
+    text-align: center;
+  }
+
+  .openBookPage1 {
+    text-align: start;
+  }
+
+  .openBookPage2 {
+    align-content: center;
+  }
+
+  .pageLinkingPanel {
+    height: 150px;
+    width: 200px;
+    margin-left: 1.25rem;
+  }
+
+  #splashImg {
+    width: 35%;
+  }
+
+  header {
+    width: 100%;
+  }
+
+  .bookP_1, .bookP_2 {
+    margin: 0.5rem 0;
+    @include font-size(1rem);
+    @include margin-left(1rem);
+    @include margin-right(1rem);
+    font-size: .9rem;
+  }
+
+  .bookPQuote_1, .bookPQuoteAuthor {
+    @include font-size(1rem);
+    @include margin-left(1rem);
+    @include margin-right(1rem);
+  }
+
+  .bookP_1_small {
+    @include margin-left(1rem);
+    @include margin-right(1.75rem);
+    font-size: .9rem;
+  }
+}
+
+/* Tablet Responsiveness
+    DIM | User % | Code Written
+    768×1024 – 50.14% - Complete
+    800×1280 – 7.07% - Complete
+    1280×800 – 6.55% - Complete
+    601×962 – 6.03% - Complete
+    810×1080 – 3.7% - Complete
+    962×601 – 3.27% - Complete
+*/
+@media(min-width: 1200px) and (max-width: 1280px)  {
+  .mobile-book, .desktop-book {
+    visibility: hidden;
+    height: 0!important;
+    width: 0!important;
+  }
+  .tablet-book {
+    visibility: visible;
+    height: calc(17rem + 5vw);
+  }
+
+  .bookTabletView {
+    background-size:  contain;
+  }
+
+  .openBookContent {
+    height: 100%;
+    padding: 1rem 3rem 2.5rem 3.5rem;
+    overflow: hidden;
+  }
+
+  .linkingBookHeader {
+    font-size: calc(1rem + .25vw)!important;
+    width: 100%;
+    margin: 1rem 0 0 0!important;
+    text-align: start;
+    padding-left: calc(.1rem + .1vw)!important;
+  }
+
+  .bookTooltip {
+    font-size: calc(1rem + .25vw)!important;
+    width: 15%!important;
+  }
+
+  .linkingBookMainHeader {
+    font-size: calc(.25rem + 1vw);
+    text-align: center;
+  }
+
+  .openBookPage1 {
+    text-align: start;
+  }
+
+  .bookP_1_small {
+    padding-left: calc(.1rem + .1vw)!important;
+    padding-right: calc(.5rem + .1vw)!important;
+    font-size: .9rem;
+    margin: 0.5rem 0;
+  }
+
+  .bookPQuote_1, .bookPQuoteAuthor {
+    padding-left: calc(.1rem + .1vw)!important;
+    padding-right: calc(.5rem + .1vw)!important;
+    margin: 0.5rem 0;
+  }
+
+  .openBookPage2 {
+    align-content: center;
+  }
+
+  .pageLinkingPanel {
+    height: 150px;
+    width: 150px;
+    margin-left: 3.25rem;
+  }
+
+  #splashImg {
+    width: 35%;
+  }
+
+  .bookP_1, .bookP_2 {
+    margin: 0.5rem 0;
+    @include font-size(1rem);
+    @include margin-left(.75rem);
+    @include margin-right(1rem);
+    font-size: .9rem;
+  }
+
+  .bookPQuote_1, .bookPQuoteAuthor {
+    @include font-size(1rem);
+    @include margin-left(1rem);
+    @include margin-right(1rem);
+  }
+
+  .bookP_1_small {
+    @include margin-left(1rem);
+    @include margin-right(1.75rem);
+    font-size: .9rem;
+  }
+}
+@media(min-width: 1112px) and (max-width: 1199px)  {
+  .mobile-book, .desktop-book {
+    visibility: hidden;
+    height: 0;
+  }
+  .tablet-book {
+    visibility: visible;
+    height: calc(30rem + 10vw);
+  }
+
+  .bookTabletView {
+    background-size:  contain;
+  }
+
+  .openBookContent {
+    height: 100%;
+    padding: 1rem 3rem 2.5rem 3.5rem;
+    overflow: hidden;
+  }
+
+  .linkingBookHeader {
+    font-size: calc(1.25rem + .25vw)!important;
+    width: 100%;
+    margin: 1rem 0 0 0!important;
+    text-align: start;
+    padding-left: calc(3rem + .5vw)!important;
+  }
+
+  .bookTooltip {
+    font-size: calc(1.75rem + .25vw)!important;
+    width: 20%!important;
+  }
+
+  .linkingBookMainHeader {
+    font-size: calc(1rem + 1vw);
+    text-align: center;
+  }
+
+  .openBookPage1 {
+    text-align: start;
+  }
+
+  .bookP_1_small {
+    padding-left: calc(3rem + 5vw)!important;
+    font-size: .9rem;
+    margin: 0.5rem 0;
+  }
+
+  .bookPQuote_1, .bookPQuoteAuthor {
+    padding-left: calc(3rem + 5vw)!important;
+    padding-right: calc(2rem + 1vw)!important;
+    margin: 0.5rem 0;
+  }
+
+  .openBookPage2 {
+    align-content: center;
+  }
+
+  .pageLinkingPanel {
+    height: 200px;
+    width: 200px;
+    margin-left: 7rem;
+  }
+  #splashImg {
+    width: 35%;
+  }
+
+  .bookP_1, .bookP_2 {
+    margin: 0.5rem 0;
+    @include font-size(1rem);
+    @include margin-left(5.5rem);
+    @include margin-right(2.5rem);
+  }
+
+  .bookPQuote_1, .bookPQuoteAuthor {
+    @include font-size(1rem);
+    @include margin-left(-1rem);
+    @include margin-right(1.75rem);
+  }
+
+  .bookP_1_small {
+    @include margin-left(-1rem);
+    @include margin-right(1.75rem);
+    font-size: .9rem;
+  }
+}
+@media(min-width: 992px) and (max-width: 1111px)  {
+  .mobile-book, .desktop-book {
+    visibility: hidden;
+    height: 0;
+  }
+  .tablet-book {
+    visibility: visible;
+    height: calc(25rem + 16vw);
+  }
+
+  .bookTabletView {
+    background-size:  contain;
+  }
+
+  .openBookContent {
+    height: 100%;
+    padding: 1rem 3rem 2.5rem 3.5rem;
+    overflow: hidden;
+  }
+
+  .linkingBookHeader {
+    font-size: calc(1.25rem + .25vw)!important;
+    width: 100%;
+    margin: 1rem 0 0 0!important;
+    text-align: start;
+    padding-left: calc(2rem + .5vw)!important;
+  }
+
+  .bookTooltip {
+    font-size: calc(1.75rem + .25vw)!important;
+    width: 20%!important;
+  }
+
+  .linkingBookMainHeader {
+    font-size: calc(1rem + 1vw);
+    text-align: center;
+  }
+
+  .openBookPage1 {
+    text-align: start;
+  }
+
+  .bookP_1_small {
+    padding-left: calc(1rem + 5vw)!important;
+    font-size: .9rem;
+    margin: 0.5rem 0;
+  }
+
+  .bookPQuote_1, .bookPQuoteAuthor {
+    padding-left: calc(1rem + 5vw)!important;
+    padding-right: calc(2rem + 1vw)!important;
+    margin: 0.5rem 0;
+  }
+
+  .openBookPage2 {
+    align-content: center;
+  }
+
+  .pageLinkingPanel {
+    height: 200px;
+    width: 200px;
+    margin-left: 7rem;
+  }
+
+  #splashImg {
+    width: 35%;
+  }
+}
+@media(min-width: 901px) and (max-width: 991px)  {
+  .mobile-book, .desktop-book {
+    visibility: hidden;
+    height: 0;
+  }
+  .tablet-book {
+    visibility: visible;
+    height: calc(20rem + 18vw);
+  }
+
+  .bookTabletView {
+    background-size:  contain;
+  }
+
+  .openBookContent {
+    height: 100%;
+    padding: 1rem 3rem 2.5rem 3.5rem;
+    overflow: hidden;
+  }
+
+  .linkingBookHeader {
+    font-size: calc(2rem + .25vw)!important;
+    width: 100%;
+    margin: 1rem 1rem 0 1rem!important;
+    text-align: start;
+    padding-left: calc(1.5rem + .25vw)!important;
+  }
+
+  .bookTooltip {
+    font-size: calc(1.75rem + .25vw)!important;
+    width: 20%!important;
+  }
+
+  .linkingBookMainHeader {
+    font-size: calc(1rem + 1vw);
+    text-align: center;
+  }
+
+  .openBookPage1 {
+    text-align: start;
+  }
+
+  .bookP_1_small {
+    padding-left: calc(0.25rem + 5vw)!important;
+    font-size: .9rem;
+    margin: 0.5rem 0;
+  }
+
+  .bookPQuote_1, .bookPQuoteAuthor {
+    padding-left: calc(0.25rem + 5vw)!important;
+    padding-right: calc(2rem + 1vw)!important;
+    margin: 0.5rem 0;
+  }
+
+  .openBookPage2 {
+    align-content: center;
+  }
+
+  .pageLinkingPanel {
+    height: 200px;
+    width: 200px;
+    margin-left: 4rem;
+  }
+
+  #splashImg {
+    width: 35%;
+  }
+}
+@media(min-width: 901px) and (max-width: 950px) {
+  .bookP_1, .bookP_2 {
+    margin: 0.5rem 0;
+    @include font-size(1rem);
+    @include margin-left(2.25rem);
+    @include margin-right(1.75rem);
+  }
+
+  .bookPQuote_1, .bookPQuoteAuthor {
+    @include font-size(1rem);
+    @include margin-left(-1rem);
+    @include margin-right(1.75rem);
+  }
+
+  .bookP_1_small {
+    @include margin-left(-1rem);
+    @include margin-right(1.75rem);
+    font-size: .9rem;
+  }
+}
+@media(min-width: 801px) and (max-width: 900px)  {
+  .mobile-book, .desktop-book {
+    visibility: hidden;
+    height: 0;
+  }
+  .tablet-book {
+    visibility: visible;
+    height: calc(20rem + 14vw);
+  }
+
+  .bookTabletView {
+    background-size:  contain;
+  }
+
+  .openBookContent {
+    height: 100%;
+    padding: 1rem 3rem 2.5rem 3.5rem;
+    overflow: hidden;
+  }
+
+  .linkingBookHeader {
+    font-size: calc(1.25rem + .25vw)!important;
+    width: 100%;
+    margin: .5rem 0 0 0!important;
+    text-align: start;
+    padding-left: calc(1.5rem + .25vw)!important;
+  }
+
+  .bookTooltip {
+    font-size: calc(1.75rem + .25vw)!important;
+    width: 20%!important;
+  }
+
+  .linkingBookMainHeader {
+    font-size: calc(1rem + 1vw);
+    text-align: center;
+  }
+
+  .openBookPage1 {
+    text-align: start;
+  }
+
+  .openBookPage2 {
+    align-content: center;
+  }
+
+  .pageLinkingPanel {
+    height: 200px;
+    width: 200px;
+    margin-left: 4rem;
+  }
+
+  #splashImg {
+    width: 35%;
+  }
+
+  .bookP_1, .bookP_2 {
+    margin: 0.5rem 0;
+    @include font-size(1rem);
+    @include margin-left(3.5rem);
+    @include margin-right(1.5rem);
+  }
+
+  .bookPQuote_1, .bookPQuoteAuthor {
+    @include font-size(1rem);
+    @include margin-left(3.5rem);
+    @include margin-right(1.5rem);
+  }
+
+  .bookP_1_small {
+    @include margin-left(3.5rem);
+    @include margin-right(1.5rem);
+    font-size: .9rem;
+  }
+}
+@media(min-width: 801px) and (max-width: 850px) {
+  .bookP_1, .bookP_2 {
+    margin: 0.5rem 0;
+    @include font-size(1rem);
+    @include margin-left(2rem);
+    @include margin-right(1.25rem);
+  }
+
+  .bookPQuote_1, .bookPQuoteAuthor {
+    @include font-size(1rem);
+    @include margin-left(2rem);
+    @include margin-right(1.25rem);
+  }
+
+  .bookP_1_small {
+    @include margin-left(2rem);
+    @include margin-right(1.25rem);
+    font-size: .9rem;
+  }
+}
+@media(min-width: 701px) and (max-width: 800px)  {
+  .mobile-book, .desktop-book {
+    visibility: hidden;
+    height: 0;
+  }
+  .tablet-book {
+    visibility: visible;
+    height: calc(20rem + 12vw);
+  }
+
+  .bookTabletView {
+    background-size:  contain;
+  }
+
+  .openBookContent {
+    height: 100%;
+    padding: 1rem 3rem 2.5rem 3.5rem;
+    overflow: hidden;
+  }
+
+  .linkingBookHeader {
+    font-size: calc(1rem + .25vw);
+    width: 100%;
+    margin: .75rem 1rem 0 1rem!important;
+    text-align: start;
+    padding-left: calc(var(--bs-gutter-x) * -0.75)!important;
+  }
+
+  .bookTooltip {
+    font-size: calc(1.25rem + .25vw)!important;
+    width: 20%!important;
+  }
+
+  .linkingBookMainHeader {
+    font-size: calc(1rem + .25vw);
+    margin: 0!important;
+    width: 100%;
+    text-align: center;
+  }
+
+  .openBookPage1 {
+    text-align: start;
+  }
+
+  .bookP_1_small {
+    padding-left: calc(1.5rem + .25vw)!important;
+    font-size: .75rem!important;
+    margin: 0.5rem 0;
+  }
+
+  .bookPQuote_1, .bookPQuoteAuthor {
+    padding-left: calc(1.5rem + .25vw)!important;
+    padding-right: calc(1.75rem + .5vw)!important;
+    margin: 0.5rem 0;
+  }
+
+  .openBookPage2 {
+    align-content: center;
+  }
+
+  .pageLinkingPanel {
+    height: 150px;
+    width: 150px;
+  }
+
+  #splashImg {
+    width: 35%;
+  }
+
+  .bookP_1, .bookP_2 {
+    margin: 0.5rem 0;
+    @include font-size(1rem);
+    @include margin-left(1.25rem);
+    @include margin-right(1.25rem);
+  }
+
+  .bookPQuote_1, .bookPQuoteAuthor {
+    @include font-size(1rem);
+  }
+
+  .dnidings {
+    font-size: 2rem;
+  }
+}
+@media(min-width: 601px) and (max-width: 700px)  {
+  .mobile-book, .desktop-book {
+    visibility: hidden;
+    height: 0;
+  }
+  .tablet-book {
+    visibility: visible;
+    height: calc(20rem + 6vw);
+  }
+
+  .bookTabletView {
+    background-size:  contain;
+  }
+
+  .openBookContent {
+    height: 100%;
+    padding: 1rem 3rem 2.5rem 3rem;
+    overflow: hidden;
+  }
+
+  .linkingBookHeader {
+    font-size: calc(1rem + .25vw);
+    width: 100%;
+    margin: 1.25rem 0 0 0!important;
+    text-align: start;
+    padding-left: calc(var(--bs-gutter-x) * -0.75)!important;
+  }
+
+  .bookTooltip {
+    font-size: calc(1.25rem + .25vw)!important;
+    width: 20%!important;
+  }
+
+  .linkingBookMainHeader {
+    font-size: calc(1rem + .25vw);
+    margin: 0!important;
+    width: 100%;
+    text-align: center;
+  }
+
+  .openBookPage1 {
+    text-align: start;
+  }
+
+  .bookP_1_small {
+    padding-left: calc(.5rem + .25vw)!important;
+    font-size: .75rem!important;
+    margin: 0.5rem 0;
+  }
+
+  .bookPQuote_1, .bookPQuoteAuthor {
+    padding-left: calc(.5rem + .25vw)!important;
+    padding-right: calc(.75rem + .5vw)!important;
+    margin: 0.5rem 0;
+  }
+
+  .openBookPage2 {
+    align-content: center;
+  }
+
+  .pageLinkingPanel {
+    height: 150px;
+    width: 150px;
+  }
+
+  #splashImg {
+    width: 35%;
+  }
+
+  .bookP_1, .bookP_2 {
+    margin: 0.5rem 0;
+    @include font-size(.85rem);
+    @include margin-left(1.25rem);
+    @include margin-right(1rem);
+  }
+
+  .bookPQuote_1, .bookPQuoteAuthor {
+    @include font-size(.85rem);
+    @include margin-left(1.25rem);
+    @include margin-right(1rem);
+  }
+
+  .bookP_1_small {
+    @include margin-left(1.25rem);
+    @include margin-right(1rem);
+  }
+}
+@media(min-width: 601px) and (max-width: 650px)  {
+  .bookP_1, .bookP_2 {
+    margin: 0.5rem 0;
+    @include font-size(.85rem);
+    @include margin-left(.5rem);
+    @include margin-right(1rem);
+  }
+
+  .bookPQuote_1, .bookPQuoteAuthor {
+    @include font-size(.85rem);
+    @include margin-left(.5rem);
+    @include margin-right(1rem);
+  }
+
+  .bookP_1_small {
+    @include margin-left(.5rem);
+    @include margin-right(1rem);
+  }
+}
+
+/* Mobile Responsiveness
+    DIM | User % | Code Written
+    414×896 – 20.52% - complete
+    375×667 – 13.18% - complete
+    375×812 – 12.65% - complete
+    414×736 – 6.63% - complete
+    360×640 – 5.41% - complete
+    412×869 – 3.67% - complete
+*/
+@media(min-width: 526px) and (max-width: 600px) {
+  #splashImg {
+    width: calc(75% - 2.5vw);
+    margin: 0 auto;
+  }
+
+  .tabletOverride {
+    --bs-gutter-x: 0;
+  }
+
+  .bookStamp {
+    @include padding-top(calc(6.25rem - 2.5vw));
+  }
+
+  .pageLinkingPanel {
+    height: calc(10rem - 2vw);
+    width: calc(10rem - 2vw);
+  }
+
+  .book {
+    height: 543px;
+  }
+  .book:last-child {
+    margin-bottom: 1rem;
+  }
+}
+@media(min-width: 415px) and (max-width: 525px) {
+  .bookStamp {
+    @include padding-top(10rem);
+  }
+
+  .pageLinkingPanel {
+    height: calc(10rem - 2vw);
+    width: calc(10rem - 2vw);
+  }
+
+  .book {
+    height: 543px;
+  }
+  .book:last-child {
+    margin-bottom: 1rem;
+  }
+}
+@media(min-width: 360px) and (max-width: 414px) {
+  .book {
+    height: 543px;
+  }
+
+  .bookStamp {
+    padding-top: calc(12rem - 30%);
+  }
+
+  .pageLinkingPanel {
+    height: 157px;
+  }
+
+  .book:last-child {
+    margin-bottom: 1rem;
+  }
+  .pageLinkingPanel {
+    width: calc(60% - 11vw);
+  }
+}

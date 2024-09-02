@@ -1,0 +1,107 @@
+/* Base Elements */
+* {
+  color: var(--book-cover-4);
+}
+
+/* SideBar Ids And Classes */
+#menuToggler {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 1rem auto;
+}
+
+.menuTogglerContainer {
+  height: 100%;
+  padding-right: 0;
+  margin-right: 0;
+}
+
+.canvasWidth {
+  width: 26%!important;
+}
+
+.sideBarHeader {
+  font-size: 1.65rem;
+  text-decoration: underline;
+  color: white;
+  overflow: hidden;
+  height: fit-content;
+}
+
+.navItemLabel {
+  color: #cceabb;
+  font-size: 1.5rem;
+}
+
+.nav-link > span {
+  color: #cceabb;
+}
+
+.nav-link > span.subLink {
+  font-size: 1.25rem;
+}
+
+.nav-link > span.subLink2 {
+  font-size: 1.15rem;
+}
+
+.nav-link > span:hover {
+  color: #fdcb9e;
+  font-size: 1.65rem;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  background: var(--book-cover-3);
+}
+
+.nav-pills .nav-link:hover {
+  background: var(--book-cover-3);
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  color: var(--book-cover-1);
+  text-decoration: underline;
+}
+
+.expandMenuBtn {
+  display: flex;
+  border-radius: 5%;
+  border: 1px solid #f7f7f7;
+  color: #f7f7f7;
+  margin: 10px;
+  position: fixed;
+}
+
+.expandMenuBtn:hover {
+  border: 1px solid #cceabb;
+  color: #cceabb;
+}
+
+.material-symbols-outlined {
+  color: #cceabb!important;
+  overflow: hidden;
+}
+
+.sidebarFooter {
+  color: var(--tiana-off-white);
+  font-size: 1.35rem;
+  overflow: hidden;
+}
+
+.linkToMainWebsite {
+  color: var(--book-cover-1);
+  text-decoration: none;
+}
+
+.linkToMainWebsite:hover {
+  text-decoration: underline;
+  font-size: 1.5rem;
+}
+
+.nav-sub-link {
+  padding-left: 1.75rem;
+}
+
+small.version {
+  color: var(--tiana-off-white);
+}

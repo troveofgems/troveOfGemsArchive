@@ -1,0 +1,42 @@
+// Responsive Font Sizing
+@import "../node_modules/rfs/scss";
+$enable-responsive-font-sizes: true;
+
+/* Custom Dev SCSS Files */
+@import "./assets/css/schemes/_color.scheme";
+@import "./assets/css/schemes/_sizes.scheme";
+
+@import "./assets/css/_mobile.responsiveness";
+@import "./assets/css/_tablet.responsiveness";
+@import "./assets/css/_desktop.responsiveness";
+
+/* Try to Force All Fonts Into Exile Style */
+* {
+  font-family: 'exile', sans-serif;
+}
+
+html {
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  letter-spacing: .1rem;
+}
+
+.dnii {
+  color: var(--book-cover-4);
+  font-family: 'Dni', sans-serif;
+}
+
+.tablePanelBackground_normal {
+  background: rgba(169, 121, 66, .65);
+}
+
+.tablePanelBackground_darker {
+  margin: 20px;
+  background: rgba(39, 23, 14, .85);
+  color: var(--tiana-off-white);
+  border-radius: 1%;
+}
