@@ -5,6 +5,6 @@ const
     cwd = __dirname,
     pathToEnvFile = path.resolve(cwd, "../env/", `${process.env.NODE_ENV}.env`);
 
-export function setApplicationKeyRing() {
+export function setApplicationEnvironmentVars() {
     return dotenv.config({ path: pathToEnvFile });
 }

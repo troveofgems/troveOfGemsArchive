@@ -1,67 +1,36 @@
-import { setApplicationKeyRing } from "./config/keys/set.keys";
-setApplicationKeyRing();
+import {debug} from "node:util";
+import express from "express";
 
-import express, { Express, Request, Response, NextFunction } from "express";
+import { setApplicationEnvironmentVars } from "./config/keys/set.keys";
+setApplicationEnvironmentVars();
+
 import LoggerMiddleware from "./middleware/logger/logger.middleware";
 
-import connectToDB, { storage } from "./config/db/connect.db";
-import session from "express-session";
-
-import morgan from "morgan";
-import {debug} from "node:util";
-
+import connectToDB from "./config/db/connect.db";
 import mountRouter from "./router/main.router";
-
-/*import { v4 as uuidv4 } from 'uuid';*/
-
-/*
-import chalk from "chalk";*/
+import configureApplicationSettings from "./config/app/settings";
+import enableSecurityPackages from "./config/security/secure.server";
 
 const
     logger = new LoggerMiddleware(),
     FINAL_FALLBACK_PORT = 33702,
     port = process.env.PORT || FINAL_FALLBACK_PORT;
 
-let app: express.Application = express();
+const app: express.Application = express();
 
-// Open Database Connection And Connect Application
+// Connect Application To Open and Listening Database
 connectToDB()
     .then(async () => {
        logger.print(`Connected To Database...up and running on port: ${port}`);
 
        // Application Settings
-       // app.use(express.json());
-       app.use(session({
-          secret: process.env.EXPRESS_SESSION_SECRET || "",
-          cookie: {
-             maxAge: 1000 * 60 * 60 * 24 * 7 // 1 week
-          },
-          store: storage.connection,
-          resave: true,
-          saveUninitialized: true
-          // Boilerplate options, see:
-          // * https://www.npmjs.com/package/express-session
-       }));
+       configureApplicationSettings(app);
 
-       app.use(morgan("combined")); // HTTP Logger
-
-/*   function(tokens: any, req: Request, res: Response) {
-      return [
-         chalk.green.bold(tokens.method(req, res)),
-         chalk.red.bold(tokens.status(req, res)),
-         chalk.white(tokens.url(req, res)),
-         chalk.yellow(tokens['response-time'](req, res) + ' ms'),
-      ].join();
-   }*/
+       // Security Settings
+       enableSecurityPackages(app);
 
        // Mount the Main Application Router
-       app = await mountRouter(app);
-
-       /* app.get("/", (req, res, next) => {
-            res.status(200).json({
-                homePage: true
-            });
-        });*/
+       await mountRouter(app);
 
       // Start Server and Open Port
       const server = app.listen(port, () => {
