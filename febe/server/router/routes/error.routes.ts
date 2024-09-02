@@ -1,6 +1,15 @@
 import express from "express";
 
-export default function errorRoutes(app: express.Application): express.Application {
+// Controller Imports
+import {
+    renderError
+} from "../../controllers/error.controller";
 
-    return app;
-}
+// Instantiate Router
+const router = express.Router();
+
+router // Top Level Route
+    .route('/')
+    .get(renderError);
+
+export default router;

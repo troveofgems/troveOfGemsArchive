@@ -20,4 +20,6 @@ export default class LoggerMiddleware {
         data?: object | null,
         methodSignature?: string | undefined
     ): void { if(this.inDevOrUATMode) { this._printToConsole(message, data, methodSignature) } }
+
+    //printWithMorgan() {}
 }
