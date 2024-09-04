@@ -1,16 +1,17 @@
+/*
 import Big from 'big.js';
-/*!
+/!*!
  * D'niDate 2.1.1
  * Copyright 2016–2020 Gary Buddell
  * Based on code created by RIUM+, Jehon the Scribe, and rokama: http://jsfiddle.net/154e70as/3/
  * Additional contributions by Brett Middleton: https://archive.guildofarchivists.org/wiki/D'ni_time_conversion
  * Based on the D'ni time system developed by Richard Watson and Cyan, Inc.
  * Licensed under the MIT license
- */
+ *!/
 
-/*! Updates By DKGreco:
+/!*! Updates By DKGreco:
 *  Provided More Myst Flavor
-*/
+*!/
 const DEBUG = true, dateTimeTest = "1991-04-21T16:54:00";
 
 
@@ -346,7 +347,7 @@ function convertSurfaceToCavernTime(isUTC = false, isTest = false) {
 
     console.log("Begin Date Conversion!");
 
-    /** calculate elapsed hahrtee from milliseconds delta */
+    /!** calculate elapsed hahrtee from milliseconds delta *!/
     let harhConversion = Big(earthMSDelta).div(msPerHahr_b);
     dateConversions.artifacts.cavern.dniTime.bigs.hahr_b = harhConversion.round();
     dateConversions.artifacts.cavern.dniTime.hahr = dateConversions.artifacts.cavern.dniTime.bigs.hahr_b.toNumber();
@@ -364,7 +365,7 @@ function convertSurfaceToCavernTime(isUTC = false, isTest = false) {
 
     console.log("Converted to and shifted Prorahntee Delta: ", prorahnteeDeltaShift.toNumber());
 
-    /** calculate elapsed vaileetee from milliseconds delta */
+    /!** calculate elapsed vaileetee from milliseconds delta *!/
     let vaileeId = prorahnteeDeltaShift.div(vaileeShift_b);
     dateConversions.artifacts.cavern.dniTime.bigs.vailee_b = vaileeId;
     console.log("Vailee Id: ", dateConversions.artifacts.cavern.dniTime.bigs.vailee_b.toNumber());
@@ -373,7 +374,7 @@ function convertSurfaceToCavernTime(isUTC = false, isTest = false) {
     prorahnteeDeltaShift -= dateConversions.artifacts.cavern.dniTime.vailee.id * (29 * 5 * 25 * 25 * 25);
 
     //yahr = Math.floor(delta / (5 * 25 * 25 * 25));
-/*
+/!*
 
 
 
@@ -382,7 +383,7 @@ function convertSurfaceToCavernTime(isUTC = false, isTest = false) {
 
     //console.log("Calculated Vailee: ", dateConversions.cavernianDateTimeArtifacts.dniTime);
    //
-   /**/
+   /!**!/
 
     return "test"; //toCavernDateTimeString(hahr, vaileeStr, yahr, gartahvo, tahvo, gorahn, prorahn);
 }
@@ -492,7 +493,7 @@ function padVal(val, size) {
 }
 
 
-/*
+/!*
 *
 * function DniDate(hahr, vailee, yahr, gartahvo, tahvo, gorahn, prorahn) {
     var hahr = hahr;
@@ -820,4 +821,4 @@ Number.prototype.pad = function(size) {
 *
 *
 *
-* */
+* *!/*/

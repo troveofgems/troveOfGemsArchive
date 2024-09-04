@@ -1,5 +1,10 @@
 import "./EmptyBook.scss";
 export default function EmptyBook() {
+    const
+        bookTitleInEnglish = "Empty Linking Book",
+        bookTitleInDni = "kortee'nea";
+
+
     return (
         <div className="col book">
             <section className={"bookCover bookMobileView mobile-book"}>
@@ -12,13 +17,13 @@ export default function EmptyBook() {
                 </div>
                 <div className={"bookTitle"}>
                     <h2 className="linkingBookHeader">
-                        <a className={"korteenea"} href={"https://archive.guildofarchivists.org/wiki/Book#Manufacture"}>Kortee'nea</a>
+                        Empty Book
                     </h2>
                     <h2 className={"linkingBookMainHeader dnii"}>
-                        kortee'nea
+                        <a className={"korteenea"} href={"https://archive.guildofarchivists.org/wiki/Book#Manufacture"}>{bookTitleInDni}</a>
                     </h2>
-                </div>
-                <div className={"linkingPanel"}>
+        </div>
+    <div className={"linkingPanel"}>
                     <div className="pageLinkingPanel">
                         <div className="radioStatic deadLinkingPanel">
                             <div className="linkToDir"></div>
@@ -35,13 +40,13 @@ export default function EmptyBook() {
                                     title="Book 0 - Empty Linking Book">
                                 <span className="dnidings" title="Book 0 - Kortee'nea - Empty Linking Book">c</span>
                             </button>
-                            <a className={"korteenea"}  href={"https://archive.guildofarchivists.org/wiki/Book/#Manufacture"}>Kortee'nea</a>
+                            {bookTitleInEnglish}
                         </h2>
                         <h2 className={"linkingBookMainHeader dnii"}>
-                        kortee'nea
+                            <a className={"korteenea"}  href={"https://archive.guildofarchivists.org/wiki/Book/#Manufacture"}>{bookTitleInDni}</a>
                         </h2>
-                        <p className="bookP_1_small">
-                            The next pages have yet to be written...
+                    <p className="bookP_1_small">
+                    The next pages have yet to be written...
                         </p>
                         <p className="bookPQuote_1">
                             &ldquo;The reader is entertained by the journey of another, but the writer
@@ -69,13 +74,13 @@ export default function EmptyBook() {
                                     title="Book 0 - Kortee'nea - Empty Linking Book">
                                 <span className="dnidings" title="Book 0 - Kortee'nea - Empty Linking Book">c</span>
                             </button>
-                            <a className={"korteenea"}  href={"https://archive.guildofarchivists.org/wiki/Book/#Manufacture"}>Kortee'nea</a>
+                            {bookTitleInEnglish}
                         </h2>
                         <h2 className={"linkingBookMainHeader dnii"}>
-                            kortee'nea
+                            <a className={"korteenea"}  href={"https://archive.guildofarchivists.org/wiki/Book/#Manufacture"}>{bookTitleInDni}</a>
                         </h2>
-                        <p className="bookP_1_small">
-                            The next pages have yet to be written...
+                    <p className="bookP_1_small">
+                    The next pages have yet to be written...
                         </p>
                         <p className="bookPQuote_1">
                             &ldquo;The reader is entertained by the journey of another, but the writer

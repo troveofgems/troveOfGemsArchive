@@ -1,6 +1,11 @@
 @import "../../../../../node_modules/rfs/scss";
 $enable-responsive-font-sizes: true;
 
+.dnii:hover {
+  font-family: exile, sans-serif;
+  cursor: pointer;
+}
+
 img {
   height: calc(96px + 2vw);
   width: calc(96px + 2vw);
@@ -55,7 +60,7 @@ img {
 
 .bookStamp {
   margin: 0 auto;
-  @include padding-top(12rem);
+  //@include padding-top(12rem);
   text-align: center;
   width: 18%;
 }
@@ -63,7 +68,7 @@ img {
 button.bookTooltip, button.bookTooltip:hover, button.bookTooltip:active {
   background: transparent;
   border: none;
-  @include font-size(4rem);
+ // @include font-size(4rem);
   padding: 0;
   width: 100%;
 }
@@ -83,7 +88,7 @@ span.dnii {
 
 .linkingBookHeader {
   color: var(--book-cover-3)!important;
-  @include font-size(1.75rem);
+  //@include font-size(1.75rem);
   margin: .5rem auto 0 auto!important;
   overflow: hidden;
   text-align: center;
@@ -92,7 +97,7 @@ span.dnii {
 
 .linkingBookMainHeader {
   color: var(--book-cover-3)!important;
-  @include font-size(2rem);
+  //@include font-size(2rem);
   font-weight: bold;
   margin: 0.25rem auto .5rem auto!important;
   overflow: hidden;
@@ -161,7 +166,7 @@ span.dnii {
     1280×720 – 4.74% - Complete
     768×1024 – 4.72% - Complete
 */
-@media(min-width: 2000px) and (max-width: 2099px) {
+@media(min-width: 2000px) {
   .mobile-book, .tablet-book {
     visibility: hidden;
     height: 0!important;
@@ -179,8 +184,12 @@ span.dnii {
 
   .openBookContent {
     height: 100%;
-    padding: 1rem 3rem 2.5rem 3.5rem;
+    padding: 5.25rem 3rem 6.75rem 3.5rem;
     overflow: hidden;
+  }
+
+  .imgLogo {
+    padding: 15px;
   }
 
   .linkingBookHeader {
@@ -188,7 +197,6 @@ span.dnii {
     width: 100%;
     margin: 1rem 0 0 0!important;
     text-align: start;
-    padding-left: calc(2.5rem + .1vw)!important;
   }
 
   .bookTooltip {
@@ -197,8 +205,9 @@ span.dnii {
   }
 
   .linkingBookMainHeader {
-    font-size: calc(.25rem + 1vw);
+    font-size: calc(0.75rem + 50%);
     text-align: center;
+    width: 100%;
   }
 
   .openBookPage1 {
@@ -210,33 +219,36 @@ span.dnii {
   }
 
   .pageLinkingPanel {
-    height: 175px;
-    width: 275px;
-    margin-left: 3.5rem;
+    height: 150px;
+    width: 175px;
+    margin: -6rem auto 0 auto;
   }
 
   #splashImg {
-    width: 35%;
+    width: 25%;
   }
 
   .bookP_1, .bookP_2 {
     margin: 0.5rem 0;
     @include font-size(1rem);
-    @include margin-left(3.75rem);
+    @include margin-left(1rem);
     @include margin-right(2rem);
-    font-size: 1.25rem;
   }
 
   .bookPQuote_1, .bookPQuoteAuthor {
-    @include font-size(1.25rem);
-    @include margin-left(3.5rem);
+    @include font-size(1rem);
+    @include margin-left(.5rem);
     @include margin-right(1.5rem);
   }
 
   .bookP_1_small {
-    @include margin-left(3.5rem);
+    @include font-size(.75rem);
+    @include margin-left(.5rem);
     @include margin-right(1.5rem);
-    font-size: 1rem;
+  }
+
+  header {
+    width: 100%;
   }
 }
 @media(min-width: 1900px) and (max-width: 1999px){
@@ -257,8 +269,12 @@ span.dnii {
 
   .openBookContent {
     height: 100%;
-    padding: 1rem 3rem 2.5rem 3.5rem;
+    padding: 5.75rem 3rem 7rem 3.5rem;
     overflow: hidden;
+  }
+
+  .imgLogo {
+    padding: 15px;
   }
 
   .linkingBookHeader {
@@ -266,7 +282,7 @@ span.dnii {
     width: 100%;
     margin: 1rem 0 0 0!important;
     text-align: start;
-    padding-left: calc(2.5rem + .1vw)!important;
+    padding-left: calc(.25rem + .1vw)!important;
   }
 
   .bookTooltip {
@@ -275,8 +291,9 @@ span.dnii {
   }
 
   .linkingBookMainHeader {
-    font-size: calc(.25rem + 1vw);
+    font-size: calc(0.75rem + 50%);
     text-align: center;
+    width: 100%;
   }
 
   .openBookPage1 {
@@ -288,33 +305,36 @@ span.dnii {
   }
 
   .pageLinkingPanel {
-    height: 175px;
-    width: 275px;
-    margin-left: 3.5rem;
+    height: 150px;
+    width: 175px;
+    margin: -6rem auto 0 auto;
   }
 
   #splashImg {
-    width: 35%;
+    width: 25%;
   }
 
   .bookP_1, .bookP_2 {
     margin: 0.5rem 0;
-    @include font-size(1rem);
-    @include margin-left(2.75rem);
+    @include font-size(.9rem);
+    @include margin-left(.75rem);
     @include margin-right(2rem);
-    font-size: 1.25rem;
   }
 
   .bookPQuote_1, .bookPQuoteAuthor {
-    @include font-size(1.25rem);
-    @include margin-left(2.5rem);
+    @include font-size(.9rem);
+    @include margin-left(.75rem);
     @include margin-right(1.5rem);
   }
 
   .bookP_1_small {
-    @include margin-left(2.5rem);
+    @include font-size(.75rem);
+    @include margin-left(.75rem);
     @include margin-right(1.5rem);
-    font-size: 1rem;
+  }
+
+  header {
+    width: 100%;
   }
 }
 @media(min-width: 1701px) and (max-width: 1899px) {
@@ -333,23 +353,28 @@ span.dnii {
     background-size:  contain;
   }
 
+  .imgLogo {
+    padding: 15px;
+  }
+
   .openBookContent {
     height: 100%;
-    padding: 1rem 3rem 2.5rem 3.5rem;
+    padding: 5rem 3rem 5.5rem 3.5rem;
     overflow: hidden;
   }
 
   .linkingBookHeader {
     font-size: calc(.75rem + .25vw)!important;
     width: 100%;
-    margin: 5rem 0 0 0!important;
+    margin: 1rem 0 0 0!important;
     text-align: start;
-    padding-left: calc(2.5rem + .1vw)!important;
+    padding-left: calc(.125rem + .1vw);
   }
 
   .bookTooltip {
     font-size: calc(.75rem + .25vw)!important;
     width: 15%!important;
+    /*margin-right: 10px!important;*/
   }
 
   .linkingBookMainHeader {
@@ -367,12 +392,12 @@ span.dnii {
 
   .pageLinkingPanel {
     height: 150px;
-    width: 200px;
-    margin: 0 auto;
+    width: 175px;
+    margin: -6rem auto 0 auto;
   }
 
   #splashImg {
-    width: 35%;
+    width: 25%;
   }
 
   .bookP_1, .bookP_2 {
@@ -384,7 +409,7 @@ span.dnii {
   }
 
   .bookPQuote_1, .bookPQuoteAuthor {
-    @include font-size(1rem);
+    @include font-size(.8rem);
     @include margin-left(.75rem);
     @include margin-right(1.5rem);
     @include margin-bottom(.125rem);
@@ -398,7 +423,7 @@ span.dnii {
     @include margin-left(.75rem);
     @include margin-right(1.5rem);
     @include margin-bottom(.125rem);
-    font-size: .9rem;
+    @include font-size(.75rem);
   }
 
   header {
@@ -406,24 +431,35 @@ span.dnii {
   }
 }
 @media(min-width: 1701px) and (max-width: 1800px) {
+  .openBookContent {
+    height: 100%;
+    padding: 5.65em 3rem 6.5rem 3.25rem;
+    overflow: hidden;
+  }
+
+  .linkingBookMainHeader {
+    font-size: calc(.125rem + 80%);
+  }
+
   .bookP_1, .bookP_2 {
-    margin: 0.5rem 0;
-    @include font-size(1rem);
-    @include margin-left(2rem);
+    margin: .5rem 0;
+    @include font-size(.8rem);
+    @include margin-left(.125rem);
     @include margin-right(1rem);
-    font-size: .9rem;
   }
 
   .bookPQuote_1, .bookPQuoteAuthor {
-    @include font-size(1rem);
-    @include margin-left(2rem);
+    @include font-size(.8rem);
+    @include margin-bottom(.5rem);
+    @include margin-left(.125rem);
     @include margin-right(1.5rem);
   }
 
   .bookP_1_small {
-    @include margin-left(2rem);
+    @include font-size(.75rem);
+    @include margin-bottom(.5rem);
+    @include margin-left(.125rem);
     @include margin-right(1.5rem);
-    font-size: .9rem;
   }
 }
 @media(min-width: 1601px) and (max-width: 1700px) {
@@ -444,26 +480,32 @@ span.dnii {
 
   .openBookContent {
     height: 100%;
-    padding: 1rem 3rem 2.5rem 3.5rem;
+    padding: 5rem 3rem 5.5rem 3.25rem;
     overflow: hidden;
   }
 
   .linkingBookHeader {
     font-size: calc(1rem + .25vw)!important;
     width: 100%;
-    margin: 1rem 0 0 0!important;
+    margin: .5rem 0 0 0!important;
     text-align: start;
-    padding-left: calc(1.5rem + .1vw)!important;
+    padding-left: calc(.125rem + 1%)!important;
   }
 
   .bookTooltip {
     font-size: calc(1rem + .25vw)!important;
     width: 15%!important;
+   /* margin-right: 5px!important;*/
+  }
+
+  .imgLogo {
+    padding: 15px;
   }
 
   .linkingBookMainHeader {
-    font-size: calc(.25rem + 1vw);
+    font-size: calc(.15rem + 1vw);
     text-align: center;
+    width: 100%;
   }
 
   .openBookPage1 {
@@ -476,32 +518,40 @@ span.dnii {
 
   .pageLinkingPanel {
     height: 150px;
-    width: 200px;
-    margin-left: 3.5rem;
+    width: 175px;
+    margin-left: 1rem;
   }
 
   #splashImg {
-    width: 35%;
+    width: 25%;
   }
 
   .bookP_1, .bookP_2 {
     margin: 0.5rem 0;
-    @include font-size(1rem);
-    @include margin-left(2rem);
+    @include font-size(.75rem);
+    @include margin-left(.05rem);
     @include margin-right(1rem);
-    font-size: .9rem;
   }
 
   .bookPQuote_1, .bookPQuoteAuthor {
-    @include font-size(1rem);
-    @include margin-left(2rem);
-    @include margin-right(1.5rem);
+    @include font-size(.75rem);
+    @include margin-left(.05rem);
+    @include margin-right(1rem);
   }
 
   .bookP_1_small {
-    @include margin-left(2rem);
+    @include margin-left(.5rem);
     @include margin-right(1.5rem);
-    font-size: .9rem;
+    @include font-size(.65rem);
+  }
+
+  header {
+    width: 100%;
+  }
+}
+@media(min-width: 1450px) and (max-width: 1600px) {
+  .pageLinkingPanel {
+    margin-left: calc(1.25rem + 5%)!important;
   }
 }
 @media(min-width: 1400px) and (max-width: 1600px) {
@@ -513,6 +563,100 @@ span.dnii {
   .desktop-book {
     visibility: visible;
     height: calc(21rem + 5vw);
+    width: fit-content;
+  }
+
+  .bookDesktopView {
+    background-size:  contain;
+  }
+
+  .bookList {
+    --bs-gutter-x: 0;
+  }
+
+  .openBookContent {
+    height: 100%;
+    padding: 5.5rem 3rem 6rem 3rem;
+    overflow: hidden;
+  }
+
+  .linkingBookHeader {
+    font-size: calc(.75rem + .25vw)!important;
+    width: 100%;
+    margin: .25rem 0 0 0!important;
+    text-align: start;
+    padding-right: calc(.5rem + .1vw)!important;
+  }
+
+  .bookTooltip {
+    font-size: calc(1.1rem + .25vw)!important;
+    width: 15%!important;
+    margin-right: 10px;
+  }
+
+  .linkingBookMainHeader {
+    font-size: calc(.15rem + 1vw);
+    margin: 0 auto .15rem auto!important;
+    text-align: center;
+    width: 100%;
+  }
+
+  .openBookPage1 {
+    text-align: start;
+    margin-left: 0;
+    padding-left: .125rem;
+  }
+
+  .openBookPage2 {
+    align-content: center;
+  }
+
+  .pageLinkingPanel {
+    height: 150px;
+    width: 145px;
+    @include margin-left(1rem);
+  }
+
+  #splashImg {
+    width: 25%;
+  }
+
+  .imgLogo {
+    padding: 10px;
+  }
+
+  .bookP_1, .bookP_2 {
+    margin: 0.5rem 0;
+    @include font-size(.7rem);
+    @include margin-left(.5rem);
+    @include margin-right(.25rem);
+  }
+
+  .bookPQuote_1, .bookPQuoteAuthor {
+    @include font-size(.7rem);
+    @include margin-left(.25rem);
+    @include margin-right(.25rem);
+  }
+
+  .bookP_1_small {
+    @include font-size(.65rem);
+    @include margin-left(.25rem);
+    @include margin-right(.25rem);
+  }
+
+  header {
+    width: 100%;
+  }
+}
+@media(min-width: 1351px) and (max-width: 1399px) {
+  .mobile-book, .tablet-book {
+    visibility: hidden;
+    height: 0!important;
+    width: 0!important;
+  }
+  .desktop-book {
+    visibility: visible;
+    height: calc(17rem + 5vw);
     width: fit-content;
   }
 
@@ -555,34 +699,38 @@ span.dnii {
   .pageLinkingPanel {
     height: 150px;
     width: 200px;
-    margin-left: 3rem;
+    margin-left: 1.25rem;
   }
 
   #splashImg {
     width: 35%;
   }
 
+  header {
+    width: 100%;
+  }
+
   .bookP_1, .bookP_2 {
     margin: 0.5rem 0;
     @include font-size(1rem);
-    @include margin-left(2rem);
+    @include margin-left(1.5rem);
     @include margin-right(1rem);
     font-size: .9rem;
   }
 
   .bookPQuote_1, .bookPQuoteAuthor {
     @include font-size(1rem);
-    @include margin-left(2rem);
-    @include margin-right(1.5rem);
+    @include margin-left(1.5rem);
+    @include margin-right(1rem);
   }
 
   .bookP_1_small {
-    @include margin-left(2rem);
-    @include margin-right(1.5rem);
+    @include margin-left(1rem);
+    @include margin-right(1.75rem);
     font-size: .9rem;
   }
 }
-@media(min-width: 1281px) and (max-width: 1399px) {
+@media(min-width: 1281px) and (max-width: 1350px) {
   .mobile-book, .tablet-book {
     visibility: hidden;
     height: 0!important;
@@ -1302,6 +1450,14 @@ span.dnii {
     412×869 – 3.67% - complete
 */
 @media(min-width: 526px) and (max-width: 600px) {
+  .dnii, .dnidings {
+    font-size: 2rem;
+  }
+
+  .linkingBookMainHeader {
+    @include font-size(1rem);
+  }
+
   #splashImg {
     width: calc(75% - 2.5vw);
     margin: 0 auto;
@@ -1328,8 +1484,16 @@ span.dnii {
   }
 }
 @media(min-width: 415px) and (max-width: 525px) {
+  .dnii, .dnidings {
+    font-size: 2rem;
+  }
+
+  .linkingBookMainHeader {
+    @include font-size(1rem);
+  }
+
   .bookStamp {
-    @include padding-top(10rem);
+    @include padding-top(11rem);
   }
 
   .pageLinkingPanel {
@@ -1345,6 +1509,14 @@ span.dnii {
   }
 }
 @media(min-width: 360px) and (max-width: 414px) {
+  .dnii, .dnidings {
+    font-size: 2rem;
+  }
+
+  .linkingBookMainHeader {
+    @include font-size(1rem);
+  }
+
   .book {
     height: 543px;
   }

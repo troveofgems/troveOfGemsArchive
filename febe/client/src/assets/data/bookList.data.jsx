@@ -93,7 +93,7 @@ export default function BookListData() {
                 hrefLink: "/site/owasp"
             },
             bookEntry: {
-                p1: "Learn how to secure your NodeJS/ExpressJS Apps as well as the OWASP principles.",
+                p1: "Learn how to secure your NodeJS/ExpressJS Apps and about OWASP principles.",
                 p2: "The directory contained within touches on Web App Security topics and providing code examples " +
                     "or explanations."
             }
