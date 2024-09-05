@@ -10,7 +10,12 @@ export default function DirectoryPage() {
         {
             directory: "html",
             directoryLabel: "HTML/5",
-            directoryIntroduction: "",
+            directoryIntroduction_1: "HTML (Hypertext Markup Language) is the standard language used for creating and " +
+                "designing web pages. It provides the structure and organization for online content. HTML5 is the " +
+                "latest version of HTML, offering enhanced capabilities and improvements over previous versions.",
+            directoryIntroduction_2: "HTML5 builds upon HTML's foundation, providing more powerful tools for creating " +
+                "engaging and interactive web experiences. Its improved semantics and multimedia capabilities make " +
+                "it ideal for modern web development.",
             linksViewable: !(params.directory === 'html'),
             links: [
                 {
@@ -59,7 +64,7 @@ export default function DirectoryPage() {
                     url: "/site/html/pages/flash-video-audio"
                 },
                 {
-                    listOrder: 9,
+                    listOrder: "9",
                     text: "Extra Markup",
                     url: "/site/html/pages/extra-markup"
                 },
@@ -68,7 +73,12 @@ export default function DirectoryPage() {
         {
             directory: "css",
             directoryLabel: "CSS/3",
-            directoryIntroduction: "",
+            directoryIntroduction_1: "CSS (Cascading Style Sheets) is a stylesheet language used to control the " +
+                "appearance and layout of web pages. It allows developers to separate the presentation of content " +
+                "from its structure, making it easier to maintain and update websites.",
+            directoryIntroduction_2: "CSS3 builds upon CSS's foundation, offering more powerful tools for creating " +
+                "visually appealing and interactive web experiences. Its improved capabilities make it " +
+                "ideal for modern web development.",
             linksViewable: !(params.directory === 'css'),
             links: [
                 {
@@ -121,7 +131,12 @@ export default function DirectoryPage() {
         {
             directory: "data-visualizations",
             directoryLabel: "Data Visualizations",
-            directoryIntroduction: "",
+            directoryIntroduction_1: "Flotr2 is a JavaScript library for creating HTML5 charts and graphs. It's " +
+                "designed to be lightweight and flexible, allowing developers to easily generate various types " +
+                "of visualizations.",
+            directoryIntroduction_2: "Flotr2 simplifies chart creation while offering powerful customization " +
+                "options, making it suitable for various data visualization needs. Explore how to build interactive" +
+                "charts in this section!",
             linksViewable: !(params.directory === "data-visualizations"),
             links: [
                 {
@@ -174,7 +189,11 @@ export default function DirectoryPage() {
         {
             directory: "accessibility",
             directoryLabel: "Accessibility",
-            directoryIntroduction: "",
+            directoryIntroduction_1: "ARIA (Accessible Rich Internet Applications) is a set of attributes that " +
+                "enhance web accessibility. It helps make dynamic web content and complex UI elements accessible " +
+                "to users with disabilities.",
+            directoryIntroduction_2: "ARIA helps bridge the gap between rich web applications and accessibility, " +
+                "enabling more inclusive web experiences.",
             linksViewable: !(params.directory === "accessibility"),
             links: [
                 {
@@ -257,7 +276,14 @@ export default function DirectoryPage() {
         {
             directory: "owasp",
             directoryLabel: "Web App Security",
-            directoryIntroduction: "",
+            directoryIntroduction_1: "Web application security focuses on protecting web-based systems from various " +
+                "threats and vulnerabilities. It involves implementing measures to prevent unauthorized access, " +
+                "data breaches, and system compromise.",
+            directoryIntroduction_2: "By focusing on web application security and utilizing OWASP resources, " +
+                "organizations can significantly reduce the risk of security breaches and create more " +
+                "trustworthy online systems.",
+            directoryIntroduction_3: "This section focuses on what security considerations should be taken " +
+                "when building applications, specifically NodeJS/ExpressJS applications.",
             linksViewable: !(params.directory === "owasp"),
             links: [
                 {
@@ -335,11 +361,21 @@ export default function DirectoryPage() {
     ];
 
     const directoryData = directoryList.find((item, index) => item.directory === params.directory);
-    console.log("directoryData: ", directoryData);
-
     return (
         <main className="mainSubSection">
-            <SidebarNavigator directoryList={directoryList} />
+            <div id="notViewableMessage">
+                <figure className={"text-center tablePanelBackground_darker"}>
+                    <blockquote className="blockquote p-3">
+                        <p className={"text-start"}>
+                            This site is not configured to render below 359px width viewports. Please resize the
+                            browser
+                            width to be greater than 359px.
+                        </p>
+                    </blockquote>
+                </figure>
+            </div>
+            <div id="trulyFalling"></div>
+            <SidebarNavigator directoryList={directoryList}/>
 
             <div className="container-fluid pageContent">
                 <div className="row col-lg-12 col-sm-12 rowContainer">
@@ -361,14 +397,20 @@ export default function DirectoryPage() {
                                     {directoryData.directoryLabel} Directory
                                 </h2>
                                 <p className="lead page__intro_1">
-                                    {directoryData.directoryIntroduction}
+                                    {directoryData.directoryIntroduction_1 || ""}
+                                </p>
+                                <p className="lead page__intro_2">
+                                    {directoryData.directoryIntroduction_2 || ""}
+                                </p>
+                                <p className="lead page__intro_2">
+                                    {directoryData.directoryIntroduction_3 || ""}
                                 </p>
                             </div>
                             <div className="col-lg-6 col-md-6 pagePanel_2"
                             >
-                                <p className="lead page__intro_2 text-center">
+                                <h2 className="page__h2 toc">
                                     Table of Contents
-                                </p>
+                                </h2>
                                 <ol id="linksDirectory">
                                     {
                                         directoryData.links.map((item, index) => (

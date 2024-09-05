@@ -15,14 +15,14 @@ export default function SidebarNavigator({directoryList}) {
                     <li className="nav-item">
                         <Link to="/" className="nav-link text-truncate">
                             <i className="fs-5 bi-house"></i><span
-                            className="d-none d-sm-inline navItemLabel">Home</span>
+                            className="d-sm-inline navItemLabel">Home</span>
                         </Link>
                     </li>
                     {
                         directoryList.map((item, index) => item.linksViewable ? (
                             <li className="nav-item" key={item.directory + `_${index}`}>
                                 <a href={"#submenu-" + item.directory} data-bs-toggle="collapse" className="nav-link">
-                                    <span className="d-none d-sm-inline navItemLabel">{item.directoryLabel}</span>
+                                    <span className="d-sm-inline navItemLabel">{item.directoryLabel}</span>
                                 </a>
                                 <ul className="collapse nav flex-column ms-1" id={"submenu-" + item.directory}
                                     data-bs-parent={"#submenu-" + item.directory}
@@ -31,7 +31,7 @@ export default function SidebarNavigator({directoryList}) {
                                         item.links.map((item_2, index_2) => (
                                             <li key={index_2} className="nav-item">
                                                 <Link to={item_2.url} className="nav-link nav-sub-link">
-                                                    - <span className="d-none d-sm-inline subLink">{item_2.text}</span>
+                                                    - <span className="d-sm-inline subLink">{item_2.text}</span>
                                                 </Link>
                                             </li>
                                         ))
