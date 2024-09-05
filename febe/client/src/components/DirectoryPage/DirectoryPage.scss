@@ -1,0 +1,869 @@
+@import "../../../node_modules/rfs/scss";
+$enable-responsive-font-sizes: true;
+
+.mainSubSection {
+  width: 100%;
+}
+
+.page__intro_1, .page__intro_2 {
+  color: var(--book-cover-3);
+  width: 95%;
+  margin: 0.5rem auto;
+  text-indent: 20px;
+}
+
+.page__h2 {
+  color: var(--book-cover-3);
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.toc {
+  color: var(--book-cover-3);
+  text-align: center;
+}
+
+.pageContent {
+  height: inherit;
+  padding-right: 0;
+  margin-right: 0;
+  background: rgb(190,120,40);
+  background: linear-gradient(90deg, rgba(190,120,40,1) 0%, rgba(118,53,10,1) 6%, rgba(39,23,14,1) 13%);
+}
+
+.rowContainer {
+  height: inherit;
+  padding-right: 0;
+  margin-right: 0;
+  margin-left: 0;
+}
+
+#tableRest {
+  background-image: url("../Landing/img/tableTop.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 100%!important;
+  margin-right: 0;
+}
+
+li::marker {
+  font-family: "dni", sans-serif;
+  cursor: pointer;
+}
+
+main.mainSubSection {
+  margin-top: 0;
+  height: 100vh;
+}
+
+.pagePanel_1, .pagePanel_2 {
+  margin: 2rem 0 3.25rem 0!important;
+  padding: 0 2rem 0 13rem!important;
+}
+
+.pagePanel_2 {
+  padding: 0 12rem 0 2rem!important;
+}
+
+.navigationContent {
+  background-image: url("../Landing/img/oldBook.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  height: 100%!important;
+  margin-right: 0;
+}
+
+/* Set Page Background */
+.topicContents {
+  background-image: url("../Landing/img/oldPaper.jpg");
+  background-position: top;
+  background-repeat: repeat;
+  background-size: cover;
+  color: var(--book-cover-4);
+}
+
+#pagePreambles {
+  margin: 0 auto;
+  width: 75%;
+}
+
+.pagePreamble_1 {
+  font-size: var(--h6-font-size);
+  margin: 2rem auto 1rem auto;
+  padding-bottom: 1rem;
+}
+
+.pagePreamble_2 {
+  font-size: var(--h6-font-size);
+  margin-bottom: 2rem;
+}
+
+.pagePreamble_1, .pagePreamble_2 {
+  color: var(--font-color-old-page-text);
+}
+
+.generalContainer {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sectionHeader > p {
+  color: var(--font-color-old-page-text);
+  font-size: var(--h6-font-size);
+}
+
+.tablePanel1 > p {
+  color: var(--font-color-old-page-text);
+  font-size: var(--h6-font-size);
+}
+
+.tablePanel2 > p {
+  color: var(--font-color-old-page-text);
+  font-size: var(--body-font-size-3);
+}
+
+.tablePanel3 > ul > li {
+  color: var(--font-color-old-page-text);
+  font-size: var(--body-font-size-3);
+}
+
+.tablePanel2, .tablePanel3 {
+  background: rgba(169, 121, 66, .65);
+}
+
+.tablePanel3 > p {
+  font-size: var(--body-font-size-4);
+}
+
+.hrStyle {
+  color: var(--book-cover-4);
+  border-width: 3px;
+  border-color: inherit;
+  opacity: .75;
+}
+
+.card-link {
+  color: var(--split-complimentary-2);
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card-link:hover {
+  font-size: 1.65rem;
+  text-decoration: underline;
+}
+
+.contentContainer {
+  text-align: left;
+  margin-bottom: 4rem;
+}
+
+.textEntry_1 {
+  font-size: 1.75rem;
+}
+
+.exploreMore, .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  background: var(--book-cover-3);
+  color: var(--tiana-off-white);
+}
+
+.exploreMore, .exploreMore:hover,
+.nav-pills .nav-link:hover {
+  font-size: 1.5rem;
+  background: var(--book-cover-4);
+}
+
+.nav-tabs .nav-link:hover {
+  font-size: 1.75rem;
+  color: var(--tiana-off-white);
+}
+
+.highlightCode {
+  font-size: var(--body-font-size-3);
+  color: var(--split-complimentary-2);
+}
+
+.nav-item > button {
+  background: var(--book-cover-2);
+}
+
+.nav-link {
+  color: var(--tiana-off-white);
+}
+
+.preStyler {
+  font-size: var(--body-font-size-5);
+}
+
+
+#linksDirectory>li {
+  display: list-item;
+  list-style-position: inside;
+}
+
+#linksDirectory>li.linkToPage > a,
+#linksDirectory>li.linkToPage::marker {
+  font-size: 1.35rem;
+  color: var(--book-cover-3);
+}
+
+#linksDirectory>li.linkToPage:hover > a:hover,
+#linksDirectory>li.linkToPage:hover::marker {
+  font-size: 1.5rem;
+  color: var(--book-cover-4);
+  text-decoration: underline;
+}
+
+.linkToPage>a {
+  text-decoration: none!important;
+}
+
+.linkToPage>a:hover {
+  text-decoration: underline!important;
+}
+
+.book__footer {
+  color: var(--book-cover-3);
+  font-size: var(--body-font-size-4);
+  text-align: center;
+}
+
+
+/* Desktop Responsiveness
+    1920×1080 – 20.66% -
+    1366×768 – 13.96% - Complete
+    1440×900 – 9.16% - Complete
+    1536×864 – 7.79% - Complete
+    1280×720 – 4.74% - Complete
+    768×1024 – 4.72% - Complete
+*/
+@media(min-width: 2100px) and (max-width: 2200px) {
+  .pagePanel_1, .pagePanel_2 {
+    margin-top: calc(7rem - 3%)!important;
+    margin-bottom: calc(14.25rem)!important;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 0 2rem 0 5rem!important;
+  }
+
+  .pagePanel_2 {
+    padding: 0 4.5rem 0 2rem !important;
+  }
+
+  .page__h2 {
+    @include font-size(1.5rem);
+    @include padding-left(5rem);
+  }
+
+  .toc {
+    @include padding-left(0);
+  }
+
+  .page__intro_1 {
+    @include font-size(1.25rem);
+    @include padding-left(2.5rem);
+    @include padding-right(2rem);
+  }
+
+  .page__intro_2 {
+    @include font-size(1.25rem);
+    @include padding-left(2.5rem);
+    @include padding-right(2rem);
+  }
+
+  .toc {
+    @include padding-left(0);
+  }
+
+  #linksDirectory > li.linkToPage > a {
+    @include font-size(1.25rem);
+  }
+
+  #linksDirectory > li.linkToPage::marker {
+    font-size: 1.25rem!important;
+  }
+}
+@media(min-width: 1900px) and (max-width: 2099px) {
+  .pagePanel_1, .pagePanel_2 {
+    margin-top: calc(9rem - 3%)!important;
+    margin-bottom: calc(14.25rem)!important;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 0 2rem 0 5rem!important;
+  }
+
+  .pagePanel_2 {
+    padding: 0 4.5rem 0 2rem !important;
+  }
+
+  .page__h2 {
+    @include font-size(1.5rem);
+    @include padding-left(3rem);
+  }
+
+  .page__intro_1 {
+    @include font-size(1.125rem);
+    @include padding-left(1.5rem);
+    @include padding-right(1rem);
+  }
+
+  .page__intro_2 {
+    @include font-size(1.125rem);
+    @include padding-left(1rem);
+    @include padding-right(2rem);
+  }
+
+  .toc {
+    @include padding-left(0);
+  }
+
+  #linksDirectory > li.linkToPage > a {
+    @include font-size(1.125rem);
+  }
+
+  #linksDirectory > li.linkToPage::marker {
+    font-size: 1.125rem!important;
+  }
+}
+@media(min-width: 1701px) and (max-width: 1899px) {
+  .pagePanel_1, .pagePanel_2 {
+    margin-top: calc(11rem - 3%)!important;
+    margin-bottom: calc(14.25rem)!important;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 0 2rem 0 5rem!important;
+  }
+
+  .pagePanel_2 {
+    padding: 0 4.5rem 0 2rem !important;
+  }
+
+  .page__h2 {
+    @include font-size(1.5rem);
+    @include padding-left(3rem);
+  }
+
+  .page__intro_1 {
+    @include font-size(1.125rem);
+    @include padding-left(1.5rem);
+    @include padding-right(1rem);
+  }
+
+  .page__intro_2 {
+    @include font-size(1.125rem);
+    @include padding-left(1rem);
+    @include padding-right(2rem);
+  }
+
+  .toc {
+    @include padding-left(0);
+  }
+
+  #linksDirectory > li.linkToPage > a {
+    @include font-size(1.125rem);
+  }
+
+  #linksDirectory > li.linkToPage::marker {
+    font-size: 1.125rem!important;
+  }
+}
+@media(min-width: 1600px) and (max-width: 1700px) {
+  .pagePanel_1, .pagePanel_2 {
+    margin-top: calc(12rem - 3%)!important;
+    margin-bottom: calc(14.25rem)!important;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 0 2rem 0 5rem!important;
+  }
+
+  .pagePanel_2 {
+    padding: 0 4.5rem 0 2rem !important;
+  }
+
+  .page__h2 {
+    @include font-size(1.5rem);
+    @include padding-left(2rem);
+  }
+
+  .page__intro_1 {
+    @include font-size(1rem);
+    @include padding-left(.5rem);
+    @include padding-right(1rem);
+  }
+
+  .page__intro_2 {
+    @include font-size(1rem);
+    @include padding-left(.1rem);
+    @include padding-right(2rem);
+  }
+
+  .toc {
+    @include padding-left(0);
+  }
+
+  #linksDirectory > li.linkToPage > a {
+    @include font-size(1rem);
+  }
+
+  #linksDirectory > li.linkToPage::marker {
+    font-size: 1rem!important;
+  }
+}
+@media(min-width: 1400px) and (max-width: 1599px) {
+  .pagePanel_1, .pagePanel_2 {
+    margin-top: calc(14rem - 3%)!important;
+    margin-bottom: calc(14.25rem)!important;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 0 2rem 0 5rem!important;
+  }
+
+  .pagePanel_2 {
+    padding: 0 4.5rem 0 2rem !important;
+  }
+
+  .page__h2 {
+    @include font-size(1.5rem);
+    @include padding-left(2rem);
+  }
+
+  .page__intro_1 {
+    @include font-size(1rem);
+    @include padding-left(.5rem);
+    @include padding-right(1rem);
+  }
+
+  .page__intro_2 {
+    @include font-size(1rem);
+    @include padding-left(.1rem);
+    @include padding-right(2rem);
+  }
+
+  .toc {
+    @include padding-left(0);
+  }
+
+  #linksDirectory > li.linkToPage > a {
+    @include font-size(1rem);
+  }
+
+  #linksDirectory > li.linkToPage::marker {
+    font-size: 1rem!important;
+  }
+}
+@media(min-width: 1281px) and (max-width: 1399px) {
+  .pagePanel_1, .pagePanel_2 {
+    margin: 13.5rem 0 14.25rem 0!important;
+    padding: 0 2rem 0 5rem!important;
+  }
+
+  .pagePanel_2 {
+    padding: 0 4.5rem 0 2rem !important;
+  }
+
+  .page__h2 {
+    @include font-size(1.5rem);
+    @include padding-left(2rem);
+  }
+
+  .page__intro_1 {
+    @include font-size(1rem);
+    @include padding-left(.5rem);
+    @include padding-right(1rem);
+  }
+
+  .page__intro_2 {
+    @include font-size(1rem);
+    @include padding-left(.1rem);
+    @include padding-right(2rem);
+  }
+
+  .toc {
+    @include padding-left(0);
+  }
+
+  #linksDirectory > li.linkToPage > a {
+    @include font-size(1rem);
+  }
+
+  #linksDirectory > li.linkToPage::marker {
+    font-size: 1rem!important;
+  }
+}
+
+/* Tablet Responsiveness
+    DIM | User % | Code Written
+    768×1024 – 50.14% - Complete
+    800×1280 – 7.07% - Complete
+    1280×800 – 6.55%
+    601×962 – 6.03% - Complete
+    810×1080 – 3.7% - Complete
+    962×601 – 3.27% - Complete
+*/
+@media(min-width: 1231px) and (max-width: 1280px) {
+  .navigationContent {
+    height: 55%!important;
+    background-position: top;
+    background-size: contain;
+  }
+
+  .page__h2 {
+    @include padding-left(20px);
+  }
+
+  .toc {
+    @include padding-left(0);
+  }
+
+  .pagePanel_1, .pagePanel_2 {
+    padding: 0 1rem 0 4.75rem !important;
+    margin: 1.5rem 0 2rem 0 !important;
+  }
+
+  .pagePanel_2 {
+    padding: 0 5.75rem 0 1rem !important;
+  }
+
+  #linksDirectory > li.linkToPage::marker {
+    font-size: 1rem!important;
+  }
+
+  .page__h2 {
+    @include font-size(1.25rem);
+  }
+
+  .page__intro_1 {
+    @include font-size(1rem);
+    @include padding-left(.5rem);
+    @include padding-right(1rem);
+  }
+
+  .page__intro_2 {
+    @include font-size(1rem);
+    @include padding-left(.1rem);
+    @include padding-right(2rem);
+  }
+
+  #linksDirectory > li.linkToPage > a {
+    @include font-size(1.125rem);
+  }
+
+  #linksDirectory > li.linkToPage {
+    @include font-size(1.125rem);
+  }
+
+  .book__footer {
+    @include font-size(1.125rem);
+  }
+}
+@media(min-width: 1201px) and (max-width: 1230px) {
+  .navigationContent {
+    height: 55%!important;
+    background-position: top;
+    background-size: contain;
+  }
+
+  .page__h2 {
+    @include padding-left(15px);
+  }
+
+  .pagePanel_1, .pagePanel_2 {
+    padding: 0 1rem 0 3.75rem !important;
+    margin: 1.5rem 0 2rem 0 !important;
+  }
+
+  .pagePanel_2 {
+    padding: 0 5.75rem 0 1rem !important;
+  }
+
+  #linksDirectory > li.linkToPage::marker {
+    font-size: 1rem!important;
+  }
+
+  .page__h2 {
+    @include font-size(1.25rem);
+  }
+
+  .page__intro_1 {
+    @include font-size(1rem);
+    @include padding-left(.5rem);
+    @include padding-right(1rem);
+  }
+
+  .page__intro_2 {
+    @include font-size(1rem);
+    @include padding-left(.1rem);
+    @include padding-right(2rem);
+  }
+
+  #linksDirectory > li.linkToPage > a {
+    @include font-size(1.125rem);
+  }
+
+  #linksDirectory > li.linkToPage {
+    @include font-size(1.125rem);
+  }
+
+  .book__footer {
+    @include font-size(1.125rem);
+  }
+}
+@media(min-width: 1026px) and (max-width: 1200px) {
+  .navigationContent {
+    height: 55%!important;
+    background-position: top;
+    background-size: contain;
+  }
+
+  .page__h2 {
+    @include margin-left(15px);
+  }
+
+  .pagePanel_1, .pagePanel_2 {
+    padding: 0 1rem 0 3.5rem !important;
+    margin: 1.5rem 0 2rem 0 !important;
+  }
+
+  .pagePanel_2 {
+    padding: 0 3.1rem 0 1rem !important;
+  }
+
+  #linksDirectory > li.linkToPage::marker {
+    font-size: 1rem!important;
+  }
+
+  .page__h2 {
+    @include font-size(1.25rem);
+  }
+
+  .page__intro_1 {
+    @include font-size(.8rem);
+    @include margin-left(1rem);
+  }
+
+  .page__intro_2 {
+    @include font-size(.8rem);
+    @include margin-left(.5rem);
+  }
+
+  #linksDirectory > li.linkToPage > a {
+    @include font-size(.8rem);
+  }
+
+  #linksDirectory > li.linkToPage {
+    @include font-size(.8rem);
+  }
+
+  .book__footer {
+    @include font-size(.8rem);
+  }
+}
+@media(min-width: 992px) and (max-width: 1026px) {
+  .navigationContent {
+    height: 45%!important;
+    background-position: top;
+    background-size: cover;
+  }
+
+  .page__h2 {
+    margin-left: 10px;
+  }
+
+  .pagePanel_1, .pagePanel_2 {
+    padding: 0 1rem 0 3.5rem !important;
+    margin: 1.5rem 0 2rem 0 !important;
+  }
+
+  .pagePanel_2 {
+    padding: 0 3.1rem 0 1rem !important;
+  }
+
+  #linksDirectory > li.linkToPage::marker {
+    font-size: 1rem!important;
+  }
+
+  .page__h2 {
+    @include font-size(1.25rem);
+  }
+
+  .page__intro_1, .page__intro_2 {
+    @include font-size(.8rem);
+  }
+
+  #linksDirectory > li.linkToPage > a {
+    @include font-size(.8rem);
+  }
+
+  #linksDirectory > li.linkToPage {
+    @include font-size(.8rem);
+  }
+
+  .book__footer {
+    @include font-size(.8rem);
+  }
+}
+@media(min-width: 901px) and (max-width: 991px) {
+  .expandMenuBtn {
+    position: absolute!important;
+    margin: 20px!important;
+  }
+
+  #tableRest {
+    height: 100vh!important;
+    margin-top: 3rem;
+    background-image: url("../Landing/img/oldPaper.jpg")!important;
+  }
+
+  .navigationContent {
+    background-image: unset;
+  }
+
+  .pageContent {
+    margin-top: -2rem;
+    height: fit-content;
+    padding-left: 0;
+  }
+
+  #linksDirectory {
+    padding-left: 7rem;
+  }
+
+  .page__h2 {
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .pagePanel_1, .pagePanel_2 {
+    padding: 0!important;
+    margin: 0!important;
+  }
+
+  .page__intro_1, .page__intro_2 {
+    width: 85%!important;
+  }
+
+  #offcanvas {
+    width: 100%!important;
+  }
+
+  #linksDirectory > li.linkToPage > a {
+    font-size: 1.15rem;
+  }
+}
+@media(min-width: 601px) and (max-width: 900px)  {
+  .expandMenuBtn {
+    position: absolute!important;
+    margin: 20px!important;
+  }
+
+  #tableRest {
+    height: 100vh!important;
+    margin-top: 3rem;
+    background-image: url("../Landing/img/oldPaper.jpg")!important;
+  }
+
+  .navigationContent {
+    background-image: unset;
+  }
+
+  .pageContent {
+    margin-top: -2rem;
+    height: fit-content;
+    padding-left: 0;
+  }
+
+  #linksDirectory {
+    padding-left: 7rem;
+  }
+
+  .page__h2 {
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .pagePanel_1, .pagePanel_2 {
+    padding: 0!important;
+    margin: 0!important;
+  }
+
+  .page__intro_1, .page__intro_2 {
+    width: 85%!important;
+  }
+
+  #offcanvas {
+    width: 100%!important;
+  }
+
+  #linksDirectory > li.linkToPage > a {
+    font-size: 1.15rem;
+  }
+}
+
+/* Mobile Responsiveness
+    DIM | User % | Code Written
+    414×896 – 20.52% - complete
+    375×667 – 13.18% - complete
+    375×812 – 12.65% - complete
+    414×736 – 6.63% - complete
+    360×640 – 5.41% - complete
+    412×869 – 3.67% - complete
+*/
+@media(min-width: 360px) and (max-width: 600px) {
+  .expandMenuBtn {
+    position: absolute!important;
+  }
+
+  #tableRest {
+    height: 100vh;
+    margin-top: 3rem;
+    background-image: url("../Landing/img/oldPaper.jpg")!important;
+  }
+
+  .navigationContent {
+    background-image: unset;
+  }
+
+  .pageContent {
+    margin-top: -2rem;
+    height: fit-content;
+    padding-left: 0;
+  }
+
+  .page__h2 {
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .pagePanel_1, .pagePanel_2 {
+    padding: 0!important;
+    margin: 0!important;
+  }
+
+  .page__intro_1, .page__intro_2 {
+    width: 85%!important;
+  }
+
+  #offcanvas {
+    width: 100%!important;
+  }
+
+  #linksDirectory > li.linkToPage > a {
+    font-size: 1.15rem;
+  }
+}
+@media(max-width: 359px) {
+  #offcanvas {
+    margin-top: 12.3rem;
+    width: 100%!important;
+  }
+
+  .tablePanelBackground_darker {
+    margin: 1rem!important;
+  }
+}

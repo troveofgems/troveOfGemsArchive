@@ -1,0 +1,21 @@
+.deadLinkingPanel {
+  background-image: url("../../img/deadRadioStatic.gif");
+  background-color: slategray;
+  cursor: not-allowed;
+}
+
+.dnidings {
+  font-family: 'dnidingssymbol', sans-serif;
+  font-style: normal !important;
+}
+
+.korteenea {
+  font-family: 'dni', sans-serif;
+  color: var(--book-cover-3);
+  text-decoration: none;
+}
+
+.korteenea:hover {
+  font-family: 'exile', sans-serif;
+  text-decoration: underline;
+}

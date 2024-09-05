@@ -1,0 +1,23 @@
+header {
+  background-color: var(--monochromatic-1);
+  text-align: center;
+}
+
+#splashImg {
+  width: 75%;
+}
+
+.fallingThroughSpaceBackground {
+  padding: 0;
+  margin: 0;
+  align-content: center;
+  background-image: url("../../Error404/img/fallingThroughSpace_mod.gif");
+  background-repeat: repeat;
+  background-size: 100%;
+}
+
+@media(min-width: 1366px) {
+  .fallingThroughSpaceBackground {
+    background-size: unset!important;
+  }
+}
