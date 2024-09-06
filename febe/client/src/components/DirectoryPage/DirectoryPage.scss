@@ -119,25 +119,18 @@ main.mainSubSection {
 
 .tablePanel1 > p {
   color: var(--font-color-old-page-text);
-  font-size: var(--h6-font-size);
 }
 
 .tablePanel2 > p {
   color: var(--font-color-old-page-text);
-  font-size: var(--body-font-size-3);
 }
 
 .tablePanel3 > ul > li {
   color: var(--font-color-old-page-text);
-  font-size: var(--body-font-size-3);
 }
 
 .tablePanel2, .tablePanel3 {
   background: rgba(169, 121, 66, .65);
-}
-
-.tablePanel3 > p {
-  font-size: var(--body-font-size-4);
 }
 
 .hrStyle {
