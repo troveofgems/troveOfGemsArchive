@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML5 Text</title>
+    <meta name="description" content="HTML5 Text">
+
+    <link rel="icon" href="../../../../../favicon.ico" sizes="any">
+<!--    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="icon.png">-->
+
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#fafafa">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="stylesheet" href="../../../../../assets/css/root.variables.css" />
+    <link rel="stylesheet" href="../../../../../assets/css/default.styles.css" />
+    <link rel="stylesheet" href="../../../../../assets/css/shared/css/page.styles.css" />
+    <link rel="stylesheet" href="../../../../../assets/css/shared/css/sidebar.styles.css" />
+    <link rel="stylesheet" href="../../../../../assets/css/shared/css/single.page.styles.css" />
+    <link href="../client/src/components/DirectoryPage/TopicPage/topics/html-pages/structure/structure.scss" rel="stylesheet">
+  </head>
+  <body>
+  <!-- SideBar Nav -->
+  <div id="offcanvas" class="offcanvas offcanvas-start bg-dark canvasWidth" tabindex="-1" data-bs-keyboard="false" data-bs-backdrop="false">
+    <div class="offcanvas-header mb-0 pb-0">
+      <h6 class="offcanvas-title d-none d-sm-block sideBarHeader">Main Navigation</h6>
+      <button type="button" class="btn-close text-reset btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body px-0 pt-0">
+      <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start" id="menu">
+        <li class="nav-item">
+          <a href="/febe/client/public" class="nav-link text-truncate">
+            <i class="fs-5 bi-house"></i><span class="ms-1 d-none d-sm-inline navItemLabel">Home</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/site/dir/html/html-dir.index.html" class="nav-link text-truncate">
+            <i class="fs-5 bi-house"></i><span class="ms-1 d-none d-sm-inline navItemLabel">HTML Directory</span>
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a href="#submenu1" class="nav-link active">
+            <span class="ms-1 d-none d-sm-inline navItemLabel active">Current Page</span></a>
+          <ul class="collapse nav flex-column ms-1 show" id="submenu1" data-bs-parent="#menu">
+            <li style="padding-left: 10px;">
+              <a href="#htmlDir_0_1" class="nav-link"> <span class="d-none d-sm-inline subLink">1. Elements, Attributes, &amp; Values</span></a>
+            </li>
+            <li style="padding-left: 10px;">
+              <a href="#htmlDir_0_2" class="nav-link"> <span class="d-none d-sm-inline subLink">2. Basic Page Text</span></a>
+            </li>
+            <li style="padding-left: 10px;">
+              <a href="#htmlDir_0_3" class="nav-link"> <span class="d-none d-sm-inline subLink">3. Code Example</span></a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <footer>
+      <span class="sidebarFooter">2024 <a class="linkToMainWebsite" href="https://thegemtrove.herokuapp.com/">ToG</a> - DKGreco</span>
+    </footer>
+  </div>
+  <!-- End SideBar Nav -->
+    <div class="container-fluid pageContent">
+      <div class="row col-lg-12 col-sm-12 rowContainer">
+        <!-- Page Intro Section -->
+        <div class="col-lg-3 col-sm-12 menuTogglerContainer">
+          <div class="col-lg-12">
+            <div id="menuToggler">
+              <button class="btn expandMenuBtn" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button">
+                Menu <span class="material-symbols-outlined">subdirectory_arrow_right</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-9 col-sm-12 topicContents">
+          <h1 class="text-center m-3 mb-0">Enforcing Text with HTML5</h1>
+          <div id="pagePreambles">
+            <p class="pagePreamble_1">
+              Consider the differences between a newspaper, an online article, and an insurance form.
+              The modes of delivery and presentation are all very different, but all follow structures that organize the
+              content being presented to the user. Much like the table of contents on this project's landing page.
+              Newspapers will often tell a story by providing a header for the story, the text body content of the story,
+              who authored the story, and there might be images included. An online article might follow a similar format
+              as a newspaper, but by presenting a story online, a new structure is introduced when we add videos or
+              linkable content. An insurance form on the other hand is unlikely to include images, and instead is more
+              geared towards getting feedback from a user by way of checkboxes, radio options, text-boxes, etc.
+            </p>
+            <p class="pagePreamble_2">
+              When we structure word documents, we may reach for headings and subheadings to reflect a hierarchy of
+              information. A document might start with a large heading, followed by an introduction or the most important
+              information. It can be further broken down under subheadings and paragraphs for each new topic or section
+              of material.
+            </p>
+          </div>
+        </div>
+
+        <!-- Basic HTML Terms -->
+        <div class="col-lg-3"></div>
+        <div class="col-lg-9 col-sm-12 topicContents">
+          <div id="htmlDir_0_1"  class="generalContainer">
+            <div class="sectionHeader">
+              <hr class="hrStyle"/>
+              <h2>Elements, Attributes, &amp; Values</h2>
+              <p>
+                Markup is defined by the singular or combined use of elements, attributes, and values.
+              </p>
+              <hr class="hrStyle"/>
+            </div>
+            <div id="htmlBasics" class="contentContainer">
+              <div class="row">
+                <div class="col-sm-12 col-lg-12">
+                  <div class="row">
+                    <div class="row col-lg-12 col-sm-12">
+                      <div class="col-lg-4 col-sm-12 p-3 text-center align-content-center tablePanel1" style="border: 1px solid var(--book-cover-4)">
+                        <p>
+                          What are HTML <strong>Elements</strong>?
+                        </p>
+                      </div>
+                      <div class="col-lg-4 col-sm-12 p-3 text-start tablePanel2" style="border: 1px solid var(--book-cover-4)" >
+                        <p>
+                          HTML <strong>Elements</strong> are usually made from two tags: an
+                          <span style="color: var(--split-complimentary-2);">opening</span> and a
+                          <span style="color: var(--split-complimentary-3)">closing</span> tag.
+                        </p>
+                        <p>
+                          Each <strong>Element</strong> tells the browser something about the information being presented
+                          between its opening and closing tags:
+                        </p>
+                      </div>
+                      <div class="col-lg-4 col-sm-12 p-3 text-start align-content-center tablePanel3" style="border: 1px solid var(--book-cover-4)" >
+                        <p>
+                          <span style="font-weight: bold; color: var(--split-complimentary-2);">&lt;a&gt;</span><span style="color: black;">Link Descriptor Content</span><span style="font-weight: bold; color: var(--split-complimentary-3)">&lt;/a&gt;</span>
+                        </p>
+                        <p>
+                          <span style="font-weight: bold; color: var(--split-complimentary-2);">&lt;h1&gt;</span><span style="color: black;">Header Content</span><span style="font-weight: bold; color: var(--split-complimentary-3)">&lt;/h1&gt;</span>
+                        </p>
+                        <p>
+                          <span style="font-weight: bold; color: var(--split-complimentary-2);">&lt;q&gt;</span><span style="color: black;">Quoted Content</span><span style="font-weight: bold; color: var(--split-complimentary-3)">&lt;/q&gt;</span>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="row col-lg-12 col-sm-12">
+                      <div class="col-lg-4 col-sm-12 p-3 text-center align-content-center tablePanel1" style="border: 1px solid var(--book-cover-4)">
+                        <p>
+                          What are HTML <strong>Attributes</strong>?
+                        </p>
+                      </div>
+                      <div class="col-lg-4 col-sm-12 p-3 text-start tablePanel2" style="border: 1px solid var(--book-cover-4)" >
+                        <p>
+                          HTML <strong>Attributes</strong> provide additional information about the contents of an element.
+                          They appear on the opening tag of an element are made up of two parts: a <span style="color: var(--split-complimentary-2);">name</span> and a <span style="color: var(--split-complimentary-3);">value</span>.
+                        </p>
+                        <p>
+                          Each <strong>Attribute</strong> name indicates what kind of extra information you are supplying
+                          about the element's content. The majority of attributes can only be used on certain elements and
+                          either follow a pre-defined or stipulated format, although a few attributes (such as lang) can
+                          appear on any element.
+                        </p>
+                      </div>
+                      <div class="col-lg-4 col-sm-12 p-3 text-start align-content-center tablePanel3" style="border: 1px solid var(--book-cover-4)" >
+                        <p>
+                          &lt;p <span style="color: var(--split-complimentary-2); font-weight: bold;">lang=</span><span style="font-weight: bold; color: var(--split-complimentary-3);">"en"</span>&gt;Paragraph in English&lt;/p&gt;
+                        </p>
+                        <p>
+                          &lt;p <span style="color: var(--split-complimentary-2); font-weight: bold;">lang=</span><span style="font-weight: bold; color: var(--split-complimentary-3);">"cz"</span>&gt;Odstavec v češtině&lt;/p&gt;
+                        </p>
+                        <p>
+                          &lt;a <span style="color: var(--split-complimentary-2); font-weight: bold;">href=</span><span style="font-weight: bold; color: var(--split-complimentary-3);">"/some/fileOrUrlPath"</span>&gt;
+                          <br/>
+                          <span class="mx-3"> Link Descriptor Content</span><br/>
+                          &lt;/a&gt;
+                        </p>
+                      </div>
+                    </div>
+                    <div class="row col-lg-12 col-sm-12">
+                      <div class="col-lg-4 col-sm-12 p-3 text-center align-content-center tablePanel1" style="border: 1px solid var(--book-cover-4)">
+                        <p>
+                          What are HTML <strong>Values</strong>?
+                        </p>
+                      </div>
+                      <div class="col-lg-4 col-sm-12 p-3 text-start tablePanel2" style="border: 1px solid var(--book-cover-4)" >
+                        <p>
+                          HTML <strong>Values</strong> are usually static strings of text that can either represent
+                          content on the page, or values provided to attributes or application functions.
+                        </p>
+                      </div>
+                      <div class="col-lg-4 col-sm-12 p-3 text-start align-content-center tablePanel3" style="border: 1px solid var(--book-cover-4)" >
+                        <p>
+                          <span>&lt;a href=</span><span style="color: var(--split-complimentary-2); font-weight: bold;">"/some/fileOrUrlPath"</span>&gt;<br/>
+                            <span style="color: var(--split-complimentary-2); font-weight: bold;" class="mx-3">Link Descriptor Content</span><br/>
+                            &lt;/a&gt;
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Basic Page Text Using Elements -->
+        <div class="col-lg-3"></div>
+        <div class="col-lg-9 col-sm-12 topicContents">
+          <div id="htmlDir_0_2" class="generalContainer">
+            <div class="sectionHeader">
+              <hr class="hrStyle"/>
+              <h2>Basic Page Text</h2>
+              <p>
+                DOCTYPE Declaration, HTML, Head, Body Tags
+              </p>
+              <hr class="hrStyle"/>
+            </div>
+            <div id="basicPageStructure" class="contentContainer">
+              <div class="row">
+                <div class="col-sm-12 col-lg-12">
+                  <div class="row">
+                    <div class="row col-lg-12 col-sm-12">
+                      <div class="col-lg-4 col-sm-12 p-3 text-center align-content-center tablePanel1" style="border: 1px solid var(--book-cover-4)">
+                        <p>
+                          DOCTYPE Declaration Tag
+                        </p>
+                      </div>
+                      <div class="col-lg-4 col-sm-12 p-3 text-start tablePanel2" style="border: 1px solid var(--book-cover-4)" >
+                        <p>
+                          This element is required as the very first line of an HTML document and serves as an instruction
+                          to the web browser about the type of document to expect and which version of HTML is being used.
+                        </p>
+                      </div>
+                      <div class="col-lg-4 col-sm-12 p-3 text-start align-content-center tablePanel3" style="border: 1px solid var(--book-cover-4)" >
+                        <p>
+                          &lt;!DOCTYPE html&gt;
+                        </p>
+                        <a href="https://developer.mozilla.org/en-US/docs/Glossary/Doctype" class="card-link">
+                          MDN Web Docs
+                        </a>
+                      </div>
+                    </div>
+                    <div class="row col-lg-12 col-sm-12">
+                      <div class="col-lg-4 col-sm-12 p-3 text-center align-content-center tablePanel1" style="border: 1px solid var(--book-cover-4)">
+                        <p>
+                          HTML Tag
+                        </p>
+                      </div>
+                      <div class="col-lg-4 col-sm-12 p-3 text-start tablePanel2" style="border: 1px solid var(--book-cover-4)" >
+                        <p>This tag indicates that anything between it and the closing tag is HTML code.</p>
+                      </div>
+                      <div class="col-lg-4 col-sm-12 p-3 text-start align-content-center tablePanel3" style="border: 1px solid var(--book-cover-4)" >
+                        <p>
+                          &lt;html lang="en"&gt;&lt;/html&gt;
+                        </p>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html" class="card-link">
+                          MDN Web Docs
+                        </a>
+                      </div>
+                    </div>
+                    <div class="row col-lg-12 col-sm-12">
+                      <div class="col-lg-4 col-sm-12 p-3 text-center align-content-center tablePanel1" style="border: 1px solid var(--book-cover-4)">
+                        <p>
+                          Head Tag
+                        </p>
+                      </div>
+                      <div class="col-lg-4 col-sm-12 p-3 text-start tablePanel2" style="border: 1px solid var(--book-cover-4)" >
+                        <p>
+                          This tag is placed before the body element. This tag should contain information <i>about</i> the
+                          page, rather than information that is shown within the main part of the browser window. Common
+                          tags included in the head tag are title, meta, and script tags.
+                        </p>
+                      </div>
+                      <div class="col-lg-4 col-sm-12 p-3 text-start align-content-center tablePanel3" style="border: 1px solid var(--book-cover-4)" >
+                        <p>
+                          &lt;head&gt;&lt;/head&gt;
+                        </p>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head" class="card-link">
+                          MDN Web Docs
+                        </a>
+                      </div>
+                    </div>
+                    <div class="row col-lg-12 col-sm-12">
+                      <div class="col-lg-4 col-sm-12 p-3 text-center align-content-center tablePanel1" style="border: 1px solid var(--book-cover-4)">
+                        <p>
+                          Body Tag
+                        </p>
+                      </div>
+                      <div class="col-lg-4 col-sm-12 p-3 text-start tablePanel2" style="border: 1px solid var(--book-cover-4)" >
+                        <p>
+                          This tag indicates that anything between it and the closing tag should be shown inside the main
+                          browser window.
+                        </p>
+                      </div>
+                      <div class="col-lg-4 col-sm-12 p-3 text-start align-content-center tablePanel3" style="border: 1px solid var(--book-cover-4)" >
+                        <p>
+                          &lt;body&gt;&lt;/body&gt;
+                        </p>
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body" class="card-link">
+                          MDN Web Docs
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Code Example -->
+        <div class="col-lg-3"></div>
+        <div class="col-lg-9 col-sm-12 topicContents">
+          <div id="htmlDir_0_3" class="generalContainer">
+            <div class="sectionHeader">
+              <hr class="hrStyle"/>
+              <h2>Code Example</h2>
+              <p>
+                Putting It All Together
+              </p>
+              <hr class="hrStyle"/>
+            </div>
+            <div id="htmlStructureCodeExample"  class="contentContainer">
+              <div class="row">
+                <div class="col-sm-12 col-lg-12">
+                  <div class="row">
+                    <div class="row col-lg-12 col-sm-12">
+                      <div class="col-lg-12 col-sm-12 p-3">
+                        <div class="container">
+                          <fieldset style="background-color: black;">
+                            <div style="display: flex; justify-content: space-around; margin-bottom: 1rem;">
+                              <label><span style="color: red; font-size: 1.15rem;">HTML Elements</span></label>
+                              <label><span style="color: dodgerblue; font-size: 1.15rem;">HTML Attributes</span></label>
+                              <label><span style="color: white; font-size: 1.15rem;">HTML Values</span></label>
+                            </div>
+                          </fieldset>
+                          <pre style="">&lt;!DOCTYPE html&gt;</pre>
+                          <pre>&lt;html <span style="color: dodgerblue">lang=</span><span style="color: #fff">"en"</span>&gt;</pre>
+                          <pre> &lt;head&gt;</pre>
+                          <pre>   &lt;meta <span style="color: dodgerblue">charset=</span><span style="color: #fff;">"utf-8"</span>&gt;</pre>
+                          <pre>   &lt;title&gt;<span style="color: #fff">HTML5 Text</span>&lt;/title&gt;</pre>
+                          <pre>   &lt;link <span style="color: dodgerblue">rel=</span><span style="color: #fff;">"icon"</span> <span style="color: dodgerblue">href=</span><span style="color: #fff">"/favicon.ico"</span> <span style="color: dodgerblue">sizes=</span><span style="color: #fff;">"any"</span>&gt;</pre>
+                          <pre> &lt;/head&gt;</pre>
+                          <pre> &lt;body&gt;</pre>
+                          <pre>  &lt;h1&gt;<span style="color: #fff">Header Content</span>&lt;/h1&gt;</pre>
+                          <pre>   &lt;script
+        <span style="color: dodgerblue;">src=</span><span style="color: white;">"https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"</span>
+        <span style="color: dodgerblue;">integrity=</span><span style="color: white;">"sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"</span>
+        <span style="color: dodgerblue;">crossorigin=</span><span style="color: white">"anonymous"</span>
+    &gt;&lt;/script&gt;</pre>
+                          <pre style="background-color: #000; color: red; margin: 0;"> &lt;/body&gt;</pre>
+                          <pre style="background-color: #000; color: red; margin: 0;">&lt;/html&gt;</pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

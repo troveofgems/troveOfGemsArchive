@@ -1,7 +1,107 @@
+// Responsive Font Sizing
+@import "../../../../node_modules/rfs/scss";
+$enable-responsive-font-sizes: true;
+
 :root {
+  --base-scale: 1;
+
+  /* Heading Sizes */
+  --h1-font-size: 4rem;
+  --h2-font-size: 3rem;
+  --h3-font-size: 2.75rem;
+  --h4-font-size: 2.5rem;
+  --h5-font-size: 2.25rem;
+  --h6-font-size: 2rem;
+
+  /* Body Sizes */
+  --body-font-size-1: 1.90rem;
+  --body-font-size-2: 1.75rem;
+  --body-font-size-3: 1.50rem;
+  --body-font-size-4: 1.25rem;
+  --body-font-size-5: 1.15rem;
+  --body-font-size-6: 1rem;
+
+  /* Line Height Settings */
+  --heading-line-height: 1.35;
+  --body-line-height: 1.5;
+
+  /* Letter Spacing Settings */
+  --h1-letter-spacing: 0.00125rem;
+  --h2-letter-spacing: 0.0009375rem;
+  --h3-letter-spacing: 0.000625rem;
+  --h4-letter-spacing: 0.0003125rem;
+  --h5-letter-spacing: 0.000156rem;
+  --h6-letter-spacing: 0.00009375rem;
+  --body-element-letter-spacing: 0.03125rem;
+
   /* Widths */
   --full-width: 100%;
   --three-quarters-width: 75%;
   --half-width: 50%;
   --quarter-width: 25%;
+}
+
+.h1Styles, .h2Styles, .h3Styles,
+.h4Styles, .h5Styles, .h6Styles {
+  line-height: calc(var(--heading-line-height) * var(--base-scale));
+}
+
+.h1Styles {
+  @include font-size(calc(var(--h1-font-size) * var(--base-scale)));
+  letter-spacing: calc(var(--h1-letter-spacing) * var(--base-scale));
+}
+
+.h2Styles {
+  @include font-size(calc(var(--h2-font-size) * var(--base-scale)));
+  letter-spacing: calc(var(--h2-letter-spacing) * var(--base-scale));
+}
+
+.h3Styles {
+  @include font-size(calc(var(--h3-font-size) * var(--base-scale)));
+  letter-spacing: calc(var(--h3-letter-spacing) * var(--base-scale));
+}
+
+.h4Styles {
+  @include font-size(calc(var(--h4-font-size) * var(--base-scale)));
+  letter-spacing: calc(var(--h4-letter-spacing) * var(--base-scale));
+}
+
+.h5Styles {
+  @include font-size(calc(var(--h5-font-size) * var(--base-scale)));
+  letter-spacing: calc(var(--h5-letter-spacing) * var(--base-scale));
+}
+
+.h6Styles {
+  @include font-size(calc(var(--h6-font-size) * var(--base-scale)));
+  letter-spacing: calc(var(--h6-letter-spacing) * var(--base-scale));
+}
+
+.bodyText_1, .bodyText_2, .bodyText_3,
+.bodyText_4, .bodyText_5, .bodyText_6 {
+  line-height: calc(var(--body-line-height) * var(--base-scale));
+  letter-spacing: calc(var(--body-element-letter-spacing) * var(--base-scale));
+}
+
+.bodyText_1 {
+  @include font-size(calc(var(--body-font-size-1) * var(--base-scale)));
+}
+
+.bodyText_2 {
+  @include font-size(calc(var(--body-font-size-2) * var(--base-scale)));
+}
+
+.bodyText_3 {
+  @include font-size(calc(var(--body-font-size-3) * var(--base-scale)));
+}
+
+.bodyText_4 {
+  @include font-size(calc(var(--body-font-size-4) * var(--base-scale)));
+}
+
+.bodyText_5 {
+  @include font-size(calc(var(--body-font-size-5) * var(--base-scale)));
+}
+
+.bodyText_6 {
+  @include font-size(calc(var(--body-font-size-6) * var(--base-scale)));
 }
