@@ -1,5 +1,6 @@
 import "./Book.scss";
 import {Link} from "react-router-dom";
+
 export default function Book({bookData}) {
     const setImgClass =
         bookData.bookStamp.bookId === 3 ? "roundLogo grow imgLogo" :

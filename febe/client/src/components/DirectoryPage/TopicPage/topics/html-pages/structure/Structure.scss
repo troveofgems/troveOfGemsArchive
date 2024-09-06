@@ -1,0 +1,65 @@
+code {
+  color: var(--split-complimentary-3);
+}
+
+pre {
+  font-size: 1.25rem;
+  background-color: #000;
+  color: red;
+  margin: 0;
+}
+
+.tablePanelOverride {
+  border: 1px solid var(--book-cover-4);
+}
+
+.spanColorComplimentary_2 {
+  color: var(--split-complimentary-2);
+}
+.spanColorComplimentary_3 {
+  color: var(--split-complimentary-3);
+}
+
+.spanColorComplimentaryAndBold_2 {
+  color: var(--split-complimentary-2);
+  font-weight: bold;
+}
+
+.spanColorComplimentaryAndBold_3 {
+  color: var(--split-complimentary-3);
+  font-weight: bold;
+}
+
+.spanColorBlack {
+  color: #000;
+}
+
+.fieldsetBGColor {
+  background-color: #000;
+}
+
+.fieldsetContent {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+}
+
+.exampleText {
+  font-size: 1.15rem;
+}
+
+.htmlElements {
+  color: red;
+}
+
+.htmlAttributes {
+  color: dodgerblue;
+}
+
+.htmlValues {
+  color: white;
+}
+
+.htmlComment {
+  color: lightslategrey;
+}

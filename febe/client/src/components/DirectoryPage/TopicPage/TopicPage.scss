@@ -1,0 +1,113 @@
+/* Set Page Background */
+#pagePreambles {
+  margin: 0 auto;
+  width: 75%;
+}
+
+.topicPreamble {
+  margin: 2rem auto 1rem auto;
+  padding-bottom: 1rem;
+}
+
+.pagePreamble_2 {
+  margin-bottom: 2rem;
+}
+
+.pagePreamble_1, .pagePreamble_2 {
+  color: var(--font-color-old-page-text);
+}
+
+.generalContainer {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sectionHeader > p {
+  color: var(--font-color-old-page-text);
+  font-size: var(--h6-font-size);
+}
+
+.tablePanel1 > p {
+  color: var(--font-color-old-page-text);
+  font-size: var(--h6-font-size);
+}
+
+.tablePanel2 > p {
+  color: var(--font-color-old-page-text);
+  font-size: var(--body-font-size-3);
+}
+
+.tablePanel3 > ul > li {
+  color: var(--font-color-old-page-text);
+  font-size: var(--body-font-size-3);
+}
+
+.tablePanel2, .tablePanel3 {
+  background: rgba(169, 121, 66, .65);
+}
+
+.tablePanel3 > p {
+  font-size: var(--body-font-size-4);
+}
+
+.hrStyle {
+  color: var(--book-cover-4);
+  border-width: 3px;
+  border-color: inherit;
+  opacity: .75;
+}
+
+.card-link {
+  color: var(--split-complimentary-2);
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.card-link:hover {
+  font-size: 1.65rem;
+  text-decoration: underline;
+}
+
+.contentContainer {
+  text-align: left;
+  margin-bottom: 4rem;
+}
+
+.textEntry_1 {
+  font-size: 1.75rem;
+}
+
+.exploreMore, .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  background: var(--book-cover-3);
+  color: var(--tiana-off-white);
+}
+
+.exploreMore, .exploreMore:hover,
+.nav-pills .nav-link:hover {
+  font-size: 1.5rem;
+  background: var(--book-cover-4);
+}
+
+.nav-tabs .nav-link:hover {
+  font-size: 1.75rem;
+  color: var(--tiana-off-white);
+}
+
+.highlightCode {
+  font-size: var(--body-font-size-3);
+  color: var(--split-complimentary-2);
+}
+
+.nav-item > button {
+  background: var(--book-cover-2);
+}
+
+.nav-link {
+  color: var(--tiana-off-white);
+}
+
+.preStyler {
+  font-size: var(--body-font-size-5);
+}
