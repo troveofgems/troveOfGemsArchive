@@ -1,0 +1,111 @@
+* {
+  color: var(--book-cover-4);
+}
+
+ul {
+  font-size: 1.35rem;
+}
+
+.sectionHeader > p {
+  font-size: var(--h6-font-size);
+}
+
+#orderedList,
+#unorderedList,
+#definitionsSection,
+#nestedLists {
+  text-align: left;
+}
+
+.example {
+  margin: 1rem;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.orderedListExample > li::marker {
+  font-family: unset;
+}
+
+.tablePanel1 > p {
+  color: var(--font-color-old-page-text);
+  font-size: var(--h6-font-size);
+}
+
+.tablePanel2 > p {
+  color: var(--font-color-old-page-text);
+  font-size: var(--body-font-size-3);
+}
+
+.tablePanel1 {
+  background: rgba(169, 121, 66, .08);
+}
+
+.tablePanel2 {
+  background: rgba(169, 121, 66, .65);
+}
+
+.tablePanel3 {
+  background: rgba(169, 121, 66, .90);
+}
+
+.olExample1 {
+  list-style-type: revert!important;
+}
+
+.example1-container {
+  box-shadow:
+    rgba(190, 120, 40, 0.4) -5px 5px,
+    rgba(190, 120, 40, 0.3) -10px 10px,
+    rgba(190, 120, 40, 0.2) -15px 15px,
+    rgba(190, 120, 40, 0.1) -20px 20px,
+    rgba(190, 120, 40, 0.05) -25px 25px;
+}
+
+.nav-item > button {
+  background: var(--book-cover-2);
+  margin-right: 1rem;
+}
+
+.nav-link {
+  color: var(--tiana-off-white);
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  background: var(--book-cover-3);
+  color: var(--tiana-off-white);
+}
+
+.nav-pills .nav-link:hover {
+  background: var(--book-cover-4);
+  color: var(--tiana-off-white);
+}
+
+.exampleTextIndent {
+  padding-left: 20px;
+}
+
+.exampleTextIndent2 {
+  padding-left: 25px;
+}
+
+.exampleTextIndent3 {
+  padding-left: 30px;
+}
+
+.exampleTextIndent4 {
+  padding-left: 40px;
+}
+
+.circleExample {
+  list-style-type: circle!important;
+}
+
+small.nestedListExample1, small.nestedListExample2 {
+  margin-left: .5rem;
+}
+
+ol.nestedListExample1, ul.nestedListExample2 {
+  padding: 0;
+  margin-left: 3rem;
+}
