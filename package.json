@@ -2,18 +2,22 @@
   "name": "troveofgems_archive",
   "version": "1.0.0",
   "description": "Trove of Gems Archive and Knowledge Base",
-  "main": "index.ts",
+  "main": "main.ts",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "client": "concurrently \"cd ./client && NODE_ENV=production npm run serve\"",
-    "devclient": "concurrently \"cd ./client && NODE_ENV=development npm run start\"",
-    "server": "concurrently \"cd ./server && NODE_ENV=production node dist/main.js\"",
-    "devserver": "concurrently \"cd ./server && NODE_ENV=development nodemon main.ts\"",
-    "prod": "concurrently \"npm:server\" \"npm:client\"",
-    "dev": "concurrently \"npm:devserver\" \"npm:devclient\""
+    "devserver": "dotenvx run -f server/config/env/.development.env -- nodemon --watch server/** --ext ts,js --ignore src/**/*.spec.ts --exec npx tsx server/main.ts",
+    "devclient": "npm run start --prefix client",
+    "dev": "concurrently \"npm:devserver\" \"npm:devclient\"",
+    "server": "dotenvx run -f server/config/env/.production.env -- node server/dist/main.js",
+    "build:devserver": "cd server && rm -rf dist && tsc --build",
+
+    "client": "concurrently \"cd ./client && npm run build && serve -s build\"",
+    "prod": "concurrently \"npm:server\" \"npm:client\""
   },
   "private": true,
   "dependencies": {
+    "@dotenvx/dotenvx": "^1.31.0",
     "concurrently": "^8.2.2",
     "connect-mongodb-session": "^5.0.0",
     "dotenv": "^16.4.5",

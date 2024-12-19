@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
-
-import {default as tryRequest} from "../../middleware/try/try.middleware";
 import {Request, Response, NextFunction} from "express";
+
+import {default as tryRequest} from "../../middleware/try/try.middleware.js";
 
 import session, {Store} from "express-session";
 import MongoDBStore from "connect-mongodb-session";
@@ -12,7 +12,7 @@ const
         NODE_ENV
     } = process.env,
     devURI = `mongodb://${MONGODB_CONN_USER}:${MONGODB_CONN_PWD}@${MONGODB_CONN_URI}:${MONGODB_CONN_PORT}`,
-    prodURI = "",
+    prodURI = `mongodb://${MONGODB_CONN_USER}:${MONGODB_CONN_PWD}@${MONGODB_CONN_URI}:${MONGODB_CONN_PORT}`,
     mongoURI = NODE_ENV === "development" ? devURI : prodURI,
     connectionStringOptions = "/tog_archives?",
     fullConnectionString = mongoURI + connectionStringOptions;
