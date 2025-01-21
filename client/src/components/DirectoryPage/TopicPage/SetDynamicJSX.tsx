@@ -3,6 +3,7 @@ import {default as HTMLStructure, SideNavigationData as HTMLStructureSideNavigat
 import {default as HTMLText, SideNavigationData as HTMLTextSideNavigationData} from "./topics/html-pages/text/Text";
 import {default as HTMLLists, SideNavigationData as HTMLListsSideNavigationData} from "./topics/html-pages/lists/Lists";
 import {default as HTMLLinks, SideNavigationData as HTMLLinksSideNavigationData} from "./topics/html-pages/links/Links";
+import {default as HTMLImages, SideNavigationData as HTMLImagesSideNavigationData} from "./topics/html-pages/images/Images";
 
 // @ts-ignore
 export default function setDynamicJSX(directory: string, topic: string) {
@@ -40,6 +41,10 @@ export default function setDynamicJSX(directory: string, topic: string) {
                     // code block
                     break;
                 case "images":
+                    // @ts-ignore
+                    topicContents.element = <HTMLImages />;
+                    // @ts-ignore
+                    topicContents.directoryAnchors = HTMLImagesSideNavigationData();
                     // code block
                     break;
                 case "tables":
