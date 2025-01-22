@@ -1,4 +1,8 @@
-import "./text.scss";
+import "./Text.scss";
+import {MainPageHeader} from "../../../../../shared/PageSections/MainPageHeader/MainPageHeader";
+import {PageIntroduction} from "../../../../../shared/PageSections/PageIntroduction/PageIntroduction";
+import {PElement} from "../../../../../shared/HTML_Elements/PElement/PElement";
+import {SectionPageHeader} from "../../../../../shared/PageSections/SectionPageHeader/SectionPageHeader";
 
 export function SideNavigationData() {
     return {
@@ -82,11 +86,49 @@ export function SideNavigationData() {
 }
 
 export default function Text() {
+    const
+        pageTitle = "HTML/5 Text Elements",
+        pageIntroduction = (
+            <>
+                {
+                    PElement(
+                        <>
+                            When developers create a web page, they add tags, also known as <strong><em>markup</em></strong> to the contents of their page.
+                            These tags provide extra meaning and allow browsers to show users the appropriate structure for a given page.
+                        </>
+                    )
+                }
+                {
+                    PElement(
+                        <>
+                            There are two (2) general types of <strong><em>markup</em></strong> to consider:
+                        </>
+                    )
+                }
+                <ol className={"introductionList__outerList"}>
+                    <li className={"pb-3 bulletItem"}>Structural Markup
+                        <ul className={"introductionList__innerList"}>
+                            <li>
+                                Markup used to describe elements like headings and paragraphs.
+                            </li>
+                        </ul>
+                    </li>
+                    <li className={"pb-3 bulletItem"}>Semantic Markup
+                        <ul className={"introductionList__innerList"}>
+                            <li>
+                                Markup used to describe things like emphasis, quotations, the meaning of
+                                acronyms, etc.
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+            </>
+        );
+
     return (
         <>
             <div className="container-fluid pageContent">
                 <div className="row col-lg-12 col-sm-12 rowContainer">
-
                     <div className="col-lg-3 col-sm-12 menuTogglerContainer">
                         <div className="col-lg-12">
                             <div id="menuToggler">
@@ -98,49 +140,18 @@ export default function Text() {
                         </div>
                     </div>
                     <div className="col-lg-9 col-sm-12 topicContents">
-                        <h1 className="text-center m-3 h1Styles">HTML/5 Text Elements</h1>
-                        <div id="pagePreambles">
-                            <p className="topicPreamble bodyText_2">
-                                When developers create a web page, they add tags, also known as <strong><em>markup</em></strong> to
-                                the contents of their page.
-                                These tags provide extra meaning and allow browsers to show users the appropriate
-                                structure for a given page.
-                            </p>
-                            <p className="topicPreamble bodyText_2">
-                                There are two (2) general types of <strong><em>markup</em></strong> to consider:
-                            </p>
-                            <ol className="olTypesOfMarkup bodyText_3">
-                                <li>Structural Markup
-                                    <ul>
-                                        <li>Markup used to describe elements like headings and paragraphs.</li>
-                                    </ul>
-                                </li>
-                                <li>Semantic Markup
-                                    <ul>
-                                        <li>Markup used to describe things like emphasis, quotations, the meaning of
-                                            acronyms, etc.
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ol>
-                        </div>
+                        {MainPageHeader(pageTitle)}
+                        {PageIntroduction(pageIntroduction)}
                     </div>
 
                     <div className="col-lg-3"></div>
                     <div className="col-lg-9 col-sm-12 topicContents">
                         <div className="structuralMarkupContainer">
                             <span id="htmlDir_1_0"></span>
-                            <div className="sectionHeader">
-                                <hr className="hrStyle"/>
-                                <h2 className={"h2Styles"}>Structural Markup</h2>
-                                <p className={"bodyText_3"}>
-                                    These text elements are intended to affect the structure of webpages.
-                                </p>
-                                <hr className="hrStyle"/>
-                            </div>
+                            {SectionPageHeader("Structural Markup", "These text elements are intended to affect the structure of webpages.")}
                             <div id="headings">
                                 <div id="htmlDir_1_0_0" className="row">
-                                    <h4 className="h4Styles">HTML/5 has six (6) levels of headings:</h4>
+                                    <h4 className="h4Styles">1. HTML/5 has six (6) levels of headings:</h4>
                                     <div className="col-sm-12 col-lg-12">
                                         <div className="row">
                                             <div className="row col-lg-12 col-sm-12 tablePanel1">
@@ -250,7 +261,7 @@ export default function Text() {
                             <hr className="hrStyle"/>
                             <div id="paragraphs">
                                 <div id="htmlDir_1_0_1" className="row">
-                                    <h4 className="h4Styles">The Paragraph Element</h4>
+                                    <h5 className="h5Styles">2. The Paragraph Element</h5>
                                     <div className="row col-lg-12 col-sm-12">
                                         <p className="bodyText_3">HTML/5 provides the paragraph tag &lt;p&gt; to set
                                             paragraphs. By default, a browser will show each
@@ -542,16 +553,7 @@ export default function Text() {
                     <div className="col-lg-9 col-sm-12 topicContents">
                         <div className="structuralMarkupContainer">
                             <span id="semanticMarkupAnchor"></span>
-                            <div className="sectionHeader">
-                                <hr className="hrStyle"/>
-                                <h2 className={"h2Styles"}>Semantic Markup</h2>
-                                <p className={"bodyText_3"}>
-                                    These text elements are not intended to affect the structure of webpages, but they
-                                    do add extra
-                                    information to the pages.
-                                </p>
-                                <hr className="hrStyle"/>
-                            </div>
+                            {SectionPageHeader("Semantic Markup", "These text elements are not intended to affect the structure of webpages, but they do add extra information to the pages.")}
                             <div id="strongAndEmphasisSection">
                                 <div id="htmlDir_1_6" className="row">
                                     <h3 className="h3Styles">1. Strong &amp; Emphasis</h3>

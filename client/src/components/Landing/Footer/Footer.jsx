@@ -10,10 +10,10 @@ export default function Footer() {
 
     return (
         <footer>
-            <p className="siteFooter">2024
+            <p className="siteFooter">2024-25
                 <a className="externalSiteLink px-2"
-                   href="https://thegemtrove.herokuapp.com/">ToG
-                </a>- DKGreco
+                   href="https://thegemtrove.herokuapp.com/">The Trove of Gems
+                </a>- Dustin K Greco
             </p>
             <p className={"dniFooterDate"}>
                 <a href={"https://archive.guildofarchivists.org/wiki/D%27ni_time_conversion#D'ni_Timekeeping"}>{timestamp}</a>

@@ -75,7 +75,7 @@ export function SideNavigationData() {
 
 export default function Images() {
     const
-        example_0 = "<img \n\tsrc=\"../../img/custard-apple.jpg\"\n\t src=\"../../img/custard-apple.jpg\"\n\t alt=\"Eight Custard Apples in a Wicker Bowl\"\n/>";
+        example_0 = "<img src=\"../../img/custard-apple.jpg\" src=\"../../img/custard-apple.jpg\" alt=\"Eight Custard Apples in a Wicker Bowl\"\n/>";
     return (
         <>
             <div className="container-fluid pageContent">
