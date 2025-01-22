@@ -1,0 +1,58 @@
+.image_refs {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.colorShiftComplementary3 {
+  color: var(--split-complimentary-3);
+}
+
+.tablePanelOverride1 {
+  border: 1px solid black;
+}
+
+.tablePanelOverride2 {
+  border: 1px solid var(--book-cover-4);
+}
+
+.preFontStyler {
+  font-size: var(--body-font-size-5);
+}
+
+.imgPadRight {
+  padding-right: 5px;
+}
+
+.h6Override1 {
+  font-size: 1.5rem;
+}
+
+.noOverflowOverride {
+  overflow: hidden;
+}
+
+.customImgSize {
+  width: 115%;
+  height: 115%;
+}
+
+.customImgSize_1 {
+  width: 272px;
+  height: 104px
+}
+
+.blueBorder {
+  border: 1px solid blue;
+}
+
+.redBorder {
+  border: 1px solid red;
+}
+
+.spanBlue {
+  color: blue;
+}
+
+.spanRed {
+  color: red;
+}

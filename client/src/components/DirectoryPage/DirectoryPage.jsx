@@ -3,7 +3,6 @@ import SidebarNavigator from "../shared/SidebarNavigator/SidebarNavigator";
 import {Link, useParams} from "react-router-dom";
 
 export default function DirectoryPage() {
-
     const
         params = useParams(),
         directoryList = [

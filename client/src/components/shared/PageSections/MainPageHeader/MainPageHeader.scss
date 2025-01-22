@@ -1,0 +1,9 @@
+// Responsive Font Sizing
+@import "../../../../../node_modules/rfs/scss";
+$enable-responsive-font-sizes: true;
+
+.mainPageHeader {
+  @include font-size(calc(var(--h2-font-size) * var(--base-scale)));
+  line-height: calc(var(--heading-line-height) * var(--base-scale));
+  letter-spacing: calc(var(--h1-letter-spacing) * var(--base-scale));
+}

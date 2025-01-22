@@ -1,4 +1,8 @@
 import "./Structure.scss";
+import {MainPageHeader} from "../../../../../shared/PageSections/MainPageHeader/MainPageHeader";
+import {PageIntroduction} from "../../../../../shared/PageSections/PageIntroduction/PageIntroduction";
+import {PElement} from "../../../../../shared/HTML_Elements/PElement/PElement";
+import {SectionPageHeader} from "../../../../../shared/PageSections/SectionPageHeader/SectionPageHeader";
 
 export function SideNavigationData() {
     return {
@@ -32,6 +36,43 @@ export function SideNavigationData() {
 }
 
 export default function Structure() {
+    const
+        pageTitle = "Enforcing Structure with HTML/5",
+        pageIntroduction = (
+            <>
+                {PElement(
+                    <>
+                        Consider the differences between a newspaper, an online article, and an insurance form.
+                        The modes of delivery and presentation are all very different, but all follow structures
+                        that organize the
+                        content being presented to the user. Much like the table of contents on this project's
+                        landing page.
+                        Newspapers will often tell a story by providing a header for the story, the text body
+                        content of the story,
+                        who authored the story, and there might be images included. An online article might
+                        follow a similar format
+                        as a newspaper, but by presenting a story online, a new structure is introduced when we
+                        add videos or
+                        linkable content. An insurance form on the other hand is unlikely to include images, and
+                        instead is more
+                        geared towards getting feedback from a user by way of checkboxes, radio options,
+                        text-boxes, etc.
+                    </>
+                )}
+                {PElement(
+                    <>
+                        When we structure word documents, we may reach for headings and subheadings to reflect a
+                        hierarchy of
+                        information. A document might start with a large heading, followed by an introduction or
+                        the most important
+                        information. It can be further broken down under subheadings and paragraphs for each new
+                        topic or section
+                        of material.
+                    </>
+                )}
+            </>
+        );
+
     return (
         <>
             <div className="container-fluid pageContent">
@@ -47,49 +88,14 @@ export default function Structure() {
                         </div>
                     </div>
                     <div className="col-lg-9 col-sm-12 topicContents">
-                        <h1 id={"pageTop"} className="text-center m-3 mb-0 h1Styles">Enforcing Structure with HTML/5</h1>
-                        <div id="pagePreambles">
-                            <p className="topicPreamble bodyText_2">
-                                Consider the differences between a newspaper, an online article, and an insurance form.
-                                The modes of delivery and presentation are all very different, but all follow structures
-                                that organize the
-                                content being presented to the user. Much like the table of contents on this project's
-                                landing page.
-                                Newspapers will often tell a story by providing a header for the story, the text body
-                                content of the story,
-                                who authored the story, and there might be images included. An online article might
-                                follow a similar format
-                                as a newspaper, but by presenting a story online, a new structure is introduced when we
-                                add videos or
-                                linkable content. An insurance form on the other hand is unlikely to include images, and
-                                instead is more
-                                geared towards getting feedback from a user by way of checkboxes, radio options,
-                                text-boxes, etc.
-                            </p>
-                            <p className="topicPreamble bodyText_2">
-                                When we structure word documents, we may reach for headings and subheadings to reflect a
-                                hierarchy of
-                                information. A document might start with a large heading, followed by an introduction or
-                                the most important
-                                information. It can be further broken down under subheadings and paragraphs for each new
-                                topic or section
-                                of material.
-                            </p>
-                        </div>
+                        {MainPageHeader(pageTitle)}
+                        {PageIntroduction(pageIntroduction)}
                     </div>
 
                     <div className="col-lg-3"></div>
                     <div className="col-lg-9 col-sm-12 topicContents">
                         <div id="htmlDir_0_1" className="generalContainer">
-                            <div className="sectionHeader">
-                                <hr className="hrStyle"/>
-                                <h2 className={"h2Styles"}>Elements, Attributes, &amp; Values</h2>
-                                <p className={"bodyText_3"}>
-                                    Markup is defined by the singular or combined use of elements, attributes, and
-                                    values.
-                                </p>
-                                <hr className="hrStyle"/>
-                            </div>
+                            {SectionPageHeader("Elements, Attributes, & Values", "Markup is defined by the singular or combined use of elements, attributes, and values.")}
                             <div id="htmlBasics" className="contentContainer">
                                 <div className="row">
                                     <div className="col-sm-12 col-lg-12">
@@ -232,14 +238,7 @@ export default function Structure() {
                     <div className="col-lg-3"></div>
                     <div className="col-lg-9 col-sm-12 topicContents">
                         <div id="htmlDir_0_2" className="generalContainer">
-                            <div className="sectionHeader">
-                                <hr className="hrStyle"/>
-                                <h2 className={"h2Styles"}>Basic Page Structure</h2>
-                                <p className={"bodyText_3"}>
-                                    DOCTYPE Declaration, HTML, Head, Body Tags
-                                </p>
-                                <hr className="hrStyle"/>
-                            </div>
+                            {SectionPageHeader("Basic Page Structure", "DOCTYPE Declaration, HTML, Head, Body Tags")}
                             <div id="basicPageStructure" className="contentContainer">
                                 <div className="row">
                                     <div className="col-sm-12 col-lg-12">
@@ -366,14 +365,7 @@ export default function Structure() {
                     <div className="col-lg-3"></div>
                     <div className="col-lg-9 col-sm-12 topicContents">
                         <div id="htmlDir_0_3" className="generalContainer">
-                            <div className="sectionHeader">
-                                <hr className="hrStyle"/>
-                                <h2 className={"h2Styles"}>Code Example</h2>
-                                <p className={"bodyText_3"}>
-                                    Putting It All Together
-                                </p>
-                                <hr className="hrStyle"/>
-                            </div>
+                            {SectionPageHeader("Code Example", "Putting It All Together")}
                             <div id="htmlStructureCodeExample" className="contentContainer">
                                 <div className="row">
                                     <div className="col-sm-12 col-lg-12">
@@ -410,7 +402,7 @@ export default function Structure() {
                                                         <pre> &lt;body&gt;</pre>
                                                         <pre>  &lt;h1&gt;<span
                                                             className="htmlValues">Header Content</span>&lt;/h1&gt;</pre>
-                                                        <pre className={"htmlComment"}>  &lt;!-- Import 3rd Party Library Popper.js From Bootstrap --&gt;</pre>
+                                                        <pre className={"htmlComment"}>  &lt;!-- Comment: Import 3rd Party Library Popper.js From Bootstrap --&gt;</pre>
                                                         <pre>  &lt;script</pre>
                                                         <pre>
                                                             <span className="htmlAttributes">       src=</span>

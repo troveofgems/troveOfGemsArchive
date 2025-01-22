@@ -111,8 +111,8 @@ export default function SidebarNavigator({directoryList, anchorList}) {
             <footer>
                 <p className="sidebarFooter mb-0">
                     <a className="linkToMainWebsite"
-                       href="https://thegemtrove.herokuapp.com/">ToG
-                    </a> - DKGreco
+                       href="https://www.thetroveofgems.tech">The Trove of Gems
+                    </a> - Dustin K Greco
                 </p>
                 <small className={"version"}>Version 1.0</small>
             </footer>
