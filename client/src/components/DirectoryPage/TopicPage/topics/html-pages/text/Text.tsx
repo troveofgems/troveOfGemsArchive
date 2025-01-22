@@ -3,6 +3,8 @@ import {MainPageHeader} from "../../../../../shared/PageSections/MainPageHeader/
 import {PageIntroduction} from "../../../../../shared/PageSections/PageIntroduction/PageIntroduction";
 import {PElement} from "../../../../../shared/HTML_Elements/PElement/PElement";
 import {SectionPageHeader} from "../../../../../shared/PageSections/SectionPageHeader/SectionPageHeader";
+import {H3Sectional} from "../../../../../shared/PageSections/H3Sectional/H3Sectional";
+import {PreElement} from "../../../../../shared/HTML_Elements/PreElement/PreElement";
 
 export function SideNavigationData() {
     return {
@@ -151,15 +153,15 @@ export default function Text() {
                             {SectionPageHeader("Structural Markup", "These text elements are intended to affect the structure of webpages.")}
                             <div id="headings">
                                 <div id="htmlDir_1_0_0" className="row">
-                                    <h4 className="h4Styles">1. HTML/5 has six (6) levels of headings:</h4>
+                                    {H3Sectional("1. HTML/5 has six (6) levels of headings:")}
                                     <div className="col-sm-12 col-lg-12">
                                         <div className="row">
                                             <div className="row col-lg-12 col-sm-12 tablePanel1">
                                                 <div className="col-lg-6 col-sm-12 p-3 text-center align-content-center tablePanel1">
-                                                    <p className={"bodyText_4"}>
+                                                    <p className={"bodyText_3"}>
                                                         <strong>&lt;h1&gt;h1 Header&lt;/h1&gt;</strong>
                                                     </p>
-                                                    <p className={"bodyText_5"}>
+                                                    <p className={"bodyText_4"}>
                                                         Used for main headings
                                                     </p>
                                                 </div>
@@ -261,7 +263,7 @@ export default function Text() {
                             <hr className="hrStyle"/>
                             <div id="paragraphs">
                                 <div id="htmlDir_1_0_1" className="row">
-                                    <h5 className="h5Styles">2. The Paragraph Element</h5>
+                                    {H3Sectional("2. The Paragraph Element")}
                                     <div className="row col-lg-12 col-sm-12">
                                         <p className="bodyText_3">HTML/5 provides the paragraph tag &lt;p&gt; to set
                                             paragraphs. By default, a browser will show each
@@ -271,10 +273,10 @@ export default function Text() {
                                         <div
                                             className="col-lg-6 col-sm-12 p-3 text-center align-content-center tablePanel1"
                                         >
-                                            <p className={"bodyText_4"}>
+                                            <p className={"bodyText_3"}>
                                                 <strong>&lt;p&gt;Paragraph Content&lt;/p&gt;</strong>
                                             </p>
-                                            <p className={"bodyText_5"}>
+                                            <p className={"bodyText_4"}>
                                                 Used to hold text content in a paragraph format
                                             </p>
                                         </div>
@@ -299,16 +301,16 @@ export default function Text() {
                             <hr className="hrStyle"/>
                             <div id="emphasis">
                                 <div id="htmlDir_1_0_2" className="row">
-                                    <h3 className="h3Styles">3. Bold, Italic, Superscript, & Subscript Elements</h3>
+                                    {H3Sectional("3. Bold, Italic, Superscript, & Subscript Elements")}
                                     <div className="row col-lg-12 col-sm-12">
                                         <div className="row col-lg-12 col-sm-12">
                                             <div
                                                 className="col-lg-6 col-sm-12 p-3 text-center align-content-center tablePanel1"
                                             >
-                                                <p className={"bodyText_2"}>
+                                                <p className={"bodyText_3"}>
                                                     <strong>&lt;b&gt;b Tag&lt;/b&gt;</strong>
                                                 </p>
-                                                <p className={"bodyText_3 text-start"}>
+                                                <p className={"bodyText_4 text-start"}>
                                                     Makes enclosed chars appear in bold. This element can also represent
                                                     a section of text that would
                                                     be presented in a visually different way (keywords in a paragraph)
@@ -331,17 +333,17 @@ export default function Text() {
                                             <div
                                                 className="col-lg-6 col-sm-12 p-3 text-center align-content-center tablePanel1"
                                             >
-                                                <p className={"bodyText_2"}>
+                                                <p className={"bodyText_3"}>
                                                     <strong>&lt;em&gt;em Tag&lt;/em&gt;</strong>
                                                 </p>
-                                                <p className={"bodyText_3 text-start"}>
+                                                <p className={"bodyText_4 text-start"}>
                                                     Makes enclosed chars appear in italic. This element can also
                                                     represent a section of text that would
                                                     be said in a different way from the surrounding content - such as
                                                     technical terms, names of ships,
                                                     foreign words, thoughts, etc.
                                                 </p>
-                                                <p className={"bodyText_3 text-start"}>
+                                                <p className={"bodyText_4 text-start"}>
                                                     Also Review The Semantic: em Tag &lt;em&gt;
                                                 </p>
                                             </div>
@@ -357,10 +359,10 @@ export default function Text() {
                                             <div
                                                 className="col-lg-6 col-sm-12 p-3 text-center align-content-center tablePanel1"
                                             >
-                                                <p className={"bodyText_2"}>
+                                                <p className={"bodyText_3"}>
                                                     <strong>&lt;sup&gt;sup Tag&lt;/sup&gt;</strong>
                                                 </p>
-                                                <p className={"bodyText_3 text-start"}>
+                                                <p className={"bodyText_4 text-start"}>
                                                     The sup tag is used to contain chars that should be superscript such
                                                     as the suffixes of dates or
                                                     mathematical concepts like raising a number to a power such as
@@ -379,10 +381,10 @@ export default function Text() {
                                             <div
                                                 className="col-lg-6 col-sm-12 p-3 text-center align-content-center tablePanel1"
                                             >
-                                                <p className={"bodyText_2"}>
+                                                <p className={"bodyText_3"}>
                                                     <strong>&lt;sub&gt;sub Tag&lt;/sub&gt;</strong>
                                                 </p>
-                                                <p className={"bodyText_3 text-start"}>
+                                                <p className={"bodyText_4 text-start"}>
                                                     The sub tag is used to contain chars that should be subscript such
                                                     as declaring footnotes or
                                                     creating or representing chemical equations/formulae like
@@ -403,7 +405,7 @@ export default function Text() {
                             <hr className="hrStyle"/>
                             <div id="whitespace">
                                 <div id="htmlDir_1_0_3" className="row">
-                                    <h3 className="h3Styles">4. White Space</h3>
+                                    {PElement(<>4. White Space</>)}
                                     <p className={"bodyText_3"}>
                                         In order to make code easier to read, web page authors tend to add extra space
                                         or start elements on new lines.
@@ -434,7 +436,7 @@ export default function Text() {
                                             <div
                                                 className="col-lg-5 col-sm-12 p-3 text-center align-content-center tablePanel2"
                                             >
-                                                <pre className={"bodyText_6"}>&lt;p&gt;The moon is drifting away from Earth.&lt;/p&gt;</pre>
+                                                {PreElement(<>{"<p>\n The moon is drifting away from Earth.\n</p>"}</>)}
                                             </div>
                                             <div
                                                 className="col-lg-5 col-sm-12 p-3 text-center align-content-center tablePanel2"
@@ -455,7 +457,7 @@ export default function Text() {
                                             <div
                                                 className="col-lg-5 col-sm-12 p-3 text-center align-content-center tablePanel2"
                                             >
-                                                <pre className={"bodyText_6"}>&lt;p&gt;The moon is     drifting away from Earth.&lt;/p&gt;</pre>
+                                                {PreElement(<>{"<p>\n The moon is     drifting away from Earth.\n</p>"}</>)}
                                             </div>
                                             <div
                                                 className="col-lg-5 col-sm-12 p-3 text-center align-content-center tablePanel2"
@@ -475,10 +477,7 @@ export default function Text() {
                                             <div
                                                 className="col-lg-5 col-sm-12 p-3 text-center align-content-center tablePanel2"
                                             >
-                    <pre className={"bodyText_6"}>
-                      &lt;p&gt;The moon
-                      is drifting                         away from Earth.&lt;/p&gt;
-                    </pre>
+                                                {PreElement(<>{"<p>\n The moon\n is     drifting away from Earth.\n</p>"}</>)}
                                             </div>
                                             <div
                                                 className="col-lg-5 col-sm-12 p-3 text-center align-content-center tablePanel2"
@@ -495,8 +494,8 @@ export default function Text() {
                             <hr className="hrStyle"/>
                             <div id="lineBreaksAndHR">
                                 <div id="htmlDir_1_5" className="row">
-                                    <h3 className="h3Styles">5. Line Breaks & Horizontal Rules</h3>
-                                    <div className="row col-lg-12 col-sm-12 p-3">
+                                    {H3Sectional("5. Line Breaks & Horizontal Rules")}
+                                    <div className="row col-lg-12 col-sm-12">
                                         <p className="bodyText_3">
                                             There are two (2) <strong>self-closing</strong> tags to help with line
                                             breaks and horizontal rules. They are also known as <strong>Empty Elements</strong>.
@@ -504,10 +503,10 @@ export default function Text() {
                                         <div
                                             className="col-lg-6 col-sm-12 p-3 text-center align-content-center tablePanel1"
                                         >
-                                            <p className={"bodyText_2"}>
+                                            <p className={"bodyText_3"}>
                                                 <strong>&lt;br/&gt;</strong>
                                             </p>
-                                            <p className={"bodyText_3 text-start"}>
+                                            <p className={"bodyText_4 text-start"}>
                                                 Used to add a line break inside the middle of a paragraph or within the
                                                 page itself.
                                             </p>
@@ -523,10 +522,10 @@ export default function Text() {
                                         <div
                                             className="col-lg-6 col-sm-12 p-3 text-center align-content-center tablePanel1"
                                         >
-                                            <p className={"bodyText_2"}>
+                                            <p className={"bodyText_3"}>
                                                 <strong>&lt;hr/&gt;</strong>
                                             </p>
-                                            <p className={"bodyText_3 text-start"}>
+                                            <p className={"bodyText_4 text-start"}>
                                                 Used to create a break between themes - such as a change in topic.
                                             </p>
                                         </div>
@@ -548,7 +547,6 @@ export default function Text() {
                         </div>
                     </div>
 
-
                     <div className="col-lg-3"></div>
                     <div className="col-lg-9 col-sm-12 topicContents">
                         <div className="structuralMarkupContainer">
@@ -556,15 +554,15 @@ export default function Text() {
                             {SectionPageHeader("Semantic Markup", "These text elements are not intended to affect the structure of webpages, but they do add extra information to the pages.")}
                             <div id="strongAndEmphasisSection">
                                 <div id="htmlDir_1_6" className="row">
-                                    <h3 className="h3Styles">1. Strong &amp; Emphasis</h3>
+                                    {H3Sectional("1. Strong & Emphasis")}
                                     <div className="col-sm-12 col-lg-12">
                                         <div className="row">
                                             <div className="row col-lg-12 col-sm-12">
                                                 <div className="col-lg-6 col-sm-12 p-3 text-center align-content-center tablePanel1">
-                                                    <p className={"bodyText_2"}>
+                                                    <p className={"bodyText_3"}>
                                                         <strong>&lt;strong&gt;strong Tag&lt;/strong&gt;</strong>
                                                     </p>
-                                                    <p className={"bodyText_3 text-start"}>
+                                                    <p className={"bodyText_4 text-start"}>
                                                         Use of the strong element indicates that its content has strong
                                                         importance.
                                                     </p>
@@ -583,10 +581,10 @@ export default function Text() {
                                             <div className="row col-lg-12 col-sm-12">
                                                 <div
                                                     className="col-lg-6 col-sm-12 p-3 text-center align-content-center tablePanel1">
-                                                    <p className={"bodyText_2"}>
+                                                    <p className={"bodyText_3"}>
                                                         <strong>&lt;em&gt;em Tag&lt;/em&gt;</strong>
                                                     </p>
-                                                    <p className={"bodyText_3 text-start"}>
+                                                    <p className={"bodyText_4 text-start"}>
                                                         Use of the em element indicates emphasis that subtly changes the
                                                         meaning of a sentence.
                                                     </p>
@@ -611,7 +609,7 @@ export default function Text() {
                             <hr className="hrStyle"/>
                             <div id="quotationsSection">
                                 <div id="htmlDir_1_7" className="row">
-                                    <h3 className="h3Styles">2. Quotations &amp; Citations</h3>
+                                    {H3Sectional("2. Quotations & Citations")}
                                     <div className="row col-lg-12 col-sm-12">
                                         <p className="bodyText_3">
                                             HTML5 provides three (3) tags:  &lt;blockquote&gt;, &lt;q&gt;,
@@ -619,10 +617,10 @@ export default function Text() {
                                         </p>
                                         <div
                                             className="col-lg-6 col-sm-12 p-3 text-center align-content-center tablePanel1">
-                                            <p className={"bodyText_2"}>
+                                            <p className={"bodyText_3"}>
                                                 <strong>&lt;blockquote&gt;Citation Content&lt;/blockquote&gt;</strong>
                                             </p>
-                                            <p className={"bodyText_3 text-start"}>
+                                            <p className={"bodyText_4 text-start"}>
                                                 Used for longer quotes that take up an entire paragraph. p Tags may be
                                                 used within blockquote elements.
                                                 This element uses the <strong>cite</strong> attribute to indicate where
@@ -648,10 +646,10 @@ export default function Text() {
                                         </div>
                                         <div
                                             className="col-lg-6 col-sm-12 p-3 text-center align-content-center tablePanel1">
-                                            <p className={"bodyText_2"}>
+                                            <p className={"bodyText_3"}>
                                                 <strong>&lt;q&gt;Citation Content&lt;/q&gt;</strong>
                                             </p>
-                                            <p className={"bodyText_3 text-start"}>
+                                            <p className={"bodyText_4 text-start"}>
                                                 Used for shorter quotes that sit within a paragraph. Browsers are
                                                 supposed to put quotes around the
                                                 q Tag, however IE did not, so q was usually avoided. This element uses
@@ -669,10 +667,10 @@ export default function Text() {
                                         </div>
                                         <div
                                             className="col-lg-6 col-sm-12 p-3 text-center align-content-center tablePanel1">
-                                            <p className={"bodyText_2"}>
+                                            <p className={"bodyText_3"}>
                                                 <strong>&lt;cite&gt;Citation Content&lt;/cite&gt;</strong>
                                             </p>
-                                            <p className={"bodyText_3 text-start"}>
+                                            <p className={"bodyText_4 text-start"}>
                                                 Used for referencing a piece of work such as a book, file, or research
                                                 paper. The cite element
                                                 can be used to indicate where the citation is from. In HTML5, it is not
@@ -695,27 +693,27 @@ export default function Text() {
                             <hr className="hrStyle"/>
                             <div id="abbreviationsAndAcronymsSection">
                                 <div id="htmlDir_1_8" className="row">
-                                    <h3 className="h3Styles">3. Abbreviations &amp; Acronyms</h3>
+                                    {H3Sectional("3. Abbreviations & Acronyms")}
                                     <div className="row col-lg-12 col-sm-12">
                                         <div className="row col-lg-12 col-sm-12">
                                             <div
                                                 className="col-lg-6 col-sm-12 p-3 text-center align-content-center tablePanel1">
-                                                <p className={"bodyText_2"}>
+                                                <p className={"bodyText_3"}>
                                                     <strong>&lt;abbr&gt;abbr Tag&lt;/abbr&gt;</strong>
                                                 </p>
-                                                <p className={"bodyText_3 text-start"}>
+                                                <p className={"bodyText_4 text-start"}>
                                                     Used for abbreviations or acronyms.
                                                     A <strong>title</strong> attribute on the opening tag is used
                                                     to specify the full term.
                                                 </p>
-                                                <p className={"bodyText_3 text-start"}>
+                                                <p className={"bodyText_4 text-start"}>
                                                     HTML5 deprecated the HTML4 &lt;acronym&gt; Tag: Use &lt;abbr&gt;
                                                 </p>
                                             </div>
                                             <div
                                                 className="col-lg-6 col-sm-12 p-3 text-center align-content-center tablePanel2">
                                                 <p className="example tablePanel3 bodyText_4">
-                                                    <abbr title="Professor">Prof</abbr> Sprout belongs to Hufflepuff.
+                                                    <abbr title="Professor">Prof</abbr> Sprout belongs to House Hufflepuff.
                                                 </p>
                                             </div>
                                         </div>
@@ -725,16 +723,16 @@ export default function Text() {
                             <hr className="hrStyle"/>
                             <div id="definitionsSection">
                                 <div id="htmlDir_1_9" className="row">
-                                    <h3 className="h3Styles">4. Definitions</h3>
+                                    {H3Sectional("4. Definitions")}
                                     <div className="row col-lg-12 col-sm-12">
                                         <div className="row col-lg-12 col-sm-12">
                                             <div
                                                 className="col-lg-6 col-sm-12 p-3 text-center align-content-center tablePanel1"
                                             >
-                                                <p className={"bodyText_2"}>
+                                                <p className={"bodyText_3"}>
                                                     <strong>&lt;dfn&gt;Definition Content&lt;/dfn&gt;</strong>
                                                 </p>
-                                                <p className={"bodyText_3 text-start"}>
+                                                <p className={"bodyText_4 text-start"}>
                                                     Used to indicate the defining instance of a new term on a webpage.
                                                 </p>
                                             </div>
@@ -752,14 +750,14 @@ export default function Text() {
                             <hr className="hrStyle"/>
                             <div id="addressSection">
                                 <div id="htmlDir_1_10" className="row">
-                                    <h3 className="h3Styles">5. Address</h3>
+                                    {H3Sectional("5. Address")}
                                     <div className="row col-lg-12 col-sm-12">
                                         <div
                                             className="col-lg-6 col-sm-12 p-3 text-center align-content-center tablePanel1">
-                                            <p className={"bodyText_2"}>
+                                            <p className={"bodyText_3"}>
                                                 <strong>&lt;address&gt;Address Details&lt;/address&gt;</strong>
                                             </p>
-                                            <p className={"bodyText_3 text-start"}>
+                                            <p className={"bodyText_4 text-start"}>
                                                 Specifically used to contain contact details for the author of the page.
                                                 It can contain a physical
                                                 address, phone number, or email address. Browsers often display the
@@ -785,15 +783,15 @@ export default function Text() {
                             <hr className="hrStyle"/>
                             <div id="contentChangesSection">
                                 <div id="htmlDir_1_11" className="row">
-                                    <h3 className="h3Styles">6. Content Changes</h3>
+                                    {H3Sectional("6. Content Changes")}
                                     <div className="row col-lg-12 col-sm-12 p-2">
                                         <div
                                             className="col-lg-6 col-sm-12 p-3 text-center align-content-center tablePanel1"
                                         >
-                                            <p className={"bodyText_2"}>
+                                            <p className={"bodyText_3"}>
                                                 <strong>&lt;ins&gt;ins Tag&lt;/ins&gt;</strong>
                                             </p>
-                                            <p className={"bodyText_3 text-start"}>
+                                            <p className={"bodyText_4 text-start"}>
                                                 Used for showing content that has been inserted into a document. Usually
                                                 formatted with an underline.
                                             </p>
@@ -809,10 +807,10 @@ export default function Text() {
                                         <div
                                             className="col-lg-6 col-sm-12 p-3 text-center align-content-center tablePanel1"
                                         >
-                                            <p className={"bodyText_2"}>
+                                            <p className={"bodyText_3"}>
                                                 <strong>&lt;del&gt;del Tag&lt;/del&gt;</strong>
                                             </p>
-                                            <p className={"bodyText_3 text-start"}>
+                                            <p className={"bodyText_4 text-start"}>
                                                 Used for showing content that has been deleted from a document. Usually
                                                 formatted with strikethrough.
                                             </p>
@@ -828,10 +826,10 @@ export default function Text() {
                                         <div
                                             className="col-lg-6 col-sm-12 p-3 text-center align-content-center tablePanel1"
                                         >
-                                            <p className={"bodyText_2"}>
+                                            <p className={"bodyText_3"}>
                                                 <strong>&lt;s&gt;s Tag&lt;/s&gt;</strong>
                                             </p>
-                                            <p className={"bodyText_3 text-start"}>
+                                            <p className={"bodyText_4 text-start"}>
                                                 Used to indicate that something is no longer accurate or relevant (but
                                                 should also not be deleted from
                                                 the document). Usually formatted with strikethrough. Older versions of

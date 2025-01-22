@@ -402,7 +402,7 @@ export default function Structure() {
                                                         <pre> &lt;body&gt;</pre>
                                                         <pre>  &lt;h1&gt;<span
                                                             className="htmlValues">Header Content</span>&lt;/h1&gt;</pre>
-                                                        <pre className={"htmlComment"}>  &lt;!-- Import 3rd Party Library Popper.js From Bootstrap --&gt;</pre>
+                                                        <pre className={"htmlComment"}>  &lt;!-- Comment: Import 3rd Party Library Popper.js From Bootstrap --&gt;</pre>
                                                         <pre>  &lt;script</pre>
                                                         <pre>
                                                             <span className="htmlAttributes">       src=</span>

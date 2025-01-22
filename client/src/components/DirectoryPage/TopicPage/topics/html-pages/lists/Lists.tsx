@@ -1,4 +1,8 @@
 import "./Lists.scss";
+import {MainPageHeader} from "../../../../../shared/PageSections/MainPageHeader/MainPageHeader";
+import {PageIntroduction} from "../../../../../shared/PageSections/PageIntroduction/PageIntroduction";
+import {PElement} from "../../../../../shared/HTML_Elements/PElement/PElement";
+import {SectionPageHeader} from "../../../../../shared/PageSections/SectionPageHeader/SectionPageHeader";
 
 export function SideNavigationData() {
     return {
@@ -32,7 +36,52 @@ export function SideNavigationData() {
 }
 
 export default function Lists() {
-    // @ts-ignore
+    const
+        pageTitle = "HTML/5 Lists",
+        pageIntroduction = (
+            <>
+                {PElement(
+                    <>
+                        There are many occasions when developers need to use a list.
+                    </>
+                )}
+                {PElement(
+                    <>
+                        HTML provides developers with three (3) different types of lists:
+                    </>
+                )}
+                <ol className={"introductionList__outerList"}>
+                    <li className={"pb-3 bulletItem"}>
+                        Ordered Lists
+                        <ul className={"introductionList__innerList"}>
+                            <li>
+                                Each item in the list is numbered. Examples that need this type of list
+                                might be instructions,
+                                a recipe, etc.
+                            </li>
+                        </ul>
+                    </li>
+                    <li className={"pb-3 bulletItem"}>
+                        Unordered Lists
+                        <ul className={"introductionList__innerList"}>
+                            <li>
+                                Each item in the list is generically bulleted to denote no specific order.
+                            </li>
+                        </ul>
+                    </li>
+                    <li className={"pb-3 bulletItem"}>
+                        Definition Lists
+                        <ul className={"introductionList__innerList"}>
+                            <li>
+                                This list comprises a set of terms along with the definitions for those
+                                terms.
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+            </>
+        );
+
     return (
         <>
             <div className="container-fluid pageContent">
@@ -48,70 +97,29 @@ export default function Lists() {
                         </div>
                     </div>
                     <div className="col-lg-9 col-sm-12 topicContents">
-                        <h1 className="text-center m-3 h1Styles">HTML/5 Lists</h1>
-                        <div id="pagePreambles">
-                            <p className="topicPreamble bodyText_2">
-                                There are many occasions when developers need to use a list.
-                            </p>
-                            <p className="topicPreamble bodyText_2">
-                                HTML provides developers with three (3) different types of lists:
-                            </p>
-                            <ol className={"bodyText_3"}>
-                                <li className="bodyText_3">
-                                    Ordered Lists
-                                    <ul>
-                                        <li>
-                                            Each item in the list is numbered. Examples that need this type of list
-                                            might be instructions,
-                                            a recipe, etc.
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    Unordered Lists
-                                    <ul>
-                                        <li>
-                                            Each item in the list is generically bulleted to denote no specific order.
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    Definition Lists
-                                    <ul>
-                                        <li>
-                                            This list comprises a set of terms along with the definitions for those
-                                            terms.
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ol>
-                        </div>
+                        {MainPageHeader(pageTitle)}
+                        {PageIntroduction(pageIntroduction)}
                     </div>
 
-                    <div className="col-lg-3"></div>
+                    <div className="col-lg-3 col-3-bg"></div>
                     <div className="col-lg-9 col-sm-12 topicContents">
                         <div id="htmlDir_2_1" className="generalContainer">
-                            <div className="sectionHeader">
-                                <hr className="hrStyle"/>
-                                <h2 className={"h2Styles"}>Ordered Lists</h2>
-                                <p className={"bodyText_3"}>
-                                    Generating A Numbered List
-                                </p>
-                                <hr className="hrStyle"/>
-                            </div>
+                            {SectionPageHeader("Ordered Lists", "Numbered Lists Provide Order")}
                             <div id="orderedList">
                                 <div className="row">
                                     <div className="col-sm-12 col-lg-6">
                                         <div className="col-lg-12">
-                                            <p className="textEntry_1">
-                                                To create an ordered list, two tags are used: &lt;ol&gt; and its child
-                                                tag &lt;li&gt;
-                                            </p>
-                                            <ol className={"bodyText_2"}>
-                                                <li className={"bodyText_3"}>
+                                            {PElement(
+                                                <>
+                                                    To create an ordered list, two tags are used: &lt;ol&gt; and its child
+                                                    tag &lt;li&gt;:
+                                                </>
+                                            )}
+                                            <ol className={"introductionList__outerList"}>
+                                                <li className={"pb-3 bulletItem"}>
                                                     ol Tag &lt;ol&gt;
-                                                    <ul>
-                                                        <li>
+                                                    <ul className={"introductionList__innerList"}>
+                                                        <li className={"pb-3 bulletItem"}>
                                                             Used to create an ordered list. Sometimes there might be
                                                             a <strong>type</strong> attribute attached
                                                             to the ol Tag used to specify the type of numbering
@@ -120,10 +128,10 @@ export default function Lists() {
                                                         </li>
                                                     </ul>
                                                 </li>
-                                                <li className={"bodyText_3"}>
+                                                <li className={"pb-3 bulletItem"}>
                                                     li Tag &lt;li&gt;
-                                                    <ul>
-                                                        <li>
+                                                    <ul className={"introductionList__innerList"}>
+                                                        <li className={"pb-3 bulletItem"}>
                                                             Used to enclose each item in the list. Browsers indent lists
                                                             by default.
                                                         </li>
@@ -225,28 +233,23 @@ export default function Lists() {
                     <div className="col-lg-3"></div>
                     <div className="col-lg-9 col-sm-12 topicContents">
                         <div id="htmlDir_2_2" className="generalContainer">
-                            <div className="sectionHeader">
-                                <hr className="hrStyle"/>
-                                <h2  className={"h2Styles"}>Unordered Lists</h2>
-                                <p className={"bodyText_3"}>
-                                    Generating A General List
-                                </p>
-                                <hr className="hrStyle"/>
-                            </div>
+                            {SectionPageHeader("Unordered Lists", "For Lists Where Order Does Not Matter")}
                             <div id="unorderedList">
                                 <div className="row">
                                     <div className="col-sm-12 col-lg-6">
                                         <div className="col">
                                             <div className="col-lg-12 col-sm-12">
-                                                <p className="textEntry_1">
-                                                    To create an unordered list, two tags are used: &lt;ul&gt; and its
-                                                    child tag &lt;li&gt;
-                                                </p>
-                                                <ol className={"bodyText_2"}>
-                                                    <li className={"bodyText_3"}>
+                                                {PElement(
+                                                    <>
+                                                        To create an unordered list, two tags are used: &lt;ul&gt; and its
+                                                        child tag &lt;li&gt;:
+                                                    </>
+                                                )}
+                                                <ol className={"introductionList__outerList"}>
+                                                    <li className={"pb-3 bulletItem"}>
                                                         ul Tag &lt;ul&gt;
-                                                        <ul>
-                                                            <li>
+                                                        <ul className={"introductionList__innerList"}>
+                                                            <li className={"pb-3 bulletItem"}>
                                                                 Used to create an unordered list. Sometimes there might
                                                                 be a <strong>type</strong> attribute attached
                                                                 to the ul Tag used to specify the type of bullet points
@@ -256,10 +259,10 @@ export default function Lists() {
                                                             </li>
                                                         </ul>
                                                     </li>
-                                                    <li className={"bodyText_3"}>
+                                                    <li className={"pb-3 bulletItem"}>
                                                         li Tag &lt;li&gt;
-                                                        <ul>
-                                                            <li>
+                                                        <ul className={"introductionList__innerList"}>
+                                                            <li className={"pb-3 bulletItem"}>
                                                                 Used to enclose each item in the list. Browsers indent
                                                                 lists by default.
                                                             </li>
@@ -371,47 +374,42 @@ export default function Lists() {
                     <div className="col-lg-3"></div>
                     <div className="col-lg-9 col-sm-12 topicContents">
                         <div id="htmlDir_2_3" className="generalContainer">
-                            <div className="sectionHeader">
-                                <hr className="hrStyle"/>
-                                <h2  className={"h2Styles"}>Definition Lists</h2>
-                                <p  className={"bodyText_3"}>
-                                    Generating A Definitions List
-                                </p>
-                                <hr className="hrStyle"/>
-                            </div>
+                            {SectionPageHeader("Definition Lists", "Generating A Definitions List")}
                             <div id="definitionsSection">
                                 <div className="row">
                                     <div className="col-sm-12 col-lg-6">
                                         <div className="col">
                                             <div className="col-lg-12">
-                                                <p className="textEntry_1">
-                                                    To create a definitions list, three tags are used: &lt;dl&gt; and
-                                                    its children tags &lt;dt&gt; & &lt;dd&gt;
-                                                </p>
-                                                <ol>
-                                                    <li>
+                                                {PElement(
+                                                    <>
+                                                        To create a definitions list, three tags are used: &lt;dl&gt; and
+                                                        its children tags &lt;dt&gt; & &lt;dd&gt;:
+                                                    </>
+                                                )}
+                                                <ol className={"introductionList__outerList"}>
+                                                    <li className={"pb-3 bulletItem"}>
                                                         dl Tag &lt;dl&gt;
-                                                        <ul>
-                                                            <li>
+                                                        <ul className={"introductionList__innerList"}>
+                                                            <li className={"pb-3 bulletItem"}>
                                                                 A definition list is created with the dl Tag and usually
                                                                 consists of a series of terms and their
                                                                 definitions.
                                                             </li>
                                                         </ul>
                                                     </li>
-                                                    <li>
+                                                    <li className={"pb-3 bulletItem"}>
                                                         dt Tag &lt;dt&gt;
-                                                        <ul>
-                                                            <li>
+                                                        <ul className={"introductionList__innerList"}>
+                                                            <li className={"pb-3 bulletItem"}>
                                                                 Used to contain the term being defined (the definition
                                                                 term).
                                                             </li>
                                                         </ul>
                                                     </li>
-                                                    <li>
+                                                    <li className={"pb-3 bulletItem"}>
                                                         dd Tag &lt;dd&gt;
-                                                        <ul>
-                                                            <li>
+                                                        <ul className={"introductionList__innerList"}>
+                                                            <li className={"pb-3 bulletItem"}>
                                                                 Used to contain the term's definition. It is possible to
                                                                 see a list where there are two terms used
                                                                 for the same definition or two different definitions for
@@ -550,26 +548,21 @@ export default function Lists() {
                     <div className="col-lg-3"></div>
                     <div className="col-lg-9 col-sm-12 topicContents">
                         <div id="htmlDir_2_4" className="generalContainer">
-                            <div className="sectionHeader">
-                                <hr className="hrStyle"/>
-                                <h2 className={"h2Styles"}>Nested Lists</h2>
-                                <p  className={"bodyText_3"}>
-                                    Creating Nested Lists
-                                </p>
-                                <hr className="hrStyle"/>
-                            </div>
+                            {SectionPageHeader("Nested Lists", "Nesting Lists")}
                             <div id="nestedLists">
                                 <div className="row">
                                     <div className="col-sm-12 col-lg-6">
                                         <div className="col">
                                             <div className="col-lg-12">
-                                                <p className="bodyText_3">
-                                                    You can put a second list inside an &lt;li&gt; element to create a
-                                                    sub-list or nested list. Browsers
-                                                    display nested lists indented further than the parent list. In
-                                                    nested unordered lists, the browser will
-                                                    usually change the style of the bullet point too.
-                                                </p>
+                                                {PElement(
+                                                    <>
+                                                        You can put a second list inside an &lt;li&gt; element to create a
+                                                        sub-list or nested list. Browsers
+                                                        display nested lists indented further than the parent list. In
+                                                        nested unordered lists, the browser will
+                                                        usually change the style of the bullet point too.
+                                                    </>
+                                                )}
                                             </div>
                                             <div className="col-lg-12">
                                                 <ul className="nav nav-pills mb-3" id="pills-tab-4" role="tablist">
@@ -602,7 +595,7 @@ export default function Lists() {
                                                             <div className={"exampleTextIndent"}>
                                                                 &lt;li&gt;
                                                                 Pastries
-                                                                <div className={"exampleTextIndent2"}>
+                                                                <div className={"exampleTextIndent2 nestedInner"}>
                                                                     &lt;ol&gt;
                                                                 </div>
                                                                 <div className={"exampleTextIndent4"}>
@@ -617,7 +610,7 @@ export default function Lists() {
                                                                 <div className={"exampleTextIndent4"}>
                                                                     &lt;li&gt;Profiterole&lt;/li&gt;
                                                                 </div>
-                                                                <div className={"exampleTextIndent2"}>
+                                                                <div className={"exampleTextIndent2 nestedInner"}>
                                                                     &lt;/ol&gt;
                                                                 </div>
                                                                 &lt;/li&gt;
@@ -639,7 +632,7 @@ export default function Lists() {
                                                             <div className={"exampleTextIndent"}>
                                                                 &lt;li&gt;Pastries
                                                             </div>
-                                                            <div className={"exampleTextIndent3"}>
+                                                            <div className={"exampleTextIndent3 nestedInner"}>
                                                                 &lt;ul&gt;
                                                             </div>
                                                             <div className={"exampleTextIndent4"}>
@@ -654,7 +647,7 @@ export default function Lists() {
                                                             <div className={"exampleTextIndent4"}>
                                                                 &lt;li&gt;Profiterole&lt;/li&gt;
                                                             </div>
-                                                            <div className={"exampleTextIndent3"}>
+                                                            <div className={"exampleTextIndent3 nestedInner"}>
                                                                 &lt;/ul&gt;
                                                             </div>
                                                             <div className={"exampleTextIndent"}>

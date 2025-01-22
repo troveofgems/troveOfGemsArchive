@@ -29,7 +29,6 @@ ul {
 
 .tablePanel1 > p {
   color: var(--font-color-old-page-text);
-  font-size: var(--h6-font-size);
 }
 
 .tablePanel2 > p {
@@ -108,4 +107,8 @@ small.nestedListExample1, small.nestedListExample2 {
 ol.nestedListExample1, ul.nestedListExample2 {
   padding: 0;
   margin-left: 3rem;
+}
+
+.nestedInner {
+  color: var(--split-complimentary-2);
 }

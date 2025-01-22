@@ -1,4 +1,9 @@
 import "./Links.scss";
+import {MainPageHeader} from "../../../../../shared/PageSections/MainPageHeader/MainPageHeader";
+import {PageIntroduction} from "../../../../../shared/PageSections/PageIntroduction/PageIntroduction";
+import {PElement} from "../../../../../shared/HTML_Elements/PElement/PElement";
+import {SectionPageHeader} from "../../../../../shared/PageSections/SectionPageHeader/SectionPageHeader";
+import {H3Sectional} from "../../../../../shared/PageSections/H3Sectional/H3Sectional";
 
 export function SideNavigationData() {
     return {
@@ -33,6 +38,27 @@ export function SideNavigationData() {
 }
 
 export default function Links() {
+    const
+        pageTitle = "HTML/5 Links",
+        pageIntroduction = (
+            <>
+                {PElement(
+                    <>
+                        Links are the defining feature of the web because they allow someone to move from one
+                        place to another - browsing across pages and accessing content.
+                        Here are just a few common link examples:
+                    </>
+                )}
+                <ol className={"introductionList__outerList"}>
+                    <li className={"pb-3 bulletItem"}>Links going from one website to another</li>
+                    <li className={"pb-3 bulletItem"}>Links from one page on a website to another page on the same website</li>
+                    <li className={"pb-3 bulletItem"}>Links from one part of a web page to another part of the same page</li>
+                    <li className={"pb-3 bulletItem"}>Links that open in a new browser window</li>
+                    <li className={"pb-3 bulletItem"}>Links that start up your email program and address a new email to someone</li>
+                </ol>
+            </>
+        );
+
     return (
         <>
             <div className="container-fluid pageContent">
@@ -48,51 +74,35 @@ export default function Links() {
                         </div>
                     </div>
                     <div className="col-lg-9 col-sm-12 topicContents">
-                        <h1 className="text-center m-3 h1Styles">HTML/5 Links</h1>
-                        <div id="pagePreambles">
-                            <p className="pagePreamble_1 bodyText_2">
-                                Links are the defining feature of the web because they allow someone to move from one
-                                place to another - browsing across pages and accessing content.
-                                Here are just a few common link examples:
-                            </p>
-                            <ul className={"bodyText_3"}>
-                                <li>Links going from one website to another</li>
-                                <li>Links from one page on a website to another page on the same website</li>
-                                <li>Links from one part of a web page to another part of the same page</li>
-                                <li>Links that open in a new browser window</li>
-                                <li>Links that start up your email program and address a new email to someone</li>
-                            </ul>
-                        </div>
+                        {MainPageHeader(pageTitle)}
+                        {PageIntroduction(pageIntroduction)}
                     </div>
 
                     <div className="col-lg-3"></div>
                     <div className="col-lg-9 col-sm-12 topicContents">
                         <div id="htmlDir_3_1" className="generalContainer">
-                            <div className="sectionHeader">
-                                <hr className="hrStyle"/>
-                                <h2 className={"h2Styles"}>Linking</h2>
-                                <p className={"bodyText_3"}>
-                                    Moving Around the Web
-                                </p>
-                                <hr className="hrStyle"/>
-                            </div>
+                            {SectionPageHeader("Linking", "Moving Around the Web")}
                             <div id="createALink">
                                 <div className="row">
                                     <div className="col-sm-12 col-lg-6">
-                                        <div className="col-lg-12">
-                                            <p className="bodyText_3 text-start">
-                                                To create a link, the &lt;a&gt; Tag is used. The content that sits
-                                                between the &lt;a&gt; Tag is known as <strong><em>Link Text</em></strong>.
-                                            </p>
-                                            <p className="bodyText_3 text-start">
-                                                Link destinations are specified by using
-                                                the <strong>href</strong> attribute.
-                                            </p>
-                                            <ol className={"createALinkExample bodyText_3 text-start"}>
-                                                <li>
+                                        <div className={"col-lg-12"}>
+                                            {PElement(
+                                                <>
+                                                    To create a link, the &lt;a&gt; Tag is used. The content that sits
+                                                    between the &lt;a&gt; Tag is known as <strong><em>Link Text</em></strong>.
+                                                </>
+                                            )}
+                                            {PElement(
+                                                <>
+                                                    Link destinations are specified by using
+                                                    the <strong>href</strong> attribute.
+                                                </>
+                                            )}
+                                            <ol className={"introductionList__outerList"}>
+                                                <li className={"pb-3 bulletItem"}>
                                                     a Tag &lt;a&gt;
-                                                    <ul>
-                                                        <li className={"bodyText_4"}>
+                                                    <ul className={"introductionList__innerList"}>
+                                                        <li className={"pb-3 bulletItem"}>
                                                             Used to create linkable text. Users can click on anything
                                                             that appears between the opening and closing
                                                             &lt;a&gt; Tags and will be taken to the page specified in
@@ -129,46 +139,107 @@ export default function Links() {
                                                      id="pills-olListExample1" role="tabpanel"
                                                      aria-labelledby="pills-olListExample1-tab">
                                                     <code>
-                                                        &lt;p&gt;Linking to other sites - Absolute URLs&lt;/p&gt;
-                                                        &lt;p&gt;&lt;strong&gt;Movie Reviews&lt;/strong&gt;&lt;/p&gt;
+                                                        <div>
+                                                            &lt;p&gt;Linking to other sites - Absolute URLs&lt;/p&gt;
+                                                        </div>
+                                                        <div>
+                                                            &lt;p&gt;&lt;strong&gt;Movie Reviews&lt;/strong&gt;&lt;/p&gt;
+                                                        </div>
+                                                        <div>
                                                             &lt;ul style="margin-top: 0; padding-top: 0;"&gt;
+                                                        </div>
+                                                        <div className={"exampleTextIndent"}>
                                                             &lt;li&gt;
-                                                            &lt;a
-                                                            href="https://www.empireonline.com"&gt;Empire&lt;/a&gt;
+                                                        </div>
+                                                        <div className={"exampleTextIndent3"}>
+                                                            &lt;a href="https://www.empireonline.com"&gt;Empire&lt;/a&gt;
+                                                        </div>
+                                                        <div className={"exampleTextIndent"}>
                                                             &lt;/li&gt;
+                                                        </div>
+                                                        <div className={"exampleTextIndent"}>
                                                             &lt;li&gt;
-                                                            &lt;a
-                                                            href="https://www.metacritic.com"&gt;Metacritic&lt;/a&gt;
+                                                        </div>
+                                                        <div className={"exampleTextIndent3"}>
+                                                            &lt;a href="https://www.metacritic.com"&gt;Metacritic&lt;/a&gt;
+                                                        </div>
+                                                        <div className={"exampleTextIndent"}>
                                                             &lt;/li&gt;
+                                                        </div>
+                                                        <div className={"exampleTextIndent"}>
                                                             &lt;li&gt;
-                                                            &lt;a href="https://www.rottentomatoes.com"&gt;Rotten
-                                                            Tomatoes&lt;/a&gt;
+                                                        </div>
+                                                        <div className={"exampleTextIndent3"}>
+                                                            &lt;a href="https://www.rottentomatoes.com"&gt;Rotten Tomatoes&lt;/a&gt;
+                                                        </div>
+                                                        <div className={"exampleTextIndent"}>
                                                             &lt;/li&gt;
+                                                        </div>
+                                                        <div className={"exampleTextIndent"}>
                                                             &lt;li&gt;
+                                                        </div>
+                                                        <div className={"exampleTextIndent3"}>
                                                             &lt;a href="https://www.variety.com"&gt;Variety&lt;/a&gt;
+                                                        </div>
+                                                        <div className={"exampleTextIndent"}>
                                                             &lt;/li&gt;
+                                                        </div>
+                                                        <div>
                                                             &lt;/ul&gt;
+                                                        </div>
                                                     </code>
                                                 </div>
                                                 <div className="tab-pane fade tablePanel3 p-3" id="pills-olListExample2"
                                                      role="tabpanel" aria-labelledby="pills-olListExample2-tab">
                         <code>
-                            &lt;p&gt;Linking to other pages on the same site - Relative URLs&lt;/p&gt;
-                            &lt;p&gt;&lt;strong&gt;Site Table Of Contents&lt;/strong&gt;&lt;/p&gt;
-                            &lt;ul&gt;
-                            &lt;li&gt;
-                            &lt;a href="../../../../../index.html"&gt;Landing Page&lt;/a&gt;
-                            &lt;/li&gt;
-                            &lt;li&gt;
-                            &lt;a href="../structure/structure.html"&gt;Text&lt;/a&gt;
-                            &lt;/li&gt;
-                            &lt;li&gt;
-                            &lt;a href="../text/text.html"&gt;Text&lt;/a&gt;
-                            &lt;/li&gt;
-                            &lt;li&gt;
-                            &lt;a href="../lists/lists.html"&gt;Lists&lt;/a&gt;
-                            &lt;/li&gt;
-                            &lt;/ul&gt;
+                            <div>
+                                &lt;p&gt;Linking to other pages on the same site - Relative URLs&lt;/p&gt;
+                            </div>
+                            <div>
+                                &lt;p&gt;&lt;strong&gt;Site Table Of Contents&lt;/strong&gt;&lt;/p&gt;
+                            </div>
+                            <div>
+                                &lt;ul&gt;
+                            </div>
+                            <div className={"exampleTextIndent"}>
+                                &lt;li&gt;
+                            </div>
+                            <div className={"exampleTextIndent3"}>
+                                &lt;a href="../../../../../index.html"&gt;Landing Page&lt;/a&gt;
+                            </div>
+                            <div className={"exampleTextIndent"}>
+                                &lt;/li&gt;
+                            </div>
+                            <div className={"exampleTextIndent"}>
+                                &lt;li&gt;
+                            </div>
+                            <div className={"exampleTextIndent3"}>
+                                &lt;a href="../structure/structure.html"&gt;Text&lt;/a&gt;
+                            </div>
+                            <div className={"exampleTextIndent"}>
+                                &lt;/li&gt;
+                            </div>
+                            <div className={"exampleTextIndent"}>
+                                &lt;li&gt;
+                            </div>
+                            <div className={"exampleTextIndent3"}>
+                                &lt;a href="../text/text.html"&gt;Text&lt;/a&gt;
+                            </div>
+                            <div className={"exampleTextIndent"}>
+                                &lt;/li&gt;
+                            </div>
+                            <div className={"exampleTextIndent"}>
+                                &lt;li&gt;
+                            </div>
+                            <div className={"exampleTextIndent3"}>
+                                &lt;a href="../lists/lists.html"&gt;Lists&lt;/a&gt;
+                            </div>
+                            <div className={"exampleTextIndent"}>
+                                &lt;/li&gt;
+                            </div>
+                            <div>
+                                &lt;/ul&gt;
+                            </div>
                         </code>
                                                 </div>
                                             </div>
@@ -230,36 +301,35 @@ export default function Links() {
                     <div className="col-lg-3"></div>
                     <div className="col-lg-9 col-sm-12 topicContents">
                         <div id="htmlDir_3_2" className="generalContainer">
-                            <div className="sectionHeader">
-                                <hr className="hrStyle"/>
-                                <h2 className={"h2Styles"}>Absolute vs Relative Paths</h2>
-                                <p className={"bodyText_3"}>
-                                    Specifying the Location of Resources
-                                </p>
-                                <hr className="hrStyle"/>
-                            </div>
+                            {SectionPageHeader("Absolute vs Relative Paths", "Specifying the Location of Resources")}
                             <div id="absoluteVsRelative">
                                 <div className="row">
                                     <div className="col-sm-12 col-lg-6">
                                         <div className="col-lg-12">
-                                            <p className="text-start bodyText_3">
-                                                URL stands for <strong>Uniform Resource Locator</strong>. Every web page has its own URL.
-                                                This is the web address that
-                                                would normally be typed into the address bar of a browser to visit that
-                                                specific page.
-                                            </p>
-                                            <p className="text-start bodyText_3">
-                                                An absolute URL starts with the domain name of the site, and can be
-                                                followed by the path to a specific
-                                                page. If no page is specified, the site will display the homepage.
-                                            </p>
-                                            <p className="text-start bodyText_3">
-                                                A relative URL can be used when linking to pages within the same site. A
-                                                domain name is not needed.
-                                                Relative URLs are also helpful when building a site on the computer
-                                                because links can be created between
-                                                pages without having to set up a domain name or hosting.
-                                            </p>
+                                            {PElement(
+                                                <>
+                                                    URL stands for <strong>Uniform Resource Locator</strong>. Every web page has its own URL.
+                                                    This is the web address that
+                                                    would normally be typed into the address bar of a browser to visit that
+                                                    specific page.
+                                                </>
+                                            )}
+                                            {PElement(
+                                                <>
+                                                    An absolute URL starts with the domain name of the site, and can be
+                                                    followed by the path to a specific
+                                                    page. If no page is specified, the site will display the homepage.
+                                                </>
+                                            )}
+                                            {PElement(
+                                                <>
+                                                    A relative URL can be used when linking to pages within the same site. A
+                                                    domain name is not needed.
+                                                    Relative URLs are also helpful when building a site on the computer
+                                                    because links can be created between
+                                                    pages without having to set up a domain name or hosting.
+                                                </>
+                                            )}
                                         </div>
                                     </div>
                                     <div className="col-sm-12 col-lg-6">
@@ -292,35 +362,30 @@ export default function Links() {
                     <div className="col-lg-3"></div>
                     <div className="col-lg-9 col-sm-12 topicContents">
                         <div id="htmlDir_3_3" className="generalContainer">
-                            <div className="sectionHeader">
-                                <hr className="hrStyle"/>
-                                <h2 className={"h2Styles"}>Relative Path Relationships</h2>
-                                <p className={"bodyText_3"}>
-                                    Understanding Relative Paths
-                                </p>
-                                <hr className="hrStyle"/>
-                            </div>
+                            {SectionPageHeader("Relative Path Relationships", "Understanding Relative Paths")}
                             <div id="relativePathRelationships">
                                 <div className="row">
                                     <div className="col-sm-12 col-lg-12">
                                         <div className="col-lg-12">
-                                            <p className="text-start bodyText_3">
-                                                Relative URLs can be used when linking to pages within the same website.
-                                                They provide a shorthand way of
-                                                telling the browser where to find specific files. If all the files in
-                                                your site are in one folder, the
-                                                filename for that page is simply referenced. If a site is organized into
-                                                separate folders or directories,
-                                                the browser will need to be told how to reach those pages <em>from the
-                                                current page</em>.
-                                            </p>
+                                            {PElement(
+                                                <>
+                                                    Relative URLs can be used when linking to pages within the same website.
+                                                    They provide a shorthand way of
+                                                    telling the browser where to find specific files. If all the files in
+                                                    your site are in one folder, the
+                                                    filename for that page is simply referenced. If a site is organized into
+                                                    separate folders or directories,
+                                                    the browser will need to be told how to reach those pages <em>from the
+                                                    current page</em>.
+                                                </>
+                                            )}
                                         </div>
                                     </div>
                                     <div className="col-sm-12 col-lg-12">
                                         <table>
                                             <tr>
-                                                <th>Relative Link Type</th>
-                                                <th>Examples</th>
+                                                <th className={"text-center"}>Relative Link Type</th>
+                                                <th className={"text-center"}>Examples</th>
                                             </tr>
                                             <tr>
                                                 <td>
@@ -397,19 +462,12 @@ export default function Links() {
                     <div className="col-lg-3"></div>
                     <div className="col-lg-9 col-sm-12 topicContents">
                         <div id="htmlDir_3_4" className="generalContainer">
-                            <div className="sectionHeader">
-                                <hr className="hrStyle"/>
-                                <h2 className={"h2Styles"}>Other Link Types &amp; Behavior</h2>
-                                <p className={"bodyText_3"}>
-                                    Exploring Links Further
-                                </p>
-                                <hr className="hrStyle"/>
-                            </div>
+                            {SectionPageHeader("Other Link Types & Behavior", "Exploring Links Further")}
                             <div id="otherLinkTypesAndBehavior">
                                 <div className="row">
                                     <div className="row col-lg-12 col-sm-12">
                                         <div className="col-lg-6 col-sm-12">
-                                            <h4 className={"h4Styles"}>Other Link Types</h4>
+                                            {H3Sectional("1. Other Link Types")}
                                             <p className="bodyText_4 text-start">
                                                 Links can also be created to manage other functionality such as starting
                                                 up a user's email program while
@@ -440,7 +498,7 @@ export default function Links() {
                                     </div>
                                     <div className="row col-lg-12 col-sm-12">
                                         <div className="col-lg-6 col-sm-12">
-                                            <h4 className={"h4Styles"}>Other Link Behaviors</h4>
+                                            {H3Sectional("2. Other Link Behaviors")}
                                             <p className="bodyText_4 text-start">
                                                 A link can open a new window when redirecting.
                                                 The <strong>target</strong> attribute is used on the
@@ -476,7 +534,7 @@ export default function Links() {
                                     </div>
                                     <div className="row col-lg-12 col-sm-12">
                                         <div className="col-lg-6 col-sm-12">
-                                            <h4 className={"h4Styles"}>Linking To Specific Sections Of The Same Page</h4>
+                                            {H3Sectional("3. Linking To Specific Sections Of The Same Page")}
                                             <p className="text-start bodyText_4">
                                                 When pages begin to become longer, it may be nice to add a table of
                                                 contents that links to each specific
@@ -526,7 +584,7 @@ export default function Links() {
                                     </div>
                                     <div className="row col-lg-12 col-sm-12">
                                         <div className="col-lg-6 col-sm-12">
-                                            <h4 className={"h4Styles"}>Linking To Specific Sections Of Another Page</h4>
+                                            {H3Sectional("4. Linking To Specific Sections Of Another Page")}
                                             <p className="text-start bodyText_4">
                                                 When a developer wants to link to a specific part of a different page
                                                 (whether on the same site or another
