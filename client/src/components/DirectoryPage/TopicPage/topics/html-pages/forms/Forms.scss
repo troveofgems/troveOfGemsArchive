@@ -1,0 +1,69 @@
+.addMarginRight {
+  margin-right: 1rem;
+}
+
+.addMarginTop {
+  margin-top: 1rem;
+}
+
+.addPaddingTop {
+  padding-top: 1rem;
+}
+
+.addPaddingRight {
+  padding-right: 1rem;
+}
+
+.addMarginTopAndBottom {
+  margin: 1rem 0;
+}
+
+.addFullMargins {
+  margin: 1rem;
+}
+
+.fullMarginDouble {
+  margin: 2rem;
+}
+
+.setToComplimentary2 {
+  color: var(--split-complimentary-2);
+}
+
+.setToComplimentary3 {
+  color: var(--split-complimentary-3);
+}
+
+.overrideFontTo3 {
+  font-size: var(--body-font-size-3);
+}
+
+.overrideFontTo4 {
+  font-size: var(--body-font-size-4);
+}
+
+.overrideFontTo5 {
+  font-size: var(--body-font-size-5);
+}
+
+.setGreyRightBorder {
+  border-right: 1px solid grey;
+}
+
+.setBookCoverBorder {
+  border-right: 1px solid var(--book-cover-4);
+}
+
+.partialPadding {
+  padding: .75rem;
+}
+
+#formLabelsAndGroupsTab,
+#commonInputExamplesTabber,
+#radioAndCheckboxExamplesTabber,
+#dropdownAndMSBExamplesTabber,
+#fileTabber,
+#dateTimeTabber,
+#myTab {
+  border-bottom: none;
+}
