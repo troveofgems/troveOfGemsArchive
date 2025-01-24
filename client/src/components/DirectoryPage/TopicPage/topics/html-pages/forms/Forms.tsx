@@ -2197,36 +2197,55 @@ export default function Forms() {
                                                                 className="text-decoration-underline">Implementation</em>
                                                             </h6>
                                                             <form action="#" className={"addFullMargins"} id="labellingDemo">
-                                                                <label>
-                                                                    Age:
-                                                                    <input type="number" name="age"/>
-                                                                </label>
-                                                                <br/>
-                                                                <input id="cat" type="radio" name="pet" value="cat"/>
-                                                                <label htmlFor="cat">Cat</label>
-                                                                <input id="dog" type="radio" name="pet" value="dog"/>
-                                                                <label htmlFor="dog">Dog</label>
+                                                                <div className={"row"}>
+                                                                    <label>
+                                                                        Age:
+                                                                        <input type="number" name="age" className={"mx-5"}/>
+                                                                    </label>
+                                                                </div>
+                                                                <div className={"row"}>
+                                                                    <label className={"mt-3"}>
+                                                                        Favorite Pet:
+                                                                        <div>
+                                                                            <input id="cat" type="radio" name="pet" value="cat"/>
+                                                                            <label htmlFor="cat" className={"mx-2"}>Cat</label>
+                                                                        </div>
+                                                                        <div>
+                                                                            <input id="dog" type="radio" name="pet" value="dog"/>
+                                                                            <label htmlFor="dog" className={"mx-2"}>Dog</label>
+                                                                        </div>
+                                                                    </label>
+                                                                </div>
                                                             </form>
                                                         </div>
                                                         <div className="col-lg-8">
                                                             <h6><em className="text-decoration-underline">Code</em></h6>
-                                                            <pre className={"overrideFontTo5"}>
-&lt;form action="#" className={"addFullMargins"} id="labellingDemo"&gt;
-                                                                <span
-                                                                    className={"overrideFontTo4 setToComplimentary2"}>&lt;label&gt;</span>
-    Age:
-                                                                &lt;input type="number" name="age" /&gt;
-                                                                <span
-                                                                    className={"overrideFontTo4 setToComplimentary2"}>&lt;/label&gt;</span>
-                                                                &lt;br/&gt;
-                                                                &lt;input id="cat" type="radio" name="pet" value="cat" /&gt;
-                                                                <span
-                                                                    className={"overrideFontTo4 setToComplimentary2"}>&lt;label for="cat"&gt;Cat&lt;/label&gt;</span>
-                                                                &lt;input id="dog" type="radio" name="pet" value="dog" /&gt;
-                                                                <span
-                                                                    className={"overrideFontTo4 setToComplimentary2"}>&lt;label for="dog"&gt;Dog&lt;/label&gt;</span>
-                                                                &lt;/form&gt;
-                        </pre>
+                                                            {PreElement(
+                                                                <>
+                                                                    <div className={"preStyleSet"}>
+                                                                        <p  className={"preStyleSet"}>Cleanup Required...</p>
+                                                                        {"<form \n    action=\"#\" \n    className={\"addFullMargins\"} \n    id=\"labellingDemo\" \n>"}
+                                                                    </div>
+                                                                    <div className={"preStyleSet"}>
+                                                                        {"  <label for=\"age\">Age:</label>"}
+                                                                    </div>
+                                                                    <div className={"preStyleSet"}>
+                                                                        {"  <input id=\"age\" \n    type=\"number\" />"}
+                                                                    </div>
+                                                                    <div className={"preStyleSet"}>
+                                                                        {"  <label for=\"pet\">Pets:</label>"}
+                                                                    </div>
+                                                                    <div className={"preStyleSet"}>
+                                                                        {"  <input id=\"cat\" \n    type=\"radio\" \n   name=\"pet\" \n   value=\"cat\"  >Pets:\n  </input>"}
+                                                                    </div>
+                                                                    <div className={"preStyleSet"}>
+                                                                        {"  <input id=\"dog\" \n    type=\"radio\" \n   name=\"pet\" \n   value=\"dog\"  >Pets:\n  </input>"}
+                                                                    </div>
+                                                                    <div className={"preStyleSet"}>
+                                                                        {"</form>"}
+                                                                    </div>
+                                                                </>
+                                                            )}
                                                         </div>
                                                     </div>
                                                 </div>
@@ -2279,6 +2298,32 @@ export default function Forms() {
                                                         </div>
                                                         <div className="col-lg-8">
                                                             <h6><em className="text-decoration-underline">Code</em></h6>
+                                                            {PreElement(
+                                                                <>
+                                                                    <div className={"preStyleSet"}>
+                                                                        {"<form \n    action=\"#formValidation\" \n    className={\"addFullMargins\"} \n    id=\"formValidation\" \n>"}
+                                                                    </div>
+                                                                    <div className={"preStyleSet"}>
+                                                                        {"  <label for=\"validateUsername\">Username:</label>"}
+                                                                    </div>
+                                                                    <div className={"preStyleSet"}>
+                                                                        {"  <input id=\"validateUsername\" \n    type=\"email\" \n    required={true}>Username:\n  </input>"}
+                                                                    </div>
+                                                                    <div className={"preStyleSet"}>
+                                                                        {"  <label for=\"validatePassword\">Password:</label>"}
+                                                                    </div>
+                                                                    <div className={"preStyleSet"}>
+                                                                        {"  <input id=\"validatePassword\" \n    type=\"password\" \n    required={true} \n    minLength={5}>Password:\n  </input>"}
+                                                                    </div>
+                                                                    <div className={"preStyleSet"}>
+                                                                        {"  <input type=\"submit\" \n    value=\"Try Me!\" \n    className=\"mt-3\">Try Me!</input>"}
+                                                                    </div>
+                                                                    <div className={"preStyleSet"}>
+                                                                        {"</form>"}
+                                                                    </div>
+                                                                </>
+                                                            )}
+
                                                             <pre className={"overrideFontTo5"}>
 &lt;form action="#" className={"addFullMargins"} id="groupingDemo"&gt;
                                                                 <span

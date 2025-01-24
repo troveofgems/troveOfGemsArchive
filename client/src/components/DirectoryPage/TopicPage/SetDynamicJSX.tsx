@@ -6,6 +6,8 @@ import {default as HTMLLinks, SideNavigationData as HTMLLinksSideNavigationData}
 import {default as HTMLImages, SideNavigationData as HTMLImagesSideNavigationData} from "./topics/html-pages/images/Images";
 import {default as HTMLTables, SideNavigationData as HTMLTablesSideNavigationData} from "./topics/html-pages/tables/Tables";
 import {default as HTMLForms, SideNavigationData as HTMLFormsSideNavigationData} from "./topics/html-pages/forms/Forms";
+import {default as HTML5Layout, SideNavigationData as HTML5LayoutSideNavigationData} from "./topics/html-pages/html5Layout/HTML5Layout";
+import {default as HTML5FlashVideoAudio, SideNavigationData as HTML5FlashVideoAudioSideNavigationData} from "./topics/html-pages/flashVideoAudio/FlashVideoAudio";
 
 // @ts-ignore
 export default function setDynamicJSX(directory: string, topic: string) {
@@ -63,10 +65,18 @@ export default function setDynamicJSX(directory: string, topic: string) {
                     topicContents.directoryAnchors = HTMLFormsSideNavigationData();
                     // code block
                     break;
-                case "html5Layout":
+                case "layout":
+                    // @ts-ignore
+                    topicContents.element = <HTML5Layout />;
+                    // @ts-ignore
+                    topicContents.directoryAnchors = HTML5LayoutSideNavigationData();
                     // code block
                     break;
-                case "flashVideoAudio":
+                case "flash-video-audio":
+                    // @ts-ignore
+                    topicContents.element = <HTML5FlashVideoAudio />;
+                    // @ts-ignore
+                    topicContents.directoryAnchors = HTML5FlashVideoAudioSideNavigationData();
                     // code block
                     break;
                 case "extraMarkup":
@@ -112,7 +122,7 @@ export default function setDynamicJSX(directory: string, topic: string) {
                 case "html5Layout":
                     // code block
                     break;
-                case "flashVideoAudio":
+                case "flash-video-audio":
                     // code block
                     break;
                 case "extraMarkup":

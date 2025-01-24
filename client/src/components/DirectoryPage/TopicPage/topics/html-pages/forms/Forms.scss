@@ -57,3 +57,13 @@
 .partialPadding {
   padding: .75rem;
 }
+
+#formLabelsAndGroupsTab,
+#commonInputExamplesTabber,
+#radioAndCheckboxExamplesTabber,
+#dropdownAndMSBExamplesTabber,
+#fileTabber,
+#dateTimeTabber,
+#myTab {
+  border-bottom: none;
+}
