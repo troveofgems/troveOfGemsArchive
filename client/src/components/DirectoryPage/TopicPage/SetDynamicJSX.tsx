@@ -8,6 +8,10 @@ import {default as HTMLTables, SideNavigationData as HTMLTablesSideNavigationDat
 import {default as HTMLForms, SideNavigationData as HTMLFormsSideNavigationData} from "./topics/html-pages/forms/Forms";
 import {default as HTML5Layout, SideNavigationData as HTML5LayoutSideNavigationData} from "./topics/html-pages/html5Layout/HTML5Layout";
 import {default as HTML5FlashVideoAudio, SideNavigationData as HTML5FlashVideoAudioSideNavigationData} from "./topics/html-pages/flashVideoAudio/FlashVideoAudio";
+import {default as HTML5ExtraMarkup, SideNavigationData as HTML5ExtraMarkupSideNavigationData} from "./topics/html-pages/extraMarkup/ExtraMarkup";
+
+// CSS Pages
+// Data Visualization Pages
 
 // @ts-ignore
 export default function setDynamicJSX(directory: string, topic: string) {
@@ -79,7 +83,11 @@ export default function setDynamicJSX(directory: string, topic: string) {
                     topicContents.directoryAnchors = HTML5FlashVideoAudioSideNavigationData();
                     // code block
                     break;
-                case "extraMarkup":
+                case "extra-markup":
+                    // @ts-ignore
+                    topicContents.element = <HTML5ExtraMarkup />;
+                    // @ts-ignore
+                    topicContents.directoryAnchors = HTML5ExtraMarkupSideNavigationData();
                     // code block
                     break;
                 default:
@@ -89,22 +97,10 @@ export default function setDynamicJSX(directory: string, topic: string) {
         case "css":
             switch(topic) {
                 case "structure":
-                    // @ts-ignore
-                    topicContents.element = <HTMLStructure />;
-                    // @ts-ignore
-                    topicContents.directoryAnchors = HTMLStructureSideNavigationData();
                     break;
                 case "text":
-                    // @ts-ignore
-                    topicContents.element = <HTMLText />;
-                    // @ts-ignore
-                    topicContents.directoryAnchors = HTMLTextSideNavigationData();
                     break;
                 case "lists":
-                    // @ts-ignore
-                    topicContents.element = <HTMLLists />;
-                    // @ts-ignore
-                    topicContents.directoryAnchors = HTMLListsSideNavigationData();
                     // code block
                     break;
                 case "links":
@@ -135,23 +131,9 @@ export default function setDynamicJSX(directory: string, topic: string) {
         case "data":
             switch(topic) {
                 case "structure":
-                    // @ts-ignore
-                    topicContents.element = <HTMLStructure />;
-                    // @ts-ignore
-                    topicContents.directoryAnchors = HTMLStructureSideNavigationData();
-                    break;
                 case "text":
-                    // @ts-ignore
-                    topicContents.element = <HTMLText />;
-                    // @ts-ignore
-                    topicContents.directoryAnchors = HTMLTextSideNavigationData();
                     break;
                 case "lists":
-                    // @ts-ignore
-                    topicContents.element = <HTMLLists />;
-                    // @ts-ignore
-                    topicContents.directoryAnchors = HTMLListsSideNavigationData();
-                    // code block
                     break;
                 case "links":
                     // code block
@@ -181,23 +163,10 @@ export default function setDynamicJSX(directory: string, topic: string) {
         case "accessibility":
             switch(topic) {
                 case "structure":
-                    // @ts-ignore
-                    topicContents.element = <HTMLStructure />;
-                    // @ts-ignore
-                    topicContents.directoryAnchors = HTMLStructureSideNavigationData();
                     break;
                 case "text":
-                    // @ts-ignore
-                    topicContents.element = <HTMLText />;
-                    // @ts-ignore
-                    topicContents.directoryAnchors = HTMLTextSideNavigationData();
                     break;
                 case "lists":
-                    // @ts-ignore
-                    topicContents.element = <HTMLLists />;
-                    // @ts-ignore
-                    topicContents.directoryAnchors = HTMLListsSideNavigationData();
-                    // code block
                     break;
                 case "links":
                     // code block
@@ -227,23 +196,10 @@ export default function setDynamicJSX(directory: string, topic: string) {
         case "owasp":
             switch(topic) {
                 case "structure":
-                    // @ts-ignore
-                    topicContents.element = <HTMLStructure />;
-                    // @ts-ignore
-                    topicContents.directoryAnchors = HTMLStructureSideNavigationData();
                     break;
                 case "text":
-                    // @ts-ignore
-                    topicContents.element = <HTMLText />;
-                    // @ts-ignore
-                    topicContents.directoryAnchors = HTMLTextSideNavigationData();
                     break;
                 case "lists":
-                    // @ts-ignore
-                    topicContents.element = <HTMLLists />;
-                    // @ts-ignore
-                    topicContents.directoryAnchors = HTMLListsSideNavigationData();
-                    // code block
                     break;
                 case "links":
                     // code block
