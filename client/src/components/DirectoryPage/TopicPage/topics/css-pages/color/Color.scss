@@ -1,0 +1,371 @@
+.foregroundExampleH1 {
+  color: DarkCyan;
+}
+
+.foregroundExampleH2 {
+  color: #ee3e80;
+}
+
+.foregroundExampleP {
+  color: var(--tiana-off-white);
+}
+
+.backgroundExampleBody {
+  background-color: rgb(200, 200, 200);
+}
+.backgroundExampleH1 {
+  background-color: DarkCyan;
+  color: white;
+  padding: 5px;
+}
+
+.backgroundExampleH2 {
+  background-color: #ee3e80;
+  color: white;
+  padding: 5px;
+}
+
+.backgroundExampleP {
+  background-color: white;
+}
+
+#red-hsl {
+  margin: 5px;
+  padding: 5px;
+  background-color: hsl(0 100% 50%);
+  color: white;
+}
+#red-hsl-80 {
+  margin: 5px;
+  padding: 5px;
+  background-color: hsl(0 80% 50%);
+  color: white;
+}
+#red-hsl-60 {
+  margin: 5px;
+  padding: 5px;
+  background-color: hsl(0 60% 50%);
+  color: white;
+}
+#red-hsl-40 {
+  margin: 5px;
+  padding: 5px;
+  background-color: hsl(0 40% 50%);
+  color: white;
+}
+#red-hsl-20 {
+  margin: 5px;
+  padding: 5px;
+  background-color: hsl(0 20% 50%);
+  color: white;
+}
+#red-hsl-0 {
+  margin: 5px;
+  padding: 5px;
+  background-color: hsl(0 0% 50%);
+  color: white;
+}
+
+#red-hsl-bright {
+  margin: 5px;
+  padding: 5px;
+  background-color: red;
+  filter: brightness(100%);
+}
+#red-hsl-80-bright {
+  margin: 5px;
+  padding: 5px;
+  background-color: red;
+  color: white;
+  filter: brightness(80%);
+}
+#red-hsl-60-bright {
+  margin: 5px;
+  padding: 5px;
+  background-color: red;
+  color: white;
+  filter: brightness(60%);
+}
+#red-hsl-50-bright {
+  margin: 5px;
+  padding: 5px;
+  background-color: red;
+  color: white;
+  filter: brightness(50%);
+}
+#red-hsl-40-bright {
+  margin: 5px;
+  padding: 5px;
+  background-color: red;
+  color: white;
+  filter: brightness(40%);
+}
+#red-hsl-20-bright {
+  margin: 5px;
+  padding: 5px;
+  background-color: red;
+  color: white;
+  filter: brightness(20%);
+}
+#red-hsl-0-bright {
+  margin: 5px;
+  padding: 5px;
+  background-color: red;
+  color: white;
+  filter: brightness(0%);
+}
+
+#css3OpacityExample {
+  position: absolute;
+  height: fit-content;
+  color: white;
+}
+
+.css3Opacity1 {
+  margin: 10px 10px;
+  padding: 10px 10px;
+  width: 165px;
+  height: 165px;
+  background-color: red;
+  color: var(--tiana-off-white);
+  font-size: var(--body-font-size-3);
+}
+
+.css3Opacity2 {
+  margin: 10px 10px;
+  padding: 10px 10px;
+  width: 165px;
+  height: 165px;
+  /*  Fallback for Older Browsers
+  *   that do not recognize RGBA
+  */
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.5);
+  position: relative;
+  top: -75px;
+  right: -30px;
+  color: var(--tiana-off-white);
+  font-size: var(--body-font-size-3);
+}
+
+.css3Opacity3 {
+  margin: 10px 10px;
+  padding: 10px 10px;
+  width: 165px;
+  height: 165px;
+  background-color: rgb(0, 0, 0);
+  position: relative;
+  top: -75px;
+  right: -30px;
+  color: var(--tiana-off-white);
+  font-size: var(--body-font-size-3);
+}
+
+
+#green-hsl-light {
+  margin: 5px;
+  padding: 5px;
+  background-color: hsl(120 100% 100%);
+}
+#green-hsl-80-light {
+  margin: 5px;
+  padding: 5px;
+  background-color: hsl(120 100% 80%);
+  color: white;
+}
+#green-hsl-60-light {
+  margin: 5px;
+  padding: 5px;
+  background-color: hsl(120 100% 60%);
+  color: white;
+}
+#green-hsl-50-light {
+  margin: 5px;
+  padding: 5px;
+  background-color: hsl(120 100% 50%);
+  color: white;
+}
+#green-hsl-40-light {
+  margin: 5px;
+  padding: 5px;
+  background-color: hsl(120 100% 40%);
+  color: white;
+}
+#green-hsl-20-light {
+  margin: 5px;
+  padding: 5px;
+  background-color: hsl(120 100% 20%);
+  color: white;
+}
+#green-hsl-0-light {
+  margin: 5px;
+  padding: 5px;
+  background-color: hsl(120 100% 0%);
+  color: white;
+}
+
+
+.hslExampleBody {
+  background-color: #c8c8c8;
+  background-color: hsl(0, 0%, 78%);
+  padding: 10px;
+}
+
+.hslExampleP {
+  background-color: #ffffff;
+  background-color: hsla(0, 100%, 100%, 0.5);
+  padding: 5px;
+}
+
+ul, ol {
+  font-size: var(--body-font-size-2);
+}
+
+.tablePanel2_css {
+  background-color: var(--book-cover-3)
+}
+
+.hueColorWheel {
+  width: 250px;
+  height: 250px;
+}
+
+.contrastExample {
+  width: 150px;
+  height: 150px;
+  background-color: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.resultantColorExample_RGBValues {
+  width: 150px;
+  height: 50px;
+  background-color: rgb(102, 205, 170);
+}
+
+.resultantColorExample_HexValues {
+  width: 150px;
+  height: 50px;
+  background-color: #66cdaa;
+}
+
+.resultantColorExample_PredefinedName {
+  width: 150px;
+  height: 50px;
+  background-color: MediumAquaMarine;
+}
+
+.contrastExample__Low {
+  width: 150px;
+  height: 150px;
+  background-color: #dedede;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto;
+}
+
+.contrastExample__High {
+  width: 150px;
+  height: 150px;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto;
+}
+
+.contrastExample__Medium {
+  width: 150px;
+  height: 150px;
+  background-color: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto;
+}
+
+.contrastMediumTextColorOverride {
+  color: #ddd;
+}
+
+.marineBiologyExampleHeader {
+  color: var(--tiana-off-white);
+}
+
+#understandingColorExamplesTabber {
+  border-bottom: none;
+}
+
+p {
+  padding: 5px;
+  margin: 0;
+}
+
+.alkalineLabel, .acidicLabel, .neutralLabel {
+  text-transform: uppercase;
+}
+
+p.phScale_0 {
+  background-color: rgb(238, 62, 128);
+}
+
+p.phScale_1 {
+  background-color: rgb(244, 90, 139);
+}
+
+p.phScale_2 {
+  background-color: rgb(243, 106, 152);
+}
+
+p.phScale_3 {
+  background-color: rgb(244, 123, 166);
+}
+
+p.phScale_4 {
+  background-color: rgb(245, 140, 178);
+}
+
+p.phScale_5 {
+  background-color: rgb(246, 159, 192);
+}
+
+p.phScale_6 {
+  background-color: rgb(245, 176, 204);
+}
+
+p.phScale_7 {
+  background-color: rgb(0, 187, 136);
+}
+
+p.phScale_8 {
+  background-color: rgb(140, 202, 242);
+}
+
+p.phScale_9 {
+  background-color: rgb(114, 193, 240);
+}
+
+p.phScale_10 {
+  background-color: rgb(84, 182, 237);
+}
+
+p.phScale_11 {
+  background-color: rgb(48, 170, 233);
+}
+
+p.phScale_12 {
+  background-color: rgb(0, 160, 230);
+}
+
+p.phScale_13 {
+  background-color: rgb(0, 149, 226);
+}
+
+p.phScale_14 {
+  background-color: rgb(0, 136, 221);
+}
