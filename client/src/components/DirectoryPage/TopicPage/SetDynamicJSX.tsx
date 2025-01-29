@@ -11,6 +11,8 @@ import {default as HTML5FlashVideoAudio, SideNavigationData as HTML5FlashVideoAu
 import {default as HTML5ExtraMarkup, SideNavigationData as HTML5ExtraMarkupSideNavigationData} from "./topics/html-pages/extraMarkup/ExtraMarkup";
 
 // CSS Pages
+import {default as CSS3Color, SideNavigationData as CSS3ColorSideNavigationData} from "./topics/css-pages/color/Color";
+
 // Data Visualization Pages
 
 // @ts-ignore
@@ -96,9 +98,13 @@ export default function setDynamicJSX(directory: string, topic: string) {
             break;
         case "css":
             switch(topic) {
-                case "structure":
+                case "basic-css":
                     break;
-                case "text":
+                case "color":
+                    // @ts-ignore
+                    topicContents.element = <CSS3Color />;
+                    // @ts-ignore
+                    topicContents.directoryAnchors = CSS3ColorSideNavigationData();
                     break;
                 case "lists":
                     // code block
