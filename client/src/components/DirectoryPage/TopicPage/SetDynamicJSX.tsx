@@ -14,6 +14,8 @@ import {default as HTML5ExtraMarkup, SideNavigationData as HTML5ExtraMarkupSideN
 import {default as CSS3Color, SideNavigationData as CSS3ColorSideNavigationData} from "./topics/css-pages/color/Color";
 
 // Data Visualization Pages
+import {default as GraphingData, SideNavigationData as DVGraphingDataSideNavigationData} from "./topics/dv-pages/graphingData/GraphingData";
+
 
 // @ts-ignore
 export default function setDynamicJSX(directory: string, topic: string) {
@@ -134,9 +136,14 @@ export default function setDynamicJSX(directory: string, topic: string) {
                 // code block
             }
             break;
-        case "data":
+        case "data-visualizations":
             switch(topic) {
-                case "structure":
+                case "graphing-data":
+                    // @ts-ignore
+                    topicContents.element = <GraphingData />;
+                    // @ts-ignore
+                    topicContents.directoryAnchors = DVGraphingDataSideNavigationData();
+                    break;
                 case "text":
                     break;
                 case "lists":

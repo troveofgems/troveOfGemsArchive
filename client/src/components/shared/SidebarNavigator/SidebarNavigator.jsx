@@ -20,7 +20,7 @@ export default function SidebarNavigator({directoryList, anchorList}) {
                         </Link>
                     </li>
                     {
-                        directoryList.map((item, index) => item.linksViewable ? (
+                        directoryList.length > 0 && directoryList.map((item, index) => item.linksViewable ? (
                             <li className="nav-item" key={item.directory + `_${index}`}>
                                 <a href={`#submenu-${item.directory}`} data-bs-toggle="collapse" className="nav-link">
                                     <span className="d-sm-inline navItemLabel">{item.directoryLabel}</span>
@@ -72,7 +72,7 @@ export default function SidebarNavigator({directoryList, anchorList}) {
                         </Link>
                     </li>
                     {
-                        [anchorList].map((item, index) => (
+                        [anchorList].length > 0 && [anchorList].map((item, index) => (
                             <li className="nav-item" key={item.directory + `_${index}`}>
                                 <a href={`#submenu-${item.directory}`} data-bs-toggle="collapse" className="nav-link">
                                     <span className="d-sm-inline navItemLabel">{item.directoryAnchors.directoryLabel}</span>
